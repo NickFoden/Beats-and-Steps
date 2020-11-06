@@ -1,0 +1,77 @@
+/*
+=============== 
+COLORS
+===============
+*/
+
+$primaryColor: #fafafa;
+$secondaryColor: #e8f1f5;
+// $accent: #00d7ff;
+// $tempAccent2: #5fdde5;
+$black: #000000;
+$white: white;
+$red: hsl(360, 67%, 44%);
+$grey: #d9d9d9;
+
+/*
+=============== 
+FORMATTING
+===============
+*/
+
+$spacing: 0.2rem;
+$transition: all 0.2s linear;
+$primaryFont: "Yantramanav", sans-serif;
+$secondaryFont: "Open Sans", sans-serif;
+
+$radius: 0.25rem;
+$lightShadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+$darkShadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+$maxWidth: 73.125rem;
+$fixedWidth: 43.75rem;
+
+/*
+=============== 
+GLOBAL STYLES
+===============
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+
+body {
+  font-family: $primaryFont;
+  background: $secondaryColor;
+  color: $black;
+  line-height: 1.5;
+  font-size: 0.875rem;
+  margin-top: 5rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 50rem) {
+  body {
+    font-size: 1rem;
+  }
+}
+
+/*** Global classes ***/

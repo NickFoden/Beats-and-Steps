@@ -1,0 +1,50 @@
+@import "global";
+
+.sidebar {
+  background: $primaryColor;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 70%;
+  height: 100%;
+  z-index: 999;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  transition: $transition;
+  transform: translateX(-100%);
+}
+
+.showSidebar {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.sidebarLinks {
+  li {
+    opacity: 1;
+
+    a {
+      display: block;
+      text-align: center;
+      text-transform: capitalize;
+      color: $black;
+      letter-spacing: $spacing;
+      margin-bottom: 0.5rem;
+      font-size: 2rem;
+      transition: $transition;
+      border-radius: $radius;
+    }
+
+    a:hover {
+      background: $primaryColor;
+      // color: $accent;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+}
