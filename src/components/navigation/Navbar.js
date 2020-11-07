@@ -1,22 +1,21 @@
 import React from "react";
 import classes from "../../styles/navigation/navbar.module.scss";
-import Logo from "../../assets/logo/dummy-logo.png";
-import Hamburger from "./Hamburger";
+import Logo from "../navigation/Logo";
 import PageLinks from "../../constants/links";
+import Hamburger from "../navigation/Hamburger";
 import { Link } from "gatsby";
 
 const Navbar = ({ toggleSidebar, isOpen }) => {
+
+  
+
   return (
     <nav className={classes.navbar}>
-      <div className={classes.navCenter}>
-        <div className={classes.navHeader}>
-          <Link className={classes.navLogo} to="/">
-            <img src={Logo} alt="Beats and Steps Logo" />
-          </Link>
-          <Hamburger toggleSidebar={toggleSidebar} isOpen={isOpen} />
-        </div>
-        <PageLinks styleClass={classes.navLinks} />
-      </div>
+      <Link to="/" style={{ height: "80%" }}>
+        <Logo />
+      </Link>
+      <Hamburger toggleSidebar={toggleSidebar} isOpen={isOpen} />
+      <PageLinks styleClass={classes.navLinks} />
     </nav>
   );
 };

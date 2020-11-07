@@ -22,13 +22,14 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
 
 $hamburger-types: (squeeze) !default;
 
-@import "./base";
+@import "base";
 
-@import "./type/squeeze";
+@import "type/squeeze";
 
+@import "../global/global";
 
-// THIS NEEDS TO BE SORTED OUT SO THAT IT ISN'T RENDERED RATHER THAN JUST NOT DISPLAYED
-@media screen and (min-width: 48rem) {
+  // THIS NEEDS TO BE SORTED OUT SO THAT IT ISN'T RENDERED RATHER THAN JUST NOT DISPLAYED
+  @media screen and (min-width: 48rem) {
   .hamburger {
     display: none;
   }
