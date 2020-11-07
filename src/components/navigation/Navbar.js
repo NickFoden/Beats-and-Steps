@@ -1,8 +1,8 @@
 import React from "react";
-import classes from "../styles/navbar.module.scss";
-import Logo from "../assets/logo/dummy-logo.png";
-import Hamburger from "../components/Hamburger";
-import PageLinks from "../constants/links";
+import classes from "../../styles/navigation/navbar.module.scss";
+import Logo from "../../assets/logo/dummy-logo.png";
+import Hamburger from "./Hamburger";
+import PageLinks from "../../constants/links";
 import { Link } from "gatsby";
 
 const Navbar = ({ toggleSidebar, isOpen }) => {

@@ -1,7 +1,7 @@
 import React from "react";
-import Links from "../constants/links";
-import SocialLinks from "../constants/socialLinks";
-import classes from "../styles/sidebar.module.scss";
+import Links from "../../constants/links";
+import SocialLinks from "../../constants/socialLinks";
+import classes from "../../styles/navigation/sidebar.module.scss";
 
 const Sidebar = ({ isOpen }) => {
   return (

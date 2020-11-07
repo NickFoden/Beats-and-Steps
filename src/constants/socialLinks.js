@@ -1,6 +1,6 @@
 import React from "react";
 import { FaFacebookSquare, FaInstagramSquare } from "react-icons/fa";
-import classes from "../styles/socialLinks.module.scss";
+import classes from "../styles/links/socialLinks.module.scss";
 
 const data = [
   {
