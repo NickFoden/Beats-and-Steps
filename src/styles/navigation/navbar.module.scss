@@ -84,7 +84,7 @@
 .navbar {
   height: 5rem;
   width: 100%;
-  background: $primaryColor;
+  background: $black;
   border-bottom: 1px solid $grey;
   top: 0;
   left: 0;
@@ -118,7 +118,7 @@
 
     a {
       text-transform: capitalize;
-      color: $black;
+      color: $white;
       font-weight: bold;
       letter-spacing: $spacing;
       transition: $transition;
