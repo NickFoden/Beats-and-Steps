@@ -9,8 +9,8 @@ const Sidebar = ({ isOpen }) => {
       className={`${classes.sidebar} ${isOpen ? classes.showSidebar : ""}`}
     >
       <>
-        <Links styleClass={`${isOpen ? classes.sidebarLinks : ""}`} />
-        <SocialLinks styleClass={`${isOpen ? classes.sidebarIcons : ""}`} />
+        <Links styleClass={`${isOpen ? classes.sidebarLinks : classes.disappear}`} />
+        <SocialLinks styleClass={`${isOpen ? classes.sidebarIcons : classes.disappear}`} />
       </>
     </aside>
   );

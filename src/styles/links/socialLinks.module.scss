@@ -1,16 +1,12 @@
 @import "../global/global";
 
 .socialLinks {
-  margin-top: 2rem;
-  width: 15rem;
+  width: 11rem;
   display: flex;
   justify-content: space-between;
+  margin-top: 3rem;
 }
 .socialLink {
-  font-size: 1.75rem;
-  color: $black;
+  font-size: 2rem;
   transition: $transition;
-}
-.socialLink:hover {
-  // color: $accent;
 }

@@ -6,6 +6,7 @@ COLORS
 
 $primaryColor: #fafafa;
 $secondaryColor: #e8f1f5;
+$backgroundColor: #d2dce0;
 $accent: #00d7ff;
 // $tempAccent2: #5fdde5;
 $black: #000000;
@@ -62,7 +63,7 @@ a {
 
 body {
   font-family: $primaryFont;
-  background: $secondaryColor;
+  background: $backgroundColor;
   color: $black;
   line-height: 1.5;
   font-size: 0.875rem;

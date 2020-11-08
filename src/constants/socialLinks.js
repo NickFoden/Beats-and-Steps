@@ -1,17 +1,31 @@
 import React from "react";
-import { FaFacebookSquare, FaInstagramSquare } from "react-icons/fa";
+import { FaFacebookSquare, FaInstagram, FaYoutube } from "react-icons/fa";
 import classes from "../styles/links/socialLinks.module.scss";
 
 const data = [
   {
     id: 1,
-    icon: <FaFacebookSquare />,
+    icon: <FaFacebookSquare style={{ color: "#4267B2" }} />,
     url: "https://www.facebook.com/beatsandstepsartsacademy/",
   },
   {
     id: 2,
-    icon: <FaInstagramSquare />,
+    icon: (
+      <FaInstagram
+        style={{
+          color: "#fff",
+          background:
+            "radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%)",
+          borderRadius: "5px",
+        }}
+      />
+    ),
     url: "https://www.instagram.com/beatsandstepsartsacademy/?hl=en",
+  },
+  {
+    id: 3,
+    icon: <FaYoutube style={{ color: "#FF0000" }} />,
+    url: "https://www.youtube.com/channel/UCtKuwwRznJUdD2qWHuTw6vQ/featured",
   },
 ];
 const links = data.map(link => {

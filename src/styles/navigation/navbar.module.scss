@@ -1,91 +1,9 @@
 @import "../global/global";
 
-// .navbar {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 5rem;
-//   display: flex;
-//   align-items: center;
-//   z-index: 200;
-//   background: $primaryColor;
-//   border-bottom: 1px solid $grey;
-// }
-
-// .navCenter {
-//   width: 90vw;
-//   max-width: 73.125rem;
-//   margin: 0 auto;
-//   height: 100%;
-// }
-
-// .navHeader {
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-//   height: 100%;
-//   // img {
-//   //   width: 100%;
-//   //   border-radius: 50%;
-//   // }
-// }
-
-// // .navLogo {
-// //   display: flex;
-// //   align-items: center;
-// //   width: 20%;
-// // }
-
-// .navLinks {
-//   display: none;
-// }
-
-// /* MEDIA QUERIES */
-
-// @media screen and (min-width: 48rem) {
-//   .navLinks {
-//     position: relative;
-//     display: flex;
-//     justify-content: flex-end;
-
-//     li {
-//       margin-right: 2rem;
-//     }
-
-//     a {
-//       text-transform: capitalize;
-//       color: $black;
-//       font-weight: bold;
-//       letter-spacing: $spacing;
-//       transition: $transition;
-//       padding: 0.5rem 0;
-//     }
-
-//     a:hover {
-//       // box-shadow: 0px 2px $accent;
-//       // color: $accent;
-//     }
-//   }
-
-//   // .navCenter {
-//   //   display: grid;
-//   //   grid-template-columns: auto 1fr;
-//   //   align-items: center;
-//   // }
-
-//   // .navLogo {
-//   //   width: 30%;
-//   // }
-// }
-
-// NEW APPROACH!
-
 .navbar {
   height: 5rem;
   width: 100%;
-  background: $black;
-  border-bottom: 1px solid $grey;
+  background: $primaryColor;
   top: 0;
   left: 0;
   position: fixed;
@@ -94,6 +12,7 @@
   align-items: center;
   padding: 0 1rem;
   z-index: 90;
+  border-bottom: 1px solid $grey;
 }
 
 .navLinks {
@@ -118,7 +37,7 @@
 
     a {
       text-transform: capitalize;
-      color: $white;
+      color: $black;
       font-weight: bold;
       letter-spacing: $spacing;
       transition: $transition;
