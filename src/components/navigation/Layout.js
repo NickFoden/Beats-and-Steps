@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
+import Footer from "./Footer";
 import useViewport from '../../hooks/useViewport';
 
 const Layout = ({ children }) => {
@@ -10,7 +11,7 @@ const Layout = ({ children }) => {
   };
 
   const { width } = useViewport();
-  const breakpoint = 768;
+  const breakpoint = 752;
 
   return (
     <>
@@ -19,6 +20,7 @@ const Layout = ({ children }) => {
         <Sidebar isOpen={isOpen} />
       ) : null}
       {children}
+      <Footer />
     </>
   );
 };

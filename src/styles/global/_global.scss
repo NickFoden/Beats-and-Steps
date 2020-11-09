@@ -8,6 +8,7 @@ $primaryColor: #fafafa;
 $secondaryColor: #e8f1f5;
 $backgroundColor: #d2dce0;
 $accent: #00d7ff;
+$footer: #424141;
 // $tempAccent2: #5fdde5;
 $black: #000000;
 $white: white;
@@ -42,7 +43,7 @@ textarea,
 button,
 select,
 a {
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 *,
@@ -77,8 +78,83 @@ a {
   text-decoration: none;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: $spacing;
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: $primaryFont;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 0.875rem;
+}
+
+p {
+  margin-bottom: 1.25rem;
+  color: var(--clr-grey-3);
+}
+
 @media screen and (min-width: 50rem) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 1.75rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
   body {
     font-size: 1rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+
+/* 
+Section Styles
+===============
+*/
+
+.header {
+  display: block;
+}
+
+.section {
+  margin: 5rem auto;
+  width: 90vw;
+}
+
+@media screen and (min-width: 47rem) {
+  .section-center {
+    width: 95vw;
   }
 }

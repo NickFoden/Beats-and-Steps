@@ -1,0 +1,14 @@
+@import "../global/global";
+
+.footer {
+  background-color: $footer;
+  height: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    color: $white;
+    text-transform: capitalize;
+  }
+}
