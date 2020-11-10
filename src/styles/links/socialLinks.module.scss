@@ -1,12 +1,35 @@
 @import "../global/global";
 
 .socialLinks {
-  width: 11rem;
   display: flex;
   justify-content: space-between;
   margin-top: 3rem;
+
+  li:first-of-type a {
+    margin-left: 0;
+  }
 }
+
 .socialLink {
   font-size: 2rem;
   transition: $transition;
+  margin-left: 2rem;
+}
+
+@media screen and (max-height: 36rem) {
+  .socialLinks {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+
+    li:first-of-type a {
+      margin-left: 0;
+    }
+  }
+
+  .socialLink {
+    font-size: 2rem;
+    transition: $transition;
+    margin-left: 2rem;
+  }
 }

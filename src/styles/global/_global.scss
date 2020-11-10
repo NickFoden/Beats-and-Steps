@@ -8,12 +8,13 @@ $primaryColor: #fafafa;
 $secondaryColor: #e8f1f5;
 $backgroundColor: #d2dce0;
 $accent: #00d7ff;
-$footer: #424141;
+$footer: #2e2e2e;
 // $tempAccent2: #5fdde5;
 $black: #000000;
 $white: white;
 $red: hsl(360, 67%, 44%);
 $grey: #d9d9d9;
+$darkGrey: #aca5a5;
 
 /*
 =============== 
@@ -25,6 +26,9 @@ $spacing: 0.2rem;
 $transition: all 0.2s linear;
 $primaryFont: "Yantramanav", sans-serif;
 $secondaryFont: "Open Sans", sans-serif;
+$BoldFont: 700;
+$NormalFont: 500;
+$LightFont: 400;
 
 $radius: 0.25rem;
 $lightShadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -64,10 +68,15 @@ a {
 
 body {
   font-family: $primaryFont;
+  font-weight: $NormalFont;
   background: $backgroundColor;
   color: $black;
   line-height: 1.5;
   font-size: 0.875rem;
+}
+
+main {
+  flex: 1 0 auto;
 }
 
 ul {
@@ -98,7 +107,8 @@ h2 {
 }
 
 h3 {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
+  font-weight: $LightFont;
 }
 
 h4 {
@@ -108,6 +118,10 @@ h4 {
 p {
   margin-bottom: 1.25rem;
   color: var(--clr-grey-3);
+}
+
+address {
+  font-style: normal;
 }
 
 @media screen and (min-width: 50rem) {

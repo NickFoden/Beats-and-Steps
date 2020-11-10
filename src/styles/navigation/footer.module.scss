@@ -2,13 +2,74 @@
 
 .footer {
   background-color: $footer;
-  height: 15rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: left;
+  width: 100%;
+  color: $white;
 
-  h2 {
-    color: $white;
-    text-transform: capitalize;
+  .container {
+    padding: 2rem;
+  }
+
+  hr {
+    border: 1px solid $accent;
+    border-radius: 5px;
+    width: 4.375rem;
+  }
+
+  .contactDetailsContainer {
+    h3 {
+      text-transform: capitalize;
+    }
+  }
+
+  .contactDetailsInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: start;
+    padding-left: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+
+    li {
+      margin-bottom: 1rem;
+    }
+
+    a:-webkit-any-link {
+      color: $white;
+    }
+  }
+
+  .grey {
+    color: $darkGrey;
+  }
+
+  .footerLinks {
+    justify-content: left;
+    margin-top: 2rem;
+  }
+
+  .copyright {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 47rem) {
+  address {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+
+  .footer {
+    .contactDetailsInfo {
+      padding-left: 0;
+    }
+
+    .copyright {
+      align-items: center;
+    }
   }
 }

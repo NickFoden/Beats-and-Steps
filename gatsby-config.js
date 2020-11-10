@@ -41,7 +41,7 @@ module.exports = {
         fonts: [
           {
             family: `Yantramanav`,
-            variants: [`500`, `700`],
+            variants: [`400`, `500`, `700`],
           },
           {
             family: `Open Sans`,

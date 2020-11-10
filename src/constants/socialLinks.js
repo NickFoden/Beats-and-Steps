@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebookSquare, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaFacebookSquare, FaInstagram, FaYoutube, FaEnvelope } from "react-icons/fa";
 import classes from "../styles/links/socialLinks.module.scss";
 
 const data = [
@@ -27,6 +27,11 @@ const data = [
     icon: <FaYoutube style={{ color: "#FF0000" }} />,
     url: "https://www.youtube.com/channel/UCtKuwwRznJUdD2qWHuTw6vQ/featured",
   },
+  {
+    id: 4,
+    icon: <FaEnvelope style={{color: "#BC9E82"}} />,
+    url: "mailto:beatsandstepsartsacademy@gmail.com",
+  }
 ];
 const links = data.map(link => {
   return (
