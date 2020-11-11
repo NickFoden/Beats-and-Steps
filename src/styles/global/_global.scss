@@ -7,9 +7,10 @@ COLORS
 $primaryColor: #fafafa;
 $secondaryColor: #e8f1f5;
 $backgroundColor: #d2dce0;
-$accent: #00d7ff;
+$section2BackgroundColor: #ebeeee;
+$accent: #00c6f7ee;
+$highlight: #00d9ff57;
 $footer: #2e2e2e;
-// $tempAccent2: #5fdde5;
 $black: #000000;
 $white: white;
 $red: hsl(360, 67%, 44%);
@@ -25,14 +26,17 @@ FORMATTING
 $spacing: 0.2rem;
 $transition: all 0.2s linear;
 $primaryFont: "Yantramanav", sans-serif;
-$secondaryFont: "Open Sans", sans-serif;
-$BoldFont: 700;
-$NormalFont: 500;
-$LightFont: 400;
+$secondaryFont: "Playfair Display", serif;
+$boldFont: 700;
+$normalFont: 500;
+$lightFont: 400;
+
+$desktopQuery: 47rem;
+// $desktopQuery: 30rem;
 
 $radius: 0.25rem;
 $lightShadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-$darkShadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+$darkShadow: 0 5px 12px rgba(0, 0, 0, 0.3);
 $maxWidth: 73.125rem;
 $fixedWidth: 43.75rem;
 
@@ -68,11 +72,11 @@ a {
 
 body {
   font-family: $primaryFont;
-  font-weight: $NormalFont;
+  font-weight: $normalFont;
   background: $backgroundColor;
   color: $black;
   line-height: 1.5;
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 
 main {
@@ -94,25 +98,27 @@ h4 {
   letter-spacing: $spacing;
   text-transform: capitalize;
   line-height: 1.25;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
   font-family: $primaryFont;
 }
 
 h1 {
-  font-size: 3rem;
+  font-family: $secondaryFont;
+  font-size: 2rem;
+  font-weight: $lightFont;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 h3 {
-  font-size: 1.125rem;
-  font-weight: $LightFont;
+  font-size: 0.825rem;
+  font-weight: $lightFont;
 }
 
 h4 {
-  font-size: 0.875rem;
+  font-size: 0.675rem;
 }
 
 p {
@@ -124,17 +130,17 @@ address {
   font-style: normal;
 }
 
-@media screen and (min-width: 50rem) {
+@media screen and (min-width: $desktopQuery) {
   h1 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 
   h2 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
 
   h3 {
-    font-size: 1.75rem;
+    font-size: 1.2rem;
   }
 
   h4 {
@@ -142,7 +148,7 @@ address {
   }
 
   body {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 
   h1,
@@ -163,12 +169,14 @@ Section Styles
 }
 
 .section {
-  margin: 5rem auto;
-  width: 90vw;
+  text-align: center;
+  padding: 2rem;
+  max-width: 69.5rem;
+  margin: 0 auto;
 }
 
-@media screen and (min-width: 47rem) {
-  .section-center {
-    width: 95vw;
+@media screen and (min-width: $desktopQuery) {
+  .section {
+    max-width: 85rem;
   }
 }

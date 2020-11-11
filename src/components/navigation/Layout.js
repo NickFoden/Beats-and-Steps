@@ -12,7 +12,8 @@ const Layout = ({ children }) => {
   };
 
   const { width } = useViewport();
-  const breakpoint = 752;
+  const breakpoint = 769;
+
 
   return (
     <div className={classes.layoutContainer}>

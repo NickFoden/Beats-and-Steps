@@ -32,7 +32,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="socialMedia">
-            <h3>Follow us!</h3>
+            <h3>Follow us</h3>
             <hr />
             <SocialLinks styleClass={classes.footerLinks}/>
           </div>

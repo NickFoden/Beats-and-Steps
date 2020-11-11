@@ -8,13 +8,9 @@
   width: 100%;
 }
 
-@media screen and (min-width: 47rem) {
+@media screen and (min-width: $desktopQuery) {
   .heroSection {
-    margin: 5rem 0 0 0;
-    overflow: hidden;
     padding-top: 0;
-    position: relative;
-    width: 100%;
     height: auto;
   }
 }

@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Beats and Steps Arts Academy, CMM Affiliate Center`,
-    description: `An Affiliate of the Center for Movement and Music (CMM), offering courses in: ballet and modern dance forms, voice and musical instruments (and theory), art, yoga, and Taekwondo`,
+    description: `The Beats and Steps Arts Academy is a CMM affiliate center that envisions developing children's full potential in the arts.`,
     author: `Alex Friedman`,
   },
   plugins: [
@@ -42,6 +42,10 @@ module.exports = {
           {
             family: `Yantramanav`,
             variants: [`400`, `500`, `700`],
+          },
+          {
+            family: `Playfair Display`,
+            variants: [`400`],
           },
           {
             family: `Open Sans`,

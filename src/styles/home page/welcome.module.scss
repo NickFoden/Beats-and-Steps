@@ -1,0 +1,16 @@
+@import "../global/global";
+
+.cta {
+  background-color: $accent;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-transform: capitalize;
+  box-shadow: $darkShadow;
+  width: fit-content;
+  margin: 0 auto;
+
+  a {
+    color: $white;
+  }
+}
+
