@@ -5,6 +5,7 @@
   text-align: left;
   width: 100%;
   color: $white;
+  font-size: 0.8rem;
 
   .container {
     padding: 2rem;
@@ -14,12 +15,6 @@
     border: 1px solid $accent;
     border-radius: 5px;
     width: 4.375rem;
-  }
-
-  .contactDetailsContainer {
-    h3 {
-      text-transform: capitalize;
-    }
   }
 
   .contactDetailsInfo {
@@ -64,6 +59,8 @@
   }
 
   .footer {
+    font-size: 1rem;
+
     .contactDetailsInfo {
       padding-left: 0;
     }
@@ -73,5 +70,3 @@
     }
   }
 }
-
-

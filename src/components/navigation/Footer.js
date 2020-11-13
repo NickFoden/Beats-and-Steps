@@ -9,7 +9,7 @@ const Footer = () => {
       <div className={classes.container}>
         <address>
           <div className={classes.contactDetailsContainer}>
-            <h3>contact beats &amp; steps arts academy</h3>
+            <h4>contact beats &amp; steps arts academy</h4>
             <hr />
             <ul className={classes.contactDetailsInfo}>
               <li className={classes.grey}>+63917 574 7131</li>
@@ -32,7 +32,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="socialMedia">
-            <h3>Follow us</h3>
+            <h4>Follow us</h4>
             <hr />
             <SocialLinks styleClass={classes.footerLinks}/>
           </div>
@@ -42,7 +42,7 @@ const Footer = () => {
             <span className={classes.grey}>
               Copyright &copy; {new Date().getFullYear()}
             </span>{" "}
-            Beats and Steps Arts Academy
+            Beats &amp; Steps Arts Academy
           </div>
           <span>
             <a

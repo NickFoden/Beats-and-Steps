@@ -40,15 +40,12 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Yantramanav`,
+            family: `Montserrat`,
             variants: [`400`, `500`, `700`],
           },
           {
-            family: `Playfair Display`,
+            family: `Sacramento`,
             variants: [`400`],
-          },
-          {
-            family: `Open Sans`,
           },
         ],
       },

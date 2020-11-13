@@ -8,9 +8,28 @@ const Welcome = () => {
       <h1>The Beat Is On</h1>
       <p>
         An Affiliate of the Center for Movement and Music (CMM) offering courses
-        in: classical ballet, jazz and hip-hop; voice, piano,
-        guitar, violin and music theory.
+        in:
       </p>
+      <div className={classes.list}>
+        <div className={classes.music}>
+          <h2>Music</h2>
+          <ul>
+            <li>Voice</li>
+            <li>Piano</li>
+            <li>Guitar</li>
+            <li>Violin</li>
+            <li>Music theory</li>
+          </ul>
+        </div>
+        <div className={classes.dance}>
+          <h2>Dance</h2>
+          <ul>
+            <li>Classical ballet</li>
+            <li>Jazz</li>
+            <li>Hip-hop</li>
+          </ul>
+        </div>
+      </div>
       <div className={classes.cta}>
         <Link to="/about">Find out more</Link>
       </div>

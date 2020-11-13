@@ -38,7 +38,7 @@
     a {
       text-transform: capitalize;
       color: $black;
-      font-weight: bold;
+      font-weight: $normalFont;
       letter-spacing: $spacing;
       transition: $transition;
       padding: 0.5rem 0;

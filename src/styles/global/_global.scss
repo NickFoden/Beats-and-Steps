@@ -6,8 +6,8 @@ COLORS
 
 $primaryColor: #fafafa;
 $secondaryColor: #e8f1f5;
-$backgroundColor: #d2dce0;
-$section2BackgroundColor: #ebeeee;
+$backgroundColor: #ebeeee;
+$section2BackgroundColor: #d2dce0;
 $accent: #00c6f7ee;
 $highlight: #00d9ff57;
 $footer: #2e2e2e;
@@ -25,14 +25,13 @@ FORMATTING
 
 $spacing: 0.2rem;
 $transition: all 0.2s linear;
-$primaryFont: "Yantramanav", sans-serif;
-$secondaryFont: "Playfair Display", serif;
+$primaryFont: "Montserrat", sans-serif;
+$secondaryFont: "Sacramento", cursive;
 $boldFont: 700;
 $normalFont: 500;
 $lightFont: 400;
 
 $desktopQuery: 47rem;
-// $desktopQuery: 30rem;
 
 $radius: 0.25rem;
 $lightShadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -72,7 +71,7 @@ a {
 
 body {
   font-family: $primaryFont;
-  font-weight: $normalFont;
+  font-weight: $lightFont;
   background: $backgroundColor;
   color: $black;
   line-height: 1.5;
@@ -103,22 +102,22 @@ h4 {
 }
 
 h1 {
-  font-family: $secondaryFont;
   font-size: 2rem;
   font-weight: $lightFont;
 }
 
 h2 {
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 h3 {
-  font-size: 0.825rem;
-  font-weight: $lightFont;
+  font-size: 2rem;
+  font-family: $secondaryFont;
 }
 
 h4 {
-  font-size: 0.675rem;
+  font-size: 0.825rem;
+  font-weight: $lightFont;
 }
 
 p {
@@ -140,11 +139,11 @@ address {
   }
 
   h3 {
-    font-size: 1.2rem;
+    font-size: 3rem;
   }
 
   h4 {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   body {
