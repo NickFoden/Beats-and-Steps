@@ -7,7 +7,7 @@ const query = graphql`
   {
     file(relativePath: { eq: "images/about.jpg" }) {
       childImageSharp {
-        fluid {
+        fluid(quality: 90, webpQuality: 90) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
@@ -24,7 +24,7 @@ const About = () => {
 
   return (
     <section className={classes.about}>
-      <Image className={classes.image} fluid={fluid} alt="Image of Students" />
+      <Image className={classes.image} fluid={fluid} alt="Beats and Steps Satellite Blossoming Ballet students posing as fairies" />
       <div className={classes.section}>
         <div>
           <p>
@@ -32,13 +32,15 @@ const About = () => {
             with CMM’s instructional goals, honing its students to the highest
             standards of quality training CMM is known for.
           </p>
-          <p>
-            Click to see more about our departments.
-          </p>
+          <p>Click to see more about our departments.</p>
         </div>
         <div className={classes.links}>
-          <Link className={classes.link} to="/dance">dance</Link>
-          <Link className={classes.link} to="/music">music</Link>
+          <Link className={classes.link} to="/dance">
+            dance
+          </Link>
+          <Link className={classes.link} to="/music">
+            music
+          </Link>
         </div>
       </div>
     </section>

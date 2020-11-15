@@ -34,7 +34,7 @@ const Footer = () => {
           <div className="socialMedia">
             <h4>Follow us</h4>
             <hr />
-            <SocialLinks styleClass={classes.footerLinks}/>
+            <SocialLinks styleClass={classes.footerLinks} />
           </div>
         </address>
         <div className={classes.copyright}>
@@ -45,12 +45,13 @@ const Footer = () => {
             Beats &amp; Steps Arts Academy
           </div>
           <span>
+            Site by{" "}
             <a
-              href
-              to="https://github.com/SignetOHara"
+              href="https://github.com/SignetOHara"
               rel="noopener noreferrer"
+              target="_blank"
             >
-              Site by <span className={classes.grey}>Alex Friedman</span>
+              <span className={classes.grey}>Alex Friedman</span>
             </a>
           </span>
         </div>

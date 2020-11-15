@@ -24,6 +24,12 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
+      resolve: `gatsby-source-instagram`,
+      options: {
+        username: `1503767980`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Beats and Steps Arts Academy, CMM Affiliate Center`,
