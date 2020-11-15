@@ -17,7 +17,6 @@ const getImages = graphql`
                 ...GatsbyImageSharpFluid_withWebp_tracedSVG
               }
             }
-            url
           }
         }
       }
@@ -25,7 +24,7 @@ const getImages = graphql`
   }
 `;
 
-// const nodeURL = 'https://www.instagram.com/p';
+const nodeURL = "https://www.instagram.com/p";
 
 const Instagram = () => {
   const {
@@ -51,14 +50,17 @@ const Instagram = () => {
         {images.map(image => (
           <article className={classes.article} key={image.node.id}>
             <a
-              href={image.node.localFile.url}
+              href={`${nodeURL}/${image.node.id}`}
               rel="noopener noreferrer"
               target="_blank"
             >
               <Image
                 className={classes.image}
                 fluid={image.node.localFile.childImageSharp.fluid}
-                alt="Image from the Beats and Steps Arts Academy Instagram page"
+                alt={
+                  image.node.caption ||
+                  "Image from the Beats and Steps Arts Academy Instagram page"
+                }
               />
             </a>
             {width >= breakpoint ? (
