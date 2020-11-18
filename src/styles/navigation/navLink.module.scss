@@ -1,0 +1,23 @@
+@import "../global/global";
+
+.link {
+  background-color: $accent;
+  transition: $transition;
+  padding: 10px 30px;
+  border-radius: 5px;
+  text-transform: capitalize;
+  box-shadow: $darkShadow;
+  color: $white;
+  position: relative;
+  overflow: hidden;
+}
+
+.link:hover {
+  background-color: $hover;
+}
+
+@media screen and (min-width: $desktopQuery) {
+  .firstLink {
+    margin-right: 5rem;
+  }
+}

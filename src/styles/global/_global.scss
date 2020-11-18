@@ -9,7 +9,8 @@ $secondaryColor: #e8f1f5;
 $backgroundColor: #ebeeee;
 $section2BackgroundColor: #d2dce0;
 $accent: #00c6f7ee;
-$highlight: #00d9ff57;
+$hover: #00a9d3ee;
+$active: #00c6f7c7;
 $footer: #2e2e2e;
 $black: #000000;
 $white: white;
@@ -31,13 +32,12 @@ $boldFont: 700;
 $normalFont: 500;
 $lightFont: 400;
 
-$desktopQuery: 47rem;
+
+$desktopQuery: 48.5rem;
 
 $radius: 0.25rem;
 $lightShadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 $darkShadow: 0 5px 12px rgba(0, 0, 0, 0.3);
-$maxWidth: 73.125rem;
-$fixedWidth: 43.75rem;
 
 /*
 =============== 

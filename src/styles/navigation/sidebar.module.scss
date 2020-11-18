@@ -28,9 +28,11 @@
   li {
     opacity: 0;
 
-    :hover,
+    :hover {
+      // background-color: $hover;
+    }
     :active {
-      background-color: $highlight;
+      background-color: $active;
     }
 
     a {

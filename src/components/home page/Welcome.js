@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "../../styles/home page/welcome.module.scss";
-import { Link } from "gatsby";
+import NavLink from "../navigation/NavLink";
 
 const Welcome = () => {
   return (
@@ -30,9 +30,7 @@ const Welcome = () => {
           </ul>
         </div>
       </div>
-      <div className={classes.cta}>
-        <Link to="/about">Find out more</Link>
-      </div>
+      <NavLink link="/about">Find out more</NavLink>
     </section>
   );
 };

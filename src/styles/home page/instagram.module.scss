@@ -15,10 +15,29 @@
   height: 10.625rem;
 }
 
+@media screen and (min-width: 33.75rem) {
+  .image {
+    height: 15rem;
+  }
+
+  .caption {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  .image {
+    height: 20rem;
+  }
+
+  .caption {
+    font-size: 1rem;
+  }
+}
+
 @media screen and (min-width: $desktopQuery) {
   .image {
     height: 40rem;
-
   }
 
   .caption {

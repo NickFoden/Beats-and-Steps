@@ -1,7 +1,8 @@
 import React from "react";
-import { Link, graphql, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
 import Image from "gatsby-image";
 import classes from "../../styles/home page/about.module.scss";
+import NavLink from "../navigation/NavLink";
 
 const query = graphql`
   {
@@ -24,7 +25,11 @@ const About = () => {
 
   return (
     <section className={classes.about}>
-      <Image className={classes.image} fluid={fluid} alt="Beats and Steps Satellite Blossoming Ballet students posing as fairies" />
+      <Image
+        className={classes.image}
+        fluid={fluid}
+        alt="Beats and Steps Satellite Blossoming Ballet students posing as fairies"
+      />
       <div className={classes.section}>
         <div>
           <p>
@@ -35,12 +40,8 @@ const About = () => {
           <p>Click to see more about our departments.</p>
         </div>
         <div className={classes.links}>
-          <Link className={classes.link} to="/dance">
-            dance
-          </Link>
-          <Link className={classes.link} to="/music">
-            music
-          </Link>
+          <NavLink link="/dance">dance</NavLink>
+          <NavLink link="/music">music</NavLink>
         </div>
       </div>
     </section>

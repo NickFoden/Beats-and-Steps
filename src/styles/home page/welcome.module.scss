@@ -1,16 +1,15 @@
 @import "../global/global";
 
-.cta {
-  background-color: $accent;
-  padding: 10px 15px;
-  border-radius: 5px;
-  text-transform: capitalize;
-  box-shadow: $darkShadow;
-  width: fit-content;
-  margin: 0 auto;
-
-  a {
-    color: $white;
+.section {
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  p,
+  ul {
+    font-size: 0.875rem;
   }
 }
 
@@ -27,7 +26,35 @@
   }
 }
 
+@media screen and (min-width: 22.5rem) {
+  .section {
+    h1 {
+      font-size: 2rem;
+    }
+    h2 {
+      font-size: 1.2rem;
+    }
+    p,
+    ul {
+      font-size: 1rem;
+    }
+  }
+}
+
 @media screen and (min-width: $desktopQuery) {
+  .section {
+    h1 {
+      font-size: 3rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
+    p,
+    ul {
+      font-size: 1.25rem;
+    }
+  }
+
   .list {
     justify-content: center;
 

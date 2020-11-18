@@ -1,38 +1,46 @@
 @import "../global/global";
 
 .navbar {
-  height: 5rem;
-  width: 100%;
-  background: $primaryColor;
+  position: fixed;
   top: 0;
   left: 0;
-  position: fixed;
+  right: 0;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 0 1rem;
-  z-index: 90;
   border-bottom: 1px solid $grey;
+  background: $primaryColor;
+  height: 5rem;
+  z-index: 90;
 }
 
-.navLinks {
-  display: none;
+.logoContainer {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 @media screen and (min-width: $desktopQuery) {
   .navbar {
-    padding: 0 3rem;
+    align-items: flex-start;
   }
 
-  .navLinks {
+  .logoContainer {
+    left: 3rem;
+  }
+
+  .navLinksContainer {
     display: flex;
+    position: relative;
+    justify-content: flex-end;
+    height: 100%;
+    flex: 1;
+    text-align: right;
+    transition: $transition;
 
-    li {
-      margin-right: 3rem;
-
-      &:last-of-type {
-        margin-right: 0rem;
-      }
+    .navLinks {
+      display: inline-flex;
+      align-items: center;
     }
 
     a {
@@ -41,7 +49,17 @@
       font-weight: $normalFont;
       letter-spacing: $spacing;
       transition: $transition;
-      padding: 0.5rem 0;
+      padding: 0 1.5rem;
+      display: flex;
+      height: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 70rem) {
+  .navLinks {
+    &:last-child {
+      margin-right: 3rem;
     }
   }
 }

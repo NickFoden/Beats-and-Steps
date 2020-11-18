@@ -15,18 +15,18 @@ const Navbar = ({ toggleSidebar, isOpen }) => {
       {width < breakpoint ? (
         <Hamburger toggleSidebar={toggleSidebar} isOpen={isOpen} />
       ) : null}
-      <Link to="/" style={{ height: "100%" }}>
-        <Logo />
-      </Link>
-      {width >= breakpoint ? <PageLinks styleClass={classes.navLinks} /> : null}
+      <div className={classes.logoContainer}>
+        <Link to="/">
+          <Logo />
+        </Link>
+      </div>
+      {width >= breakpoint ? (
+        <div className={classes.navLinksContainer}>
+          <PageLinks styleClass={classes.navLinks} />
+        </div>
+      ) : null}
     </nav>
   );
 };
 
 export default Navbar;
-
-// {width < breakpoint ? (
-//   <Hamburger toggleSidebar={toggleSidebar} isOpen={isOpen} />
-// ) : (
-//   <PageLinks styleClass={classes.navLinks} />
-// )}

@@ -12,15 +12,6 @@
   align-items: center;
 }
 
-.link {
-  background-color: $accent;
-  padding: 10px 30px;
-  border-radius: 5px;
-  text-transform: capitalize;
-  box-shadow: $darkShadow;
-  color: $white;
-}
-
 @media screen and (min-width: $desktopQuery) {
   .about {
     flex-direction: row;
@@ -38,9 +29,9 @@
   .links {
     justify-content: center;
     margin-top: 3rem;
-  }
 
-  .link:first-of-type {
-    margin-right: 5rem;
+    :first-child {
+      margin-right: 5rem;
+    }
   }
 }
