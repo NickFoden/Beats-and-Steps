@@ -52,7 +52,7 @@
   }
 }
 
-@media screen and (min-width: $desktopQuery) {
+@media screen and (min-width: $ipadProDesktop) {
   address {
     display: flex;
     justify-content: space-evenly;

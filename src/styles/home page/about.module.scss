@@ -12,7 +12,7 @@
   align-items: center;
 }
 
-@media screen and (min-width: $desktopQuery) {
+@media screen and (min-width: $ipadProDesktop) {
   .about {
     flex-direction: row;
   }

@@ -15,7 +15,7 @@
   height: 10.625rem;
 }
 
-@media screen and (min-width: 33.75rem) {
+@media screen and (min-width: $smallTablet) {
   .image {
     height: 15rem;
   }
@@ -25,7 +25,7 @@
   }
 }
 
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: $ipad) {
   .image {
     height: 20rem;
   }
@@ -35,7 +35,7 @@
   }
 }
 
-@media screen and (min-width: $desktopQuery) {
+@media screen and (min-width: $ipadProDesktop) {
   .image {
     height: 40rem;
   }

@@ -1,6 +1,7 @@
 @import "../global/global";
 
 .link {
+  display: inline-block;
   background-color: $accent;
   transition: $transition;
   padding: 10px 30px;
@@ -16,7 +17,7 @@
   background-color: $hover;
 }
 
-@media screen and (min-width: $desktopQuery) {
+@media screen and (min-width: $ipadProDesktop) {
   .firstLink {
     margin-right: 5rem;
   }

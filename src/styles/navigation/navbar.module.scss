@@ -20,7 +20,7 @@
   right: 0;
 }
 
-@media screen and (min-width: $desktopQuery) {
+@media screen and (min-width: $ipadProDesktop) {
   .navbar {
     align-items: flex-start;
   }
@@ -56,7 +56,7 @@
   }
 }
 
-@media screen and (min-width: 70rem) {
+@media screen and (min-width: $bigDesktop) {
   .navLinks {
     &:last-child {
       margin-right: 3rem;

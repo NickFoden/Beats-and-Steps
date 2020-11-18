@@ -32,12 +32,17 @@ $boldFont: 700;
 $normalFont: 500;
 $lightFont: 400;
 
-
-$desktopQuery: 48.5rem;
-
 $radius: 0.25rem;
 $lightShadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 $darkShadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+
+// BREAKPOINT VARIABLES
+
+$defaultSmallPhone: 22.5rem; // Only use if formatting is broken on anything smaller (e.g. iPhone 5/SE)
+$smallTablet: 33.75rem;
+$ipad: 48rem;
+$ipadProDesktop: 64rem;
+$bigDesktop: 70rem;
 
 /*
 =============== 
@@ -129,7 +134,14 @@ address {
   font-style: normal;
 }
 
-@media screen and (min-width: $desktopQuery) {
+.section {
+  text-align: center;
+  padding: 2rem;
+  max-width: 69.5rem;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: $ipadProDesktop) {
   h1 {
     font-size: 3rem;
   }
@@ -156,25 +168,7 @@ address {
   h4 {
     line-height: 1;
   }
-}
 
-/* 
-Section Styles
-===============
-*/
-
-.header {
-  display: block;
-}
-
-.section {
-  text-align: center;
-  padding: 2rem;
-  max-width: 69.5rem;
-  margin: 0 auto;
-}
-
-@media screen and (min-width: $desktopQuery) {
   .section {
     max-width: 85rem;
   }
