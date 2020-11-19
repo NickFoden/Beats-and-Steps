@@ -1,5 +1,5 @@
 import React from "react";
-import Links from "../../constants/links";
+import PageLinks from "../../constants/pageLinks";
 import SocialLinks from "../../constants/socialLinks";
 import classes from "../../styles/navigation/sidebar.module.scss";
 
@@ -9,7 +9,7 @@ const Sidebar = ({ isOpen }) => {
       className={`${classes.sidebar} ${isOpen ? classes.showSidebar : ""}`}
     >
       <>
-        <Links styleClass={`${isOpen ? classes.sidebarLinks : classes.disappear}`} />
+        <PageLinks styleClass={`${isOpen ? classes.sidebarLinks : classes.disappear}`} />
         <SocialLinks styleClass={`${isOpen ? classes.sidebarIcons : classes.disappear}`} />
       </>
     </aside>

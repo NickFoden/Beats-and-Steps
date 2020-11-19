@@ -1,14 +1,14 @@
 import React from "react";
 import classes from "../../styles/navigation/navbar.module.scss";
 import Logo from "./Logo";
-import PageLinks from "../../constants/links";
+import PageLinks from "../../constants/pageLinks";
 import Hamburger from "./Hamburger";
 import { Link } from "gatsby";
 import useViewport from "../../hooks/useViewport";
 
 const Navbar = ({ toggleSidebar, isOpen }) => {
   const { width } = useViewport();
-  const breakpoint = 769;
+  const breakpoint = 1023;
 
   return (
     <nav className={classes.navbar}>
