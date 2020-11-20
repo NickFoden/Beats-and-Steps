@@ -15,11 +15,13 @@
   opacity: 0;
   transition: $transition;
   transform: translateX(-100%);
+  visibility: hidden; 
 }
 
 .showSidebar {
   opacity: 1;
   transform: translateX(0);
+  visibility: visible; 
 }
 
 .sidebarLinks {
