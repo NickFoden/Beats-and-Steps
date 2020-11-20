@@ -8,9 +8,14 @@ $primaryColor: #fafafa;
 $secondaryColor: #e8f1f5;
 $backgroundColor: #ebeeee;
 $section2BackgroundColor: #d2dce0;
-$accent: #00c6f7ee;
+$accent: rgba(0, 198, 247, 0.933);
 $hover: #00a9d3ee;
 $active: #00c6f7c7;
+$buttonFontColor: #333333;
+$backgroundHover: #2021240a;
+$backgroundFocus: #2021241f;
+$backgroundActive: #2021241a;
+$hamburgerFocus: #5f63681f;
 $footer: #2e2e2e;
 $black: #000000;
 $white: white;
@@ -29,12 +34,13 @@ $transition: all 0.2s linear;
 $primaryFont: "Montserrat", sans-serif;
 $secondaryFont: "Sacramento", cursive;
 $boldFont: 700;
+$semiBoldFont: 600;
 $normalFont: 500;
 $lightFont: 400;
 
-$radius: 0.25rem;
 $lightShadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 $darkShadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+$blueShadow: 6px 6px 30px -6px rgba(0, 198, 247, 0.933);
 
 // BREAKPOINT VARIABLES
 
@@ -85,6 +91,7 @@ body {
 
 main {
   flex: 1 0 auto;
+  margin-top: 5rem;
 }
 
 ul {

@@ -3,18 +3,25 @@
 .link {
   display: inline-block;
   background-color: $accent;
+  font-weight: $semiBoldFont;
   transition: $transition;
   padding: 10px 30px;
   border-radius: 5px;
   text-transform: capitalize;
   box-shadow: $darkShadow;
-  color: $white;
+  color: $buttonFontColor;
   position: relative;
   overflow: hidden;
-}
 
-.link:hover {
-  background-color: $hover;
+  &:hover,
+  &:focus {
+    background-color: $hover;
+    color: $white;
+  }
+
+  &:active {
+    transform: translateY(2px);
+  }
 }
 
 @media screen and (min-width: $ipadProDesktop) {

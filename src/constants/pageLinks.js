@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import classes from '../styles/navigation/navbar.module.scss';
+import styles from '../styles/navigation/sidebar.module.scss';
 
 const data = [
   {
@@ -39,6 +40,7 @@ export default ({ styleClass }) => {
         className={
           styleClass === classes.navLinks ? classes.navLink : classes.sideLink
         }
+        activeClassName={styleClass === classes.navLinks ? classes.active : styles.active}
       >
         {link.text}
       </Link>
@@ -47,19 +49,3 @@ export default ({ styleClass }) => {
 
   return <div className={`${styleClass ? styleClass : ""}`}>{tempLinks}</div>;
 };
-
-// const tempLinks = data.map(link => {
-//   return (
-//     <Link key={link.id} to={link.url} className={classes.navLink}>
-//       {link.text}
-//     </Link>
-//   );
-// });
-
-// export default ({ styleClass }) => {
-//   return (
-//     <ul className={`${styleClass ? styleClass : ""}`}>
-//       {tempLinks}
-//     </ul>
-//   );
-// };

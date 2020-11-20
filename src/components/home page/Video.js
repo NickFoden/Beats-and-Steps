@@ -4,7 +4,7 @@ import TestVideo from "../../assets/video/intro-video.mp4";
 
 const Video = () => {
   return (
-    <video autoPlay muted loop controls disablePictureInPicture playsInline="playsInline" className={classes.video} /*width="1920" height="720"*/>
+    <video autoPlay muted loop controls disablePictureInPicture playsInline="playsInline" className={classes.video}>
       <source src={TestVideo} type="video/mp4" />
     </video>
   );

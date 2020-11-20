@@ -28,6 +28,12 @@
       transition: $transition;
     }
   }
+
+  &:focus {
+    background-color: $hamburgerFocus;
+    transition: transition;
+    border-radius: 50%;
+  }
 }
 
 .hamburgerBox {

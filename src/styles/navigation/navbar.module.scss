@@ -1,83 +1,3 @@
-// @import "../global/global";
-
-// .navbar {
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   right: 0;
-//   display: flex;
-//   align-items: center;
-//   border-bottom: 1px solid $grey;
-//   background: $primaryColor;
-//   height: 5rem;
-//   z-index: 90;
-// }
-
-// .logoContainer {
-//   height: 100%;
-//   position: absolute;
-//   top: 0;
-//   right: 0;
-// }
-
-// @media screen and (min-width: $ipadProDesktop) {
-//   .navbar {
-//     align-items: flex-start;
-//   }
-
-//   .logoContainer {
-//     left: 3rem;
-//   }
-
-//   .navLinksContainer {
-//     display: flex;
-//     position: relative;
-//     justify-content: flex-end;
-//     height: 100%;
-//     flex: 1;
-//     text-align: right;
-//     transition: $transition;
-
-//     .navLinks {
-//       display: inline-flex;
-//       align-items: center;
-
-//       .navLink {
-//         align-items: center;
-//         transition: $transition;
-//         padding: 0 1.5rem;
-//         display: flex;
-//         height: 100%;
-
-//         &:hover {
-//           border-top: 2px solid $accent;
-//           border-bottom: 2px solid $accent;
-
-//           a {
-//             color: $accent;
-//             transition: $transition;
-//           }
-//         }
-
-//         a {
-//           text-transform: capitalize;
-//           color: $black;
-//           font-weight: $normalFont;
-//           letter-spacing: $spacing;
-//         }
-//       }
-//     }
-//   }
-// }
-
-// @media screen and (min-width: $bigDesktop) {
-//   .navLinks {
-//     &:last-child {
-//       margin-right: 3rem;
-//     }
-//   }
-// }
-
 @import "../global/global";
 
 .navbar {
@@ -122,6 +42,15 @@
       display: inline-flex;
       align-items: center;
 
+      .active {
+        border-top: 2px solid $accent;
+        border-bottom: 2px solid $accent;
+      }
+
+      .active.navLink {
+        color: $accent;
+      }
+
       .navLink {
         align-items: center;
         transition: $transition;
@@ -138,6 +67,15 @@
           border-bottom: 2px solid $accent;
           color: $accent;
           transition: $transition;
+          background-color: $backgroundHover;
+        }
+
+        &:active {
+          background-color: $backgroundActive;
+        }
+
+        &:focus {
+          background-color: $backgroundFocus;
         }
       }
     }

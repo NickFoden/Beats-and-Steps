@@ -14,6 +14,19 @@
   font-size: 2rem;
   transition: $transition;
   margin-left: 2rem;
+
+  &:focus-within {
+    svg {
+      transition: $transition;
+      transform: scale(1.5, 1.5);
+    }
+  }
+
+  svg:hover,
+  svg:active {
+    transition: $transition;
+    transform: scale(1.5, 1.5);
+  }
 }
 
 @media screen and (max-height: 36rem) {

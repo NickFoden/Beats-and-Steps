@@ -48,7 +48,7 @@ module.exports = {
           google: [
             {
               family: `Montserrat`,
-              variants: [`400`, `500`, `700`],
+              variants: [`400`, `500`, `600`, `700`],
             },
             {
               family: `Sacramento`,

@@ -1,7 +1,5 @@
 @if index($hamburger-types, squeeze) {
-  /*
-   * Squeeze
-   */
+
   .hamburgerSqueeze {
     .hamburgerInner {
       transition-duration: 0.075s;

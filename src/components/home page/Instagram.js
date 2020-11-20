@@ -37,7 +37,7 @@ const Instagram = () => {
   return (
     <section className={classes.section}>
       <h3>Instagram</h3>
-      <p>
+      <p className={classes.hashtag}>
         <a
           href="https://www.instagram.com/beatsandstepsartsacademy/?hl=en"
           target="_blank"

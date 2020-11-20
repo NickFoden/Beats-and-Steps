@@ -33,6 +33,14 @@
 
     a:-webkit-any-link {
       color: $white;
+      transition: $transition;
+
+      &:active,
+      &:hover,
+      &:focus {
+        color: $accent;
+        border-bottom: 2px solid $accent;
+      }
     }
   }
 
@@ -49,6 +57,13 @@
     margin-top: 1rem;
     display: flex;
     flex-direction: column;
+
+    a:active,
+    a:hover,
+    a:focus {
+      border-bottom: 2px solid $accent;
+      transition: $transition;
+    }
   }
 }
 

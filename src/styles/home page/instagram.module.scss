@@ -7,12 +7,40 @@
 
 .article {
   width: 50%;
+
+  a:focus-within {
+    .image {
+      box-shadow: $blueShadow;
+      transform: scale(1.01, 1.01);
+    }
+  }
 }
 
 .image {
   width: calc(100% - (10px * 2));
   margin: 10px;
   height: 10.625rem;
+  transition: $transition;
+
+  &:active,
+  &:hover {
+    box-shadow: $blueShadow;
+    transform: scale(1.01, 1.01);
+  }
+}
+
+.hashtag {
+  a {
+    color: $footer;
+    transition: $transition;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $hover;
+      border-bottom: 2px solid $hover;
+    }
+  }
 }
 
 @media screen and (min-width: $smallTablet) {
