@@ -9,8 +9,12 @@ const Sidebar = ({ isOpen }) => {
       className={`${classes.sidebar} ${isOpen ? classes.showSidebar : ""}`}
     >
       <>
-        <PageLinks styleClass={`${isOpen ? classes.sidebarLinks : classes.disappear}`} />
-        <SocialLinks styleClass={`${isOpen ? classes.sidebarIcons : classes.disappear}`} />
+        <PageLinks
+          styleClass={`${isOpen ? classes.sidebarLinks : classes.disappear}`}
+        />
+        <SocialLinks
+          styleClass={`${isOpen ? classes.sidebarIcons : classes.disappear}`}
+        />
       </>
     </aside>
   );
