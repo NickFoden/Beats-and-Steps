@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
-import classes from '../styles/navigation/navbar.module.scss';
-import styles from '../styles/navigation/sidebar.module.scss';
+import classes from "../styles/navigation/navbar.module.scss";
+import styles from "../styles/navigation/sidebar.module.scss";
 
 const data = [
   {
@@ -11,8 +11,8 @@ const data = [
   },
   {
     id: 2,
-    text: "about us",
-    url: "/about/",
+    text: "music",
+    url: "/music/",
   },
   {
     id: 3,
@@ -21,8 +21,8 @@ const data = [
   },
   {
     id: 4,
-    text: "music",
-    url: "/music/",
+    text: "about us",
+    url: "/about/",
   },
   {
     id: 5,
@@ -40,7 +40,9 @@ export default ({ styleClass }) => {
         className={
           styleClass === classes.navLinks ? classes.navLink : classes.sideLink
         }
-        activeClassName={styleClass === classes.navLinks ? classes.active : styles.active}
+        activeClassName={
+          styleClass === classes.navLinks ? classes.active : styles.active
+        }
       >
         {link.text}
       </Link>

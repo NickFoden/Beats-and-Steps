@@ -1,21 +1,13 @@
 @import "../global/global";
 
-.about {
+.aboutContainer {
   background-color: $section2BackgroundColor;
   display: flex;
   flex-direction: column;
 }
 
-.text {
-  margin-bottom: 3rem;
-}
-
-.image {
-  width: 100vw;
-}
-
-@media screen and (min-width: $ipadProDesktop) {
-  .about {
+@media screen and (min-width: $bigDesktop) {
+  .aboutContainer {
     flex-direction: row;
   }
 
@@ -23,8 +15,7 @@
     width: 50vw;
   }
 
-  .section {
+  .text {
     width: 50vw;
-    align-self: center;
   }
 }

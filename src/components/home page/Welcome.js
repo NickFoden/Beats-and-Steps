@@ -30,7 +30,10 @@ const Welcome = () => {
           </ul>
         </div>
       </div>
-      <NavLink link="/about">Find out more</NavLink>
+      <div className={classes.links}>
+        <NavLink link="/music">music</NavLink>
+        <NavLink link="/dance">dance</NavLink>
+      </div>
     </section>
   );
 };
