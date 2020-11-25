@@ -26,14 +26,21 @@
   }
 }
 
-.links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 0.875rem;
+.music {
+  height: 15.1875rem;
+  position: relative;
+  a {
+    position: absolute;
+    bottom: 0;
+  }
+}
 
-  :first-child {
-    margin-right: 3rem;
+.dance {
+  height: 15.1875rem;
+  position: relative;
+  a {
+    position: absolute;
+    bottom: 0;
   }
 }
 
@@ -50,26 +57,12 @@
       font-size: 1rem;
     }
   }
-
-  .links {
-    font-size: 1rem;
-
-    :first-child {
-      margin-right: 4rem;
-    }
-  }
-}
-
-@media screen and (min-width: $smallTablet) {
-  .links {
-    :first-child {
-      margin-right: 7rem;
-    }
-  }
 }
 
 @media screen and (min-width: $ipadProDesktop) {
   .section {
+    margin-bottom: 2rem;
+
     h1 {
       font-size: 3rem;
     }
@@ -87,18 +80,16 @@
 
     .dance {
       margin-left: 6rem;
+      a {
+        bottom: -2rem;
+      }
     }
 
     .music {
       margin-right: 0rem;
-    }
-  }
-
-  .links {
-    font-size: 1.25rem;
-
-    :first-child {
-      margin-right: 9rem;
+      a {
+        bottom: -2rem;
+      }
     }
   }
 }

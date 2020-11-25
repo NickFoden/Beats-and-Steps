@@ -20,6 +20,7 @@ const Welcome = () => {
             <li>Violin</li>
             <li>Music theory</li>
           </ul>
+        <NavLink link="/music">music</NavLink>
         </div>
         <div className={classes.dance}>
           <h2>Dance</h2>
@@ -28,11 +29,8 @@ const Welcome = () => {
             <li>Jazz</li>
             <li>Hip-hop</li>
           </ul>
-        </div>
-      </div>
-      <div className={classes.links}>
-        <NavLink link="/music">music</NavLink>
         <NavLink link="/dance">dance</NavLink>
+        </div>
       </div>
     </section>
   );

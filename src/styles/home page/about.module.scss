@@ -6,15 +6,31 @@
   flex-direction: column;
 }
 
-.text {
-  margin-bottom: 3rem;
-}
-
 .image {
   width: 100vw;
 }
 
-@media screen and (min-width: $ipadProDesktop) {
+.section {
+  .logo {
+    display: inline-block;
+    height: 5rem;
+    padding: 0 0.5rem;
+  }
+
+  a {
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (min-width: $defaultSmallPhone) {
+  .section {
+    .logo {
+      padding: 0 1rem;
+    }
+  }
+}
+
+@media screen and (min-width: $bigDesktop) {
   .about {
     flex-direction: row;
   }
@@ -26,5 +42,8 @@
   .section {
     width: 50vw;
     align-self: center;
+    .logo {
+      height: 7rem;
+    }
   }
 }
