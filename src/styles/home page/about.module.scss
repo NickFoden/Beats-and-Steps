@@ -14,7 +14,13 @@
   .logo {
     display: inline-block;
     height: 5rem;
-    padding: 0 0.5rem;
+    margin: 0 0.5rem;
+    transition: $transition;
+    &:active,
+    &:hover {
+      box-shadow: $blueShadow;
+      transform: scale(1.01, 1.01);
+    }
   }
 
   a {
@@ -22,10 +28,19 @@
   }
 }
 
+.exLinks {
+  a:focus-within {
+    .logo {
+      box-shadow: $blueShadow;
+      transform: scale(1.01, 1.01);
+    }
+  }
+}
+
 @media screen and (min-width: $defaultSmallPhone) {
   .section {
     .logo {
-      padding: 0 1rem;
+      margin: 0 1rem;
     }
   }
 }

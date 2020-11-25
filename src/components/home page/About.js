@@ -29,17 +29,21 @@ const About = () => {
           </strong>{" "}
           and the <strong>Australian Conservatoire of Ballet</strong>:
         </p>
-        <div>
-          <img
-            className={classes.logo}
-            src={logo1}
-            alt="logo of The Associated Board of the Royal Schools of Music"
-          />
-          <img
-            className={classes.logo}
-            src={logo2}
-            alt="logo of The Australian Conservatoire of Ballet"
-          />
+        <div className={classes.exLinks}>
+          <a href="https://www.abrsm.org/">
+            <img
+              className={classes.logo}
+              src={logo1}
+              alt="logo of The Associated Board of the Royal Schools of Music"
+            />
+          </a>
+          <a href="http://www.acbaustralia.com.au/">
+            <img
+              className={classes.logo}
+              src={logo2}
+              alt="logo of The Australian Conservatoire of Ballet"
+            />
+          </a>
         </div>
         <NavLink link="/about">Find out more</NavLink>
       </div>
