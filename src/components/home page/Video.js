@@ -6,6 +6,7 @@ const Video = () => {
   return (
     <video autoPlay muted loop controls disablePictureInPicture playsInline="playsInline" className={classes.video}>
       <source src={TestVideo} type="video/mp4" />
+      <p>Your browser doesn't support HTML5 video</p>
     </video>
   );
 };

@@ -3,11 +3,15 @@ import Layout from "../components/navigation/Layout";
 import Image from "../components/Image";
 import classes from "../styles/pageStyles/about.module.scss";
 import NavLink from "../components/navigation/NavLink";
-// import SEO from "../components/SEO";
+import SEO from "../components/SEO/SEO";
 
 const About = () => {
   return (
     <Layout>
+      <SEO
+        title="About"
+        description="About Page for Beats &amp; Steps Arts Academy"
+      />
       <section className={classes.aboutContainer}>
         <Image
           className={classes.image}
@@ -38,9 +42,7 @@ const About = () => {
               Board of the Royal Schools of Music (ABRSM) and participates
               yearly in its international music exams.
             </p>
-            <p>
-              BRIEF COURSE INFORMATION / SCHEDULE / FEES?
-            </p>
+            <p>BRIEF COURSE INFORMATION / SCHEDULE / FEES?</p>
             <NavLink link="/contact">Enroll Here</NavLink>
           </div>
         </div>

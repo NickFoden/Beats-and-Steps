@@ -7,7 +7,7 @@ const Logo = props => (
     className={classes.logo}
     style={{ height: props.height, marginBottom: props.marginBottom }}
   >
-    <img src={logo} alt="Beats and Steps Logo" />
+    <img src={logo} alt="Beats and Steps Arts Academy Logo" />
   </div>
 );
 

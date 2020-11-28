@@ -2,33 +2,22 @@ import React from "react";
 import Layout from "../components/navigation/Layout";
 import classes from "../styles/pageStyles/dance.module.scss";
 import Image from "../components/Image";
-import useViewport from "../hooks/useViewport";
 import NavLink from "../components/navigation/NavLink";
-// import SEO from "../components/SEO";
+import SEO from "../components/SEO/SEO";
 
 const Dance = () => {
-  const { width } = useViewport();
-  const breakpoint = 540;
-
   return (
     <Layout>
+      <SEO
+        title="Dance"
+        description="Dance Department page for Beats &amp; Steps Arts Academy"
+      />
       <section className={classes.danceContainer}>
-        {width >= breakpoint ? (
-          <Image
-            className={classes.image}
-            filename="leap.jpg"
-            alt="Beats and Steps student dancing"
-            style={{ objectPosition: "center" }}
-          />
-        ) : (
-          <Image
-            className={classes.image}
-            filename="leap.jpg"
-            alt="Beats and Steps student dancing"
-            style={{ objectPosition: "bottom" }}
-          />
-        )}
-
+        <Image
+          className={classes.image}
+          filename="leap.jpg"
+          alt="Beats and Steps student dancing"
+        />
         <div className={classes.section}>
           <h1>Dance Classes</h1>
           <div className={classes.text}>

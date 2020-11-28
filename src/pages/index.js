@@ -4,12 +4,12 @@ import Hero from "../components/home page/Hero";
 import Welcome from "../components/home page/Welcome";
 import About from "../components/home page/About";
 import Instagram from "../components/home page/Instagram";
-
-// import SEO from "../components/SEO";
+import SEO from "../components/SEO/SEO";
 
 const IndexPage = () => {
   return (
     <Layout>
+      <SEO title="Home" />
       <Hero />
       <Welcome />
       <About />

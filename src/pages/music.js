@@ -3,11 +3,15 @@ import Layout from "../components/navigation/Layout";
 import classes from "../styles/pageStyles/music.module.scss";
 import Image from "../components/Image";
 import NavLink from "../components/navigation/NavLink";
-// import SEO from "../components/SEO";
+import SEO from "../components/SEO/SEO";
 
 const Music = () => {
   return (
     <Layout>
+      <SEO
+        title="Music"
+        description="Music Department page for Beats &amp; Steps Arts Academy"
+      />
       <section className={classes.musicContainer}>
         <Image
           className={classes.image}

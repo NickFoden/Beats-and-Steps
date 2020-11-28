@@ -45,7 +45,13 @@ const data = [
 const links = data.map(link => {
   return (
     <li key={link.id}>
-      <a href={link.url} className={classes.socialLink} aria-label={link.label}>
+      <a
+        href={link.url}
+        className={classes.socialLink}
+        aria-label={link.label}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         {link.icon}
       </a>
     </li>
