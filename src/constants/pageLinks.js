@@ -31,12 +31,13 @@ const data = [
   },
 ];
 
-export default ({ styleClass }) => {
+export default ({ styleClass, toggleSidebar }) => {
   const tempLinks = data.map(link => {
     return (
       <Link
         key={link.id}
         to={link.url}
+        onClick={toggleSidebar}
         className={
           styleClass === classes.navLinks ? classes.navLink : classes.sideLink
         }

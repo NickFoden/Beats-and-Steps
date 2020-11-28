@@ -18,7 +18,7 @@ const Contact = () => {
           alt="Beats and Steps students dancing"
         />
         <div className={classes.section}>
-          <h1>Enroll</h1>
+          <h1>PLACEHOLDER - Enroll</h1>
           <div className={classes.text}>
             <p>
               For inquiries, please text 0917-5747131 or send us a message on

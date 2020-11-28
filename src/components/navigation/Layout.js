@@ -18,7 +18,7 @@ const Layout = ({ children }) => {
   return (
     <div className={classes.layoutContainer}>
       <Navbar toggleSidebar={toggleSidebar} isOpen={isOpen} />
-      {width < breakpoint ? <Sidebar isOpen={isOpen} /> : null}
+      {width < breakpoint ? <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} /> : null}
       <main>{children}</main>
       <Footer />
     </div>
