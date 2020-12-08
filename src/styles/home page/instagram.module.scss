@@ -21,6 +21,7 @@
   margin: 10px;
   height: 10.625rem;
   transition: $transition;
+  box-shadow: $darkShadow;
 
   &:active,
   &:hover {
