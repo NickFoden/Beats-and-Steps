@@ -34,13 +34,21 @@ const About = () => {
               for.
             </p>
             <p>
+              B&amp;S follows CMM's progressive course offerings in voice,
+              piano, guitar, violin, music theory, classical and modern ballet,
+              jazz, hiphop, as well as short-term courses in art, yoga,
+              b-boying, Zumba and Taekwondo.
+            </p>
+            <p>
+              Our Music Department is an affiliate of the London-based Royal
+              Schools of Music (RSM) and participates yearly in its
+              international music exams.
+            </p>
+            <p>
               Our Dance Department is an affiliate of the Australian
               Conservatoire of Ballet (ACB) and enters students to ACB’s
               training and examination program. We are also a member of the
-              Association of Ballet Academies of the Philippines (ABAP). Our
-              Music Department is an affiliate of the London-based Associated
-              Board of the Royal Schools of Music (ABRSM) and participates
-              yearly in its international music exams.
+              Association of Ballet Academies of the Philippines (ABAP).
             </p>
             <p>BRIEF COURSE INFORMATION / SCHEDULE / FEES?</p>
             <NavLink link="/contact">Enroll Here</NavLink>

@@ -2,11 +2,10 @@ import React from "react";
 import classes from "../../styles/home page/instagram.module.scss";
 import { graphql, useStaticQuery } from "gatsby";
 import Image from "gatsby-image";
-import useViewport from "../../hooks/useViewport";
 
 const getImages = graphql`
   {
-    allInstaNode(sort: { fields: timestamp, order: DESC }, limit: 4) {
+    allInstaNode(sort: { fields: timestamp, order: DESC }, limit: 6) {
       edges {
         node {
           id
@@ -30,9 +29,6 @@ const Instagram = () => {
   const {
     allInstaNode: { edges: images },
   } = useStaticQuery(getImages);
-
-  const { width } = useViewport();
-  const breakpoint = 769;
 
   return (
     <section className={classes.section}>
@@ -63,9 +59,6 @@ const Instagram = () => {
                 }
               />
             </a>
-            {width >= breakpoint ? (
-              <p className={classes.caption}>{image.node.caption}</p>
-            ) : null}
           </article>
         ))}
       </div>

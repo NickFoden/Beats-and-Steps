@@ -7,8 +7,8 @@ const Welcome = () => {
     <section className={classes.section}>
       <h1>The Beat Is On</h1>
       <p>
-        An Affiliate of the Center for Movement and Music (CMM) offering courses
-        in:
+        An Affiliate of the <strong>Center for Movement and Music (CMM)</strong>{" "}
+        offering courses in:
       </p>
       <div className={classes.list}>
         <div className={classes.music}>
@@ -20,16 +20,17 @@ const Welcome = () => {
             <li>Violin</li>
             <li>Music theory</li>
           </ul>
-        <NavLink link="/music">music</NavLink>
+          <NavLink link="/music">music</NavLink>
         </div>
         <div className={classes.dance}>
           <h2>Dance</h2>
           <ul>
             <li>Classical ballet</li>
+            <li>Modern ballet</li>
             <li>Jazz</li>
-            <li>Hip-hop</li>
+            <li>Hiphop</li>
           </ul>
-        <NavLink link="/dance">dance</NavLink>
+          <NavLink link="/dance">dance</NavLink>
         </div>
       </div>
     </section>

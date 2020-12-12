@@ -24,6 +24,12 @@
   }
 }
 
+@media screen and (max-width: $defaultSmallPhone) {
+  .link {
+    padding: 8px 25px;
+  }
+}
+
 @media screen and (min-width: $ipadProDesktop) {
   .firstLink {
     margin-right: 5rem;
