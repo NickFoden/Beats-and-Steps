@@ -5,7 +5,7 @@ import Image from "gatsby-image";
 
 const getImages = graphql`
   {
-    allInstaNode(sort: { fields: timestamp, order: DESC }, limit: 6) {
+    allInstaNode(sort: { fields: timestamp, order: DESC }, limit: 12) {
       edges {
         node {
           id
@@ -32,7 +32,7 @@ const Instagram = () => {
 
   return (
     <section className={classes.section}>
-      <h3>Instagram</h3>
+      <h3 className={classes.instaTitle}>Instagram</h3>
       <p className={classes.hashtag}>
         <a
           href="https://www.instagram.com/beatsandstepsartsacademy/?hl=en"

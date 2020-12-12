@@ -26,8 +26,12 @@ const Footer = () => {
                 <Link to="/">www.beatsandsteps.ph</Link>
               </li>
               <li className={classes.grey}>
-                Marius Acropoli Building, 140 Katipunan Ave. Extension, St.
-                Ignatius Quezon City, Philippines
+                <ul className={classes.address}>
+                  <li>Marius Acropoli Building</li>
+                  <li>140 Katipunan Ave</li>
+                  <li>Extension, St</li>
+                  <li>Ignatius Quezon City, Philippines</li>
+                </ul>
               </li>
             </ul>
           </div>

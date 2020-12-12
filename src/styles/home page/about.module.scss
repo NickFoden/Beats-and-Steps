@@ -6,15 +6,13 @@
   flex-direction: column;
 }
 
-.image {
-  width: 100vw;
+.affTitle {
+  text-transform: none;
 }
 
 .section {
   .logo {
-    display: inline-block;
-    height: 5rem;
-    margin: 0 0.5rem;
+    margin: 0 3px;
     transition: $transition;
     box-shadow: $darkShadow;
     &:active,
@@ -23,14 +21,37 @@
       transform: scale(1.01, 1.01);
     }
   }
+}
 
-  a {
-    margin-top: 2rem;
+.textLink {
+  color: $black;
+  transition: $transition;
+
+  &:active,
+  &:hover,
+  &:focus {
+    color: $accent;
+    border-bottom: 2px solid $accent;
   }
 }
 
-.exLinks {
-  margin-top: 2rem;
+.affLinks {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+
+  li {
+    display: flex;
+    margin: 0.5rem 0;
+  }
+
+  p {
+    display: inline;
+    margin: auto;
+    padding: 0 1.5rem;
+  }
+  
+  // Accessibility: code block directly below lets keyboard users tab through logos
   a:focus-within {
     .logo {
       box-shadow: $blueShadow;
@@ -39,10 +60,25 @@
   }
 }
 
-@media screen and (min-width: $defaultSmallPhone) {
+@media screen and (min-width: 400px) {
+  .affLinks {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (min-width: $ipad) {
   .section {
     .logo {
-      margin: 0 1rem;
+      margin: 0 10px;
+    }
+  }
+
+  .affLinks {
+    ul {
+      width: 70%;
+      margin: auto;
     }
   }
 }
@@ -59,8 +95,5 @@
   .section {
     width: 50vw;
     align-self: center;
-    .logo {
-      height: 7rem;
-    }
   }
 }

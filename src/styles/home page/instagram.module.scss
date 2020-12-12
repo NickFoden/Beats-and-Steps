@@ -16,9 +16,13 @@
   }
 }
 
+.instaTitle {
+  font-size: 2rem;
+  font-family: $secondaryFont;
+}
+
 .image {
-  width: calc(100% - (10px * 2));
-  margin: 10px;
+  margin: 3px;
   height: 10.625rem;
   transition: $transition;
   box-shadow: $darkShadow;
@@ -48,28 +52,20 @@
   .image {
     height: 15rem;
   }
-
-  .caption {
-    font-size: 1rem;
-  }
 }
 
 @media screen and (min-width: $ipad) {
   .image {
     height: 20rem;
   }
-
-  .caption {
-    font-size: 1rem;
-  }
 }
 
 @media screen and (min-width: $ipadProDesktop) {
-  .image {
-    height: 40rem;
+  .instaTitle {
+    font-size: 3rem;
   }
 
-  .caption {
-    font-size: 1rem;
+  .image {
+    height: 40rem;
   }
 }

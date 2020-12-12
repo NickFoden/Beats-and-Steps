@@ -2,16 +2,16 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 
-const Image = props => {
+const AffiliateLogos = props => {
   const data = useStaticQuery(graphql`
     {
-      allFile(filter: { extension: { eq: "jpg" } }) {
+      allFile(filter: { relativeDirectory: { eq: "logo" } }) {
         nodes {
           relativePath
           name
           childImageSharp {
-            fluid(quality: 90, webpQuality: 90) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            fixed(width: 80, height: 80, quality: 90, webpQuality: 90) {
+              ...GatsbyImageSharpFixed_withWebp_tracedSVG
             }
           }
         }
@@ -19,23 +19,23 @@ const Image = props => {
     }
   `);
 
-  const image = data.allFile.nodes.find(img =>
-    img.relativePath.includes(props.filename)
+  const logo = data.allFile.nodes.find(logo =>
+    logo.relativePath.includes(props.filename)
   );
 
-  if (!image) {
+  if (!logo) {
     return null;
   }
 
-  const imageFluid = image.childImageSharp.fluid;
+  const logoFixed = logo.childImageSharp.fixed;
   return (
     <Img
       className={props.className}
       alt={props.alt}
-      fluid={imageFluid}
+      fixed={logoFixed}
       imgStyle={props.style}
     />
   );
 };
 
-export default Image;
+export default AffiliateLogos;
