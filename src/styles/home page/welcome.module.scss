@@ -22,44 +22,46 @@
   ul {
     list-style-type: initial;
     list-style-position: inside;
-    margin-bottom: 2rem;
   }
 }
 
-.music {
-  height: 15.1875rem;
+.list__department {
+  height: 13rem;
   position: relative;
   a {
     position: absolute;
     bottom: 0;
-  }
-}
-
-.dance {
-  height: 15.1875rem;
-  position: relative;
-  a {
-    position: absolute;
-    bottom: 0;
+    margin: 0 10px;
+    padding: 5px 15px;
   }
 }
 
 @media screen and (min-width: $defaultSmallPhone) {
   .section {
     h1 {
-      font-size: 2rem;
+      font-size: $h1FontSize;
     }
     h2 {
-      font-size: 1.2rem;
+      font-size: $h2FontSize;
     }
     p,
     ul {
       font-size: 1rem;
     }
   }
+
+  .list__department {
+    height: 15.1875rem;
+    a {
+      position: absolute;
+      bottom: 0;
+      margin: 0 10px;
+      padding: 8px 25px;
+    }
+  }
 }
 
-@media screen and (min-width: $ipadProDesktop) {
+@media screen and (min-width: $ipadPro) {
   .section {
     margin-bottom: 2rem;
 
@@ -76,20 +78,23 @@
   }
 
   .list {
-    justify-content: center;
+    justify-content: space-evenly;
 
-    .dance {
-      margin-left: 6rem;
+    .list__department {
       a {
         bottom: -2rem;
       }
     }
+  }
+}
 
-    .music {
-      margin-right: 0rem;
-      a {
-        bottom: -2rem;
-      }
+@media screen and (min-width: $bigDesktop) {
+  .list {
+    div:first-of-type {
+      padding-left: 8rem;
+    }
+    div:last-of-type {
+      padding-right: 8rem;
     }
   }
 }

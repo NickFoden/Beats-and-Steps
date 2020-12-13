@@ -10,7 +10,7 @@ const AffiliateLogos = props => {
           relativePath
           name
           childImageSharp {
-            fixed(width: 80, height: 80, quality: 90, webpQuality: 90) {
+            fixed(width: 70, height: 70, quality: 90, webpQuality: 90) {
               ...GatsbyImageSharpFixed_withWebp_tracedSVG
             }
           }

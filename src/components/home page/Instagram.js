@@ -5,7 +5,7 @@ import Image from "gatsby-image";
 
 const getImages = graphql`
   {
-    allInstaNode(sort: { fields: timestamp, order: DESC }, limit: 12) {
+    allInstaNode(sort: { fields: timestamp, order: DESC }, limit: 6) {
       edges {
         node {
           id

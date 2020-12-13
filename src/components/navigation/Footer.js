@@ -12,7 +12,16 @@ const Footer = () => {
             <h4>contact beats &amp; steps arts academy</h4>
             <hr />
             <ul className={classes.contactDetailsInfo}>
-              <li className={classes.grey}>+63917 574 7131</li>
+              <li>
+                <ul className={classes.numbers}>
+                  <li>
+                    <a href="tel:579-4063">579-4063</a>
+                  </li>
+                  <li>
+                    <a href="tel:0917-5747131">0917-574-7131</a>
+                  </li>
+                </ul>
+              </li>
               <li>
                 <a
                   href="mailto:beatsandstepsartsacademy@gmail.com"
@@ -28,9 +37,9 @@ const Footer = () => {
               <li className={classes.grey}>
                 <ul className={classes.address}>
                   <li>Marius Acropoli Building</li>
-                  <li>140 Katipunan Ave</li>
-                  <li>Extension, St</li>
-                  <li>Ignatius Quezon City, Philippines</li>
+                  <li>140 Katipunan Ave Extension</li>
+                  <li>St Ignatius, Quezon City</li>
+                  <li>Philippines</li>
                 </ul>
               </li>
             </ul>

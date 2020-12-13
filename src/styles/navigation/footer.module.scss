@@ -44,9 +44,28 @@
     }
   }
 
+  .numbers {
+    li {
+      margin: 0;
+    }
+
+    a:-webkit-any-link {
+      color: $darkGrey;
+      transition: $transition;
+
+      &:active,
+      &:hover,
+      &:focus {
+        color: $accent;
+        border-bottom: 2px solid $accent;
+      }
+    }
+  }
+
   .address {
     li {
       margin: 0;
+      color: $darkGrey;
     }
   }
 
@@ -73,7 +92,7 @@
   }
 }
 
-@media screen and (min-width: $ipadProDesktop) {
+@media screen and (min-width: $ipadPro) {
   address {
     display: flex;
     justify-content: space-evenly;

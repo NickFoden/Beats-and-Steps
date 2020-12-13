@@ -5,13 +5,13 @@ import NavLink from "../navigation/NavLink";
 const Welcome = () => {
   return (
     <section className={classes.section}>
-      <h1>The Beat Is On</h1>
+      <h1>Beats &amp; Steps Arts Academy</h1>
       <p>
         An Affiliate of the <strong>Center for Movement and Music (CMM)</strong>{" "}
         offering courses in:
       </p>
       <div className={classes.list}>
-        <div className={classes.music}>
+        <div className={classes.list__department}>
           <h2>Music</h2>
           <ul>
             <li>Voice</li>
@@ -22,7 +22,7 @@ const Welcome = () => {
           </ul>
           <NavLink link="/music">music</NavLink>
         </div>
-        <div className={classes.dance}>
+        <div className={classes.list__department}>
           <h2>Dance</h2>
           <ul>
             <li>Classical ballet</li>

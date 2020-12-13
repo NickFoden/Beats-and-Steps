@@ -1,5 +1,7 @@
 @import "../global/global";
 
+// NEW FORMAT
+
 .about {
   background-color: $section2BackgroundColor;
   display: flex;
@@ -8,77 +10,83 @@
 
 .affTitle {
   text-transform: none;
+  margin: 2rem 0;
 }
 
-.section {
-  .logo {
-    margin: 0 3px;
-    transition: $transition;
-    box-shadow: $darkShadow;
-    &:active,
-    &:hover {
+.affLinks {
+  margin: 2rem 0;
+  font-size: 1rem;
+}
+
+.affLinks__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.affLinks__logo {
+  transition: $transition;
+  box-shadow: $darkShadow;
+  border-radius: 20%;
+  &:active,
+  &:hover {
+    box-shadow: $blueShadow;
+    transform: scale(1.01, 1.01);
+  }
+}
+
+.affLinks__listItem {
+  padding: 0.5rem;
+  a {
+    display: block;
+    font-weight: $semiBoldFont;
+    margin: auto;
+    width: fit-content;
+  }
+
+  // Accessibility: focus-within selector lets keyboard users tab through logos
+  a:focus-within {
+    .affLinks__logo {
       box-shadow: $blueShadow;
       transform: scale(1.01, 1.01);
     }
   }
 }
 
-.textLink {
+.affLinks__textLink {
   color: $black;
   transition: $transition;
+  font-size: 0.7rem;
 
   &:active,
   &:hover,
   &:focus {
     color: $accent;
-    border-bottom: 2px solid $accent;
-  }
-}
-
-.affLinks {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 2rem;
-
-  li {
-    display: flex;
-    margin: 0.5rem 0;
-  }
-
-  p {
-    display: inline;
-    margin: auto;
-    padding: 0 1.5rem;
-  }
-  
-  // Accessibility: code block directly below lets keyboard users tab through logos
-  a:focus-within {
-    .logo {
-      box-shadow: $blueShadow;
-      transform: scale(1.01, 1.01);
-    }
-  }
-}
-
-@media screen and (min-width: 400px) {
-  .affLinks {
-    width: 90%;
-    margin: auto;
-    margin-bottom: 2rem;
   }
 }
 
 @media screen and (min-width: $ipad) {
-  .section {
-    .logo {
-      margin: 0 10px;
+  .affLinks__listItem {
+    a {
+      width: 15rem;
     }
   }
 
-  .affLinks {
-    ul {
-      width: 70%;
-      margin: auto;
+  .affLinks__textLink {
+    font-size: 0.825rem;
+  }
+}
+
+@media screen and (min-width: $ipadPro) {
+  .affLinks__list {
+    display: flex;
+  }
+
+  .affLinks__listItem {
+    width: 25%;
+    padding: 0 2rem;
+    a {
+      padding-top: 0.5rem;
+      width: fit-content;
     }
   }
 }
@@ -88,12 +96,20 @@
     flex-direction: row;
   }
 
-  .image {
-    width: 50vw;
-  }
-
   .section {
     width: 50vw;
-    align-self: center;
+    margin-top: 5rem;
+  }
+
+  .affTitle {
+    margin-top: 3rem;
+  }
+
+  .affLinks__list {
+    margin: 3rem 0;
+  }
+
+  .image {
+    width: 50vw;
   }
 }

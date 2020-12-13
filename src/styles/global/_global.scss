@@ -31,12 +31,18 @@ FORMATTING
 
 $spacing: 0.2rem;
 $transition: all 0.2s linear;
+
 $primaryFont: "Montserrat", sans-serif;
 $secondaryFont: "Sacramento", cursive;
 $boldFont: 700;
 $semiBoldFont: 600;
 $normalFont: 500;
 $lightFont: 400;
+
+$h1FontSize: 2rem;
+$h2FontSize: 1.2rem;
+$h3FontSize: 1.2rem;
+$h4FontSize: 0.825rem;
 
 $lightShadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 $darkShadow: 0 5px 12px rgba(0, 0, 0, 0.3);
@@ -47,7 +53,7 @@ $blueShadow: 6px 6px 30px -6px rgba(0, 198, 247, 0.933);
 $defaultSmallPhone: 22.5rem; // This is 360px. Only use if formatting is broken on anything smaller (e.g. iPhone 5/SE which is 320px and the smallest reasonable screen size)
 $smallTablet: 33.75rem;
 $ipad: 48rem;
-$ipadProDesktop: 64rem;
+$ipadPro: 64rem;
 $bigDesktop: 70rem;
 
 /*
@@ -114,20 +120,20 @@ h4 {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: $h1FontSize;
   font-weight: $semiBoldFont;
 }
 
 h2 {
-  font-size: 1.2rem;
+  font-size: $h2FontSize;
 }
 
 h3 {
-  font-size: 1.2rem;
+  font-size: $h3FontSize;
 }
 
 h4 {
-  font-size: 0.825rem;
+  font-size: $h4FontSize;
   font-weight: $lightFont;
 }
 
@@ -147,7 +153,7 @@ address {
   margin: 0 auto;
 }
 
-@media screen and (min-width: $ipadProDesktop) {
+@media screen and (min-width: $ipadPro) {
   h1 {
     font-size: 3rem;
   }
