@@ -44,21 +44,18 @@
     }
   }
 
-  .numbers {
-    li {
-      margin: 0;
-    }
+  .grey {
+    color: $darkGrey;
+  }
 
-    a:-webkit-any-link {
-      color: $darkGrey;
-      transition: $transition;
+  #number {
+    color: $darkGrey;
 
-      &:active,
-      &:hover,
-      &:focus {
-        color: $accent;
-        border-bottom: 2px solid $accent;
-      }
+    &:active,
+    &:hover,
+    &:focus {
+      color: $accent;
+      border-bottom: 2px solid $accent;
     }
   }
 
@@ -67,10 +64,6 @@
       margin: 0;
       color: $darkGrey;
     }
-  }
-
-  .grey {
-    color: $darkGrey;
   }
 
   .footerLinks {

@@ -13,14 +13,7 @@ const Footer = () => {
             <hr />
             <ul className={classes.contactDetailsInfo}>
               <li>
-                <ul className={classes.numbers}>
-                  <li>
-                    <a href="tel:579-4063">579-4063</a>
-                  </li>
-                  <li>
-                    <a href="tel:0917-5747131">0917-574-7131</a>
-                  </li>
-                </ul>
+                <a id={classes.number} href="tel:0917-5747131">0917-574-7131</a>
               </li>
               <li>
                 <a
