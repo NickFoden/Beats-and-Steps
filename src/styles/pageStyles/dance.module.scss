@@ -1,32 +1,49 @@
 @import "../global/global";
 
 .danceContainer {
-  background-color: $section2BackgroundColor;
+  background-color: $backgroundColor;
+}
+
+.block {
   display: flex;
   flex-direction: column;
 }
 
-.image {
-  max-height: 60vh;
+.reverseBlock {
+  flex-direction: column-reverse;
 }
 
-@media screen and (min-width: $smallTablet) {
-  .image {
-    max-height: 70vh;
+.middleBlock {
+  background-color: $section2BackgroundColor;
+}
+
+@media screen and (min-width: $ipad) {
+  .section {
+    max-width: 45rem;
   }
 }
 
-@media screen and (min-width: $bigDesktop) {
-  .danceContainer {
+@media screen and (min-width: 93.75rem) {
+  .block {
     flex-direction: row;
+    align-items: center;
   }
 
   .image {
-    width: 50vw;
-    max-height: inherit;
+    height: fit-content;
+    box-shadow: $darkShadow;
+    width: 650px;
   }
 
-  .text {
-    width: 50vw;
+  .imageRight {
+    margin-right: 13rem;
+  }
+
+  .imageLeft {
+    margin-left: 13rem;
+  }
+
+  .block__text {
+    width: 40vw;
   }
 }
