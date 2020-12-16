@@ -13,6 +13,12 @@
   flex-direction: column-reverse;
 }
 
+@media screen and (min-width: $ipad) {
+  .section {
+    max-width: 45rem;
+  }
+}
+
 @media screen and (min-width: 93.75rem) {
   .block {
     display: flex;
@@ -26,13 +32,13 @@
   }
 
   .image1 {
-    margin-right: 15rem;
-    width: 550px;
+    margin-right: 13rem;
+    width: 600px;
   }
 
   .image2 {
-    width: 600px;
-    margin-left: 15rem;
+    width: 700px;
+    margin-left: 12rem;
   }
 
   .block__text {
