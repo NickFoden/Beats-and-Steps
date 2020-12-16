@@ -2,20 +2,40 @@
 
 .aboutContainer {
   background-color: $section2BackgroundColor;
+}
+
+.block {
   display: flex;
   flex-direction: column;
 }
 
-@media screen and (min-width: $bigDesktop) {
-  .aboutContainer {
+.firstBlock {
+  flex-direction: column-reverse;
+}
+
+@media screen and (min-width: 93.75rem) {
+  .block {
+    display: flex;
     flex-direction: row;
+    align-items: center;
   }
 
   .image {
-    width: 50vw;
+    height: fit-content;
+    box-shadow: $darkShadow;
   }
 
-  .text {
-    width: 50vw;
+  .image1 {
+    margin-right: 15rem;
+    width: 550px;
+  }
+
+  .image2 {
+    width: 600px;
+    margin-left: 15rem;
+  }
+
+  .block__text {
+    width: 40vw;
   }
 }
