@@ -8,7 +8,7 @@ import useViewport from "../../hooks/useViewport";
 
 const Navbar = ({ toggleSidebar, isOpen }) => {
   const { width } = useViewport();
-  const breakpoint = 1023;
+  const breakpoint = 1024;
 
   return (
     <nav className={classes.navbar}>

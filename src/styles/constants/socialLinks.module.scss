@@ -3,7 +3,7 @@
 .socialLinks {
   display: flex;
   justify-content: space-between;
-  margin-top: 3rem;
+  margin-top: 1rem;
 
   li:first-of-type a {
     margin-left: 0;
@@ -29,6 +29,8 @@
   }
 }
 
+/*** PORTRAIT MODE MEDIA QUERIES ***/
+
 @media screen and (max-height: 36rem) {
   .socialLinks {
     display: flex;
@@ -47,9 +49,45 @@
   }
 }
 
+@media screen and (min-width: $nexus) {
+  .socialLinks {
+    margin-top: 3rem;
+  }
+
+  .socialLink {
+    font-size: 3rem;
+    margin-left: 3rem;
+  }
+}
+
 @media screen and (min-width: $ipad) {
   .socialLink {
     font-size: 3rem;
+    margin-left: 3rem;
+  }
+}
+
+/*** LANDSCAPE MODE ***/
+
+@media screen and (min-width: 35.5rem) and (min-height: 20rem) and (orientation: landscape) {
+  .socialLinks {
+    margin-top: 0;
+  }
+
+  .socialLink {
+    font-size: 1rem;
+    margin-left: 2rem;
+  }
+}
+
+// Surface Duo+ landscape mode
+@media screen and (min-width: 45rem) and (min-height: 33.75rem) and (orientation: landscape) {
+  .socialLinks {
+    margin-top: 1rem;
+  }
+
+  .socialLink {
+    font-size: 2rem;
     margin-left: 3rem;
   }
 }

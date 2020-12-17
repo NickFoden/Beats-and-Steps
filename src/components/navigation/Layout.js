@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
   };
 
   const { width } = useViewport();
-  const breakpoint = 1023;
+  const breakpoint = 1024;
 
 
   return (

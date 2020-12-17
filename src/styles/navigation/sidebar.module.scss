@@ -15,17 +15,17 @@
   opacity: 0;
   transition: $transition;
   transform: translateX(-100%);
-  visibility: hidden; 
+  visibility: hidden;
 }
 
 .showSidebar {
   opacity: 1;
   transform: translateX(0);
-  visibility: visible; 
+  visibility: visible;
 }
 
 .sidebarLinks {
-  margin-top: 5rem;
+  margin-top: 2rem;
 
   .active {
     border-top: 2px solid $accent;
@@ -94,6 +94,9 @@ Sidebar Animation
 .sidebarLinks a:nth-of-type(5) {
   animation-delay: 1.25s;
 }
+.sidebarLinks a:nth-of-type(6) {
+  animation-delay: 1.5s;
+}
 
 @keyframes slideRight {
   0% {
@@ -136,16 +139,41 @@ Sidebar Animation
   }
 }
 
+/*** PORTRAIT MODE QUERIES ***/
+
 @media screen and (max-height: 36rem) {
   .sidebarLinks {
-    margin-top: 2rem;
+    a {
+      font-size: 1.5rem;
+    }
   }
 }
 
-@media screen and (min-height: $ipad) {
+@media screen and (min-width: $nexus) and (min-height: 60rem) {
   .sidebarLinks {
+    margin-top: 5rem;
     a {
       font-size: 3rem;
+    }
+  }
+}
+
+/*** LANDSCAPE MODE QUERIES ***/
+@media screen and (min-width: 35.5rem) and (min-height: 20rem) and (orientation: landscape) {
+  .sidebarLinks {
+    margin-top: 1rem;
+    a {
+      margin-bottom: 0.5rem;
+      font-size: 0.75rem;
+    }
+  }
+}
+
+// Surface Duo+ landscape mode
+@media screen and (min-width: 45rem) and (min-height: 33.75rem) and (orientation: landscape) {
+  .sidebarLinks {
+    a {
+      font-size: 1.5rem;
     }
   }
 }

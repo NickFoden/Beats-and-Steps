@@ -26,6 +26,11 @@ const data = [
   },
   {
     id: 5,
+    text: "faculty",
+    url: "/faculty/",
+  },
+  {
+    id: 6,
     text: "contact us",
     url: "/contact/",
   },
