@@ -27,7 +27,7 @@ const Contact = () => {
             <a className={classes.contactLink} href="tel:0917-5747131">
               0917-574-7131
             </a>
-            <p>Or directly message us at:</p>
+            <p>Or directly message us via:</p>
             <ul>
               <li>
                 <a
@@ -47,7 +47,7 @@ const Contact = () => {
               </li>
             </ul>
           </div>
-          <h2>Our Address</h2>
+          <h2>Our Address:</h2>
           <div className={classes.text}>
             <ul className={classes.address}>
               <li>Marius Acropoli Building</li>
