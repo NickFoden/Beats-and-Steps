@@ -14,7 +14,7 @@ const About = () => {
       />
       <div className={classes.section}>
         <p>
-          Beats &amp; Steps (B&amp;S) is a Quezon City based performing arts
+          <strong>Beats &amp; Steps (B&amp;S)</strong> is a Quezon City based performing arts
           center working in consonance with CMM’s instructional goals, honing
           its students to the highest standards of quality training CMM is known
           for.

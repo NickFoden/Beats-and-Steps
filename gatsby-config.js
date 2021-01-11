@@ -4,12 +4,20 @@ module.exports = {
     description: `The Beats and Steps Arts Academy is a CMM affiliate center that envisions developing children's full potential in the arts.`,
     author: `Alex Friedman`,
     image: `/dummy-logo-white.png`,
-    // siteUrl: *siteURL goes here but remove the trailing forward slash*,
+    // siteUrl: // *siteURL goes here but remove the trailing forward slash*,
   },
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     // `gatsby-plugin-sitemap`,
+    // {
+    //   resolve: `gatsby-plugin-robots-txt`,
+    //   options: {
+    //     host: `www.example.com`,
+    //     sitemap: `www.example.com/sitemap.xml`,
+    //     policy: [{ userAgent: `*`, allow: `/` }],
+    //   },
+    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

@@ -40,7 +40,7 @@ const Music = () => {
         <div className={[classes.block, classes.middleBlock].join(" ")}>
           <Image
             className={[classes.image, classes.imageLeft].join(" ")}
-            filename="piano.jpg"
+            filename="guitar.jpg"
             alt="Beats &amp; Steps Jazz Students posing"
           />
           <article className={classes.section}>
