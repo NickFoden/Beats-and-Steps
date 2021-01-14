@@ -34,14 +34,14 @@ const Music = () => {
           <Image
             className={[classes.image, classes.imageRight].join(" ")}
             filename="voice-class.jpg"
-            alt="Beats &amp; Steps Ballet student playing the piano"
+            alt="Beats &amp; Steps voice students and teacher"
           />
         </div>
         <div className={[classes.block, classes.middleBlock].join(" ")}>
           <Image
             className={[classes.image, classes.imageLeft].join(" ")}
             filename="guitar.jpg"
-            alt="Beats &amp; Steps Jazz Students posing"
+            alt="Beats &amp; Steps Guitar Student"
           />
           <article className={classes.section}>
             <p>

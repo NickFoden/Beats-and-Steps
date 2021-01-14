@@ -37,14 +37,14 @@ const Dance = () => {
           <Image
             className={[classes.image, classes.imageRight].join(" ")}
             filename="swans.jpg"
-            alt="Beats &amp; Steps Ballet students posing in swan lake costumes"
+            alt="Beats &amp; Steps Ballet students in swan lake costumes"
           />
         </div>
         <div className={[classes.block, classes.middleBlock].join(" ")}>
           <Image
             className={[classes.image, classes.imageLeft].join(" ")}
             filename="jazz.jpg"
-            alt="Beats &amp; Steps Jazz Students posing"
+            alt="Beats &amp; Steps Jazz Students"
           />
           <article className={classes.section}>
             <h2>The Jazz Program</h2>
