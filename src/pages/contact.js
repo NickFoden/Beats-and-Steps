@@ -1,8 +1,8 @@
 import React from "react";
 import Layout from "../components/navigation/Layout";
-import classes from "../styles/pageStyles/contact.module.scss";
 import Image from "../components/Image";
 import SEO from "../components/SEO/SEO";
+import classes from "../styles/pages/contact.module.scss";
 
 const Contact = () => {
   return (
@@ -17,7 +17,7 @@ const Contact = () => {
           filename="dancers.jpg"
           alt="Beats and Steps students dancing"
         />
-        <div className={classes.section}>
+        <div className="sectionContainer">
           <h1>Open Enrollment</h1>
           <div className={classes.text}>
             <p>

@@ -1,10 +1,10 @@
 import React from "react";
-import classes from "../../styles/navigation/navbar.module.scss";
 import Logo from "./Logo";
 import PageLinks from "../../constants/pageLinks";
 import Hamburger from "./Hamburger";
 import { Link } from "gatsby";
 import useViewport from "../../hooks/useViewport";
+import classes from "../../styles/layout/navbar.module.scss";
 
 const Navbar = ({ toggleSidebar, isOpen }) => {
   const { width } = useViewport();

@@ -1,0 +1,16 @@
+@use '../base/variables' as *;
+
+.facultyContainer {
+  h1 {
+    margin-top: 1rem;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: $bigDesktop) {
+  .image {
+    width: 60%;
+    height: auto;
+    margin: auto;
+  }
+}

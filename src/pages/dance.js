@@ -1,9 +1,9 @@
 import React from "react";
 import Layout from "../components/navigation/Layout";
-import classes from "../styles/pageStyles/dance.module.scss";
 import Image from "../components/Image";
 import NavLink from "../components/navigation/NavLink";
 import SEO from "../components/SEO/SEO";
+import classes from "../styles/pages/dance.module.scss";
 
 const Dance = () => {
   return (
@@ -14,7 +14,7 @@ const Dance = () => {
       />
       <section className={classes.danceContainer}>
         <div className={[classes.block, classes.reverseBlock].join(" ")}>
-          <article className={[classes.section, classes.block__text].join(" ")}>
+          <article className={["sectionContainer", classes.block__text].join(" ")}>
             <h2>The Ballet Program</h2>
             <p>
               B&amp;S Arts Academy, in partnership with CMM aims to present
@@ -46,7 +46,7 @@ const Dance = () => {
             filename="jazz.jpg"
             alt="Beats &amp; Steps Jazz Students"
           />
-          <article className={classes.section}>
+          <article className={["sectionContainer", classes.block__text].join(" ")}>
             <h2>The Jazz Program</h2>
             <p>
               Our Jazz Program focuses on vocabulary of dance steps, technique
@@ -80,7 +80,7 @@ const Dance = () => {
           </article>
         </div>
         <div className={[classes.block, classes.reverseBlock].join(" ")}>
-          <article className={classes.section}>
+          <article className={["sectionContainer", classes.block__text].join(" ")}>
             <h2>The Hiphop Program</h2>
             <p>
               Hiphop is an energizing form of dance that focuses on

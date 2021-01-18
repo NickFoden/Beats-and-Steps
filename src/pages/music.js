@@ -1,9 +1,9 @@
 import React from "react";
 import Layout from "../components/navigation/Layout";
-import classes from "../styles/pageStyles/music.module.scss";
 import Image from "../components/Image";
 import NavLink from "../components/navigation/NavLink";
 import SEO from "../components/SEO/SEO";
+import classes from "../styles/pages/music.module.scss";
 
 const Music = () => {
   return (
@@ -14,7 +14,7 @@ const Music = () => {
       />
       <section className={classes.musicContainer}>
         <div className={[classes.block, classes.reverseBlock].join(" ")}>
-          <article className={[classes.section, classes.block__text].join(" ")}>
+          <article className={["sectionContainer", classes.block__text].join(" ")}>
             <h2>The Music Program</h2>
             <p>
               B&amp;S Arts Academy, offers individual instruction in voice,
@@ -43,7 +43,7 @@ const Music = () => {
             filename="guitar.jpg"
             alt="Beats &amp; Steps Guitar Student"
           />
-          <article className={classes.section}>
+          <article className={["sectionContainer", classes.block__text].join(" ")}>
             <p>
               B&amp;S is aligned with the instructional standards of the Center
               for Movement &amp; Music (CMM), as its Affiliate Centre.

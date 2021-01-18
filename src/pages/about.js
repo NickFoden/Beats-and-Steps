@@ -1,8 +1,8 @@
 import React from "react";
 import Layout from "../components/navigation/Layout";
 import Image from "../components/Image";
-import classes from "../styles/pageStyles/about.module.scss";
 import SEO from "../components/SEO/SEO";
+import classes from "../styles/pages/about.module.scss";
 
 const About = () => {
   return (
@@ -13,7 +13,7 @@ const About = () => {
       />
       <section className={classes.aboutContainer}>
         <div className={[classes.block, classes.firstBlock].join(" ")}>
-          <article className={[classes.block__text, classes.section].join(" ")}>
+          <article className={["sectionContainer", classes.block__text].join(" ")}>
             <h2>Nurturing Together</h2>
             <p>
               The Beats and Steps Arts Academy (B&amp;S), formerly known as CMM
@@ -57,7 +57,7 @@ const About = () => {
             filename="teaching1.jpg"
             alt="Beats &amp; Steps teacher and student playing piano"
           />
-          <article className={[classes.block__text, classes.section].join(" ")}>
+          <article className={["sectionContainer", classes.block__text].join(" ")}>
             <p>
               B&amp;S abides by CMM’s balanced and progressive program of study
               where the level of technical expertise is within the grasp of

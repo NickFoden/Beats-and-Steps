@@ -1,8 +1,8 @@
 import React from "react";
 import Layout from "../components/navigation/Layout";
-import classes from "../styles/pageStyles/faculty.module.scss";
 import Image from "../components/Image";
 import SEO from "../components/SEO/SEO";
+import classes from "../styles/pages/faculty.module.scss";
 
 const Faculty = () => {
   return (

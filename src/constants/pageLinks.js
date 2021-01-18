@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
-import classes from "../styles/navigation/navbar.module.scss";
-import styles from "../styles/navigation/sidebar.module.scss";
+import classes from "../styles/layout/navbar.module.scss";
+import styles from "../styles/layout/sidebar.module.scss";
 
 const data = [
   {
@@ -47,7 +47,9 @@ export default ({ styleClass, toggleSidebar }) => {
           styleClass === classes.navLinks ? classes.navLink : classes.sideLink
         }
         activeClassName={
-          styleClass === classes.navLinks ? classes.active : styles.active
+          styleClass === classes.navLinks
+            ? classes.active
+            : styles.sidebarActive
         }
       >
         {link.text}

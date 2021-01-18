@@ -1,0 +1,51 @@
+@use '../base/variables' as *;
+
+.musicContainer {
+  background-color: $section2BackgroundColor;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+}
+
+.reverseBlock {
+  flex-direction: column-reverse;
+}
+
+.middleBlock {
+  background-color: $section2BackgroundColor;
+}
+
+@media screen and (min-width: $ipad) {
+  .section {
+    max-width: 45rem;
+  }
+}
+
+@media screen and (min-width: 93.75rem) {
+  .block {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .image {
+    height: fit-content;
+    box-shadow: $darkShadow;
+  }
+
+  .imageRight {
+    margin-top: 2rem;
+    margin-right: 13rem;
+    width: 40rem;
+  }
+
+  .imageLeft {
+    margin: 2rem 0 2rem 13rem;
+    width: 35rem;
+  }
+
+  .block__text {
+    width: 40vw;
+  }
+}

@@ -1,0 +1,101 @@
+@use '../base/variables' as *;
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid $grey;
+  background: $primaryColor;
+  height: 5rem;
+  z-index: 90;
+  align-items: center;
+}
+
+.logoContainer {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@media screen and (min-width: $ipadPro) {
+  .navbar {
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+
+  .logoContainer {
+    left: 3rem;
+    right: initial;
+  }
+
+  .navLinksContainer {
+    display: flex;
+    position: relative;
+    height: 100%;
+    transition: $transition;
+
+    .navLinks {
+      display: inline-flex;
+      align-items: center;
+
+      .active {
+        border-top: 2px solid $accent;
+        border-bottom: 2px solid $accent;
+      }
+
+      .active.navLink {
+        color: $accent;
+      }
+
+      .navLink {
+        align-items: center;
+        transition: $transition;
+        padding: 0 1.5rem;
+        display: flex;
+        height: 100%;
+        text-transform: capitalize;
+        font-weight: $normalFont;
+        font-size: 1rem;
+        letter-spacing: $spacing;
+
+        &:hover {
+          border-top: 2px solid $accent;
+          border-bottom: 2px solid $accent;
+          color: $accent;
+          transition: $transition;
+          background-color: $backgroundHover;
+        }
+
+        &:active {
+          background-color: $backgroundActive;
+        }
+
+        &:focus {
+          background-color: $backgroundFocus;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $bigDesktop) {
+  .navbar {
+    .navLinksContainer {
+      .navLinks {
+        .navLink {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  .navLinks {
+    &:last-child {
+      margin-right: 3rem;
+    }
+  }
+}

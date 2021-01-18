@@ -1,7 +1,7 @@
 import React from "react";
 import PageLinks from "../../constants/pageLinks";
 import SocialLinks from "../../constants/socialLinks";
-import classes from "../../styles/navigation/sidebar.module.scss";
+import classes from "../../styles/layout/sidebar.module.scss";
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
   return (

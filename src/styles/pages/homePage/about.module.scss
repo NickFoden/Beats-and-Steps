@@ -1,0 +1,112 @@
+@use '../../base/variables' as *;
+
+.about {
+  background-color: $section2BackgroundColor;
+  display: flex;
+  flex-direction: column;
+}
+
+.affTitle {
+  text-transform: none;
+  margin: 2rem 0;
+}
+
+.affLinks {
+  margin: 2rem 0;
+}
+
+.affLinks__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.affLinks__logo {
+  transition: $transition;
+  box-shadow: $darkShadow;
+  border-radius: 20%;
+  &:active,
+  &:hover {
+    box-shadow: $blueShadow;
+    transform: scale(1.01, 1.01);
+  }
+}
+
+.affLinks__listItem {
+  padding: 0.5rem;
+  a {
+    display: block;
+    font-weight: $semiBoldFont;
+    margin: auto;
+    width: fit-content;
+  }
+
+  // Accessibility: focus-within selector lets keyboard users tab through logos
+  a:focus-within {
+    .affLinks__logo {
+      box-shadow: $blueShadow;
+      transform: scale(1.01, 1.01);
+    }
+  }
+}
+
+.affLinks__textLink {
+  color: $black;
+  transition: $transition;
+  font-size: 0.7rem;
+
+  &:active,
+  &:hover,
+  &:focus {
+    color: $accent;
+  }
+}
+
+@media screen and (min-width: $ipad) {
+  .affLinks__listItem {
+    a {
+      width: 15rem;
+    }
+  }
+
+  .affLinks__textLink {
+    font-size: 0.825rem;
+  }
+}
+
+@media screen and (min-width: $ipadPro) {
+  .affLinks__list {
+    display: flex;
+  }
+
+  .affLinks__listItem {
+    width: 25%;
+    padding: 0 2rem;
+    a {
+      padding-top: 0.5rem;
+      width: fit-content;
+    }
+  }
+}
+
+@media screen and (min-width: $bigDesktop) {
+  .about {
+    flex-direction: row;
+  }
+  
+  .aboutTextContainer {
+    width: 50vw;
+    margin-top: 5rem;
+  }
+
+  .affTitle {
+    margin-top: 3rem;
+  }
+
+  .affLinks__list {
+    margin: 3rem 0;
+  }
+
+  .image {
+    width: 50vw;
+  }
+}

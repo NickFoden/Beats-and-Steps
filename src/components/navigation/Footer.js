@@ -1,7 +1,7 @@
 import React from "react";
-import classes from "../../styles/navigation/footer.module.scss";
 import SocialLinks from "../../constants/socialLinks";
 import { Link } from "gatsby";
+import classes from "../../styles/layout/footer.module.scss";
 
 const Footer = () => {
   return (
@@ -13,7 +13,9 @@ const Footer = () => {
             <hr />
             <ul className={classes.contactDetailsInfo}>
               <li>
-                <a id={classes.number} href="tel:0917-5747131">0917-574-7131</a>
+                <a className={classes.number} href="tel:0917-5747131">
+                  0917-574-7131
+                </a>
               </li>
               <li>
                 <a
@@ -37,7 +39,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="socialMedia">
+          <div className={classes.socialMedia}>
             <h4>Follow us</h4>
             <hr />
             <SocialLinks styleClass={classes.footerLinks} />
