@@ -12,7 +12,7 @@ const getImages = graphql`
           caption
           localFile {
             childImageSharp {
-              fluid(quality: 90, webpQuality: 90) {
+              fluid(maxWidth: 300, maxHeight: 300, quality: 90, webpQuality: 90) {
                 ...GatsbyImageSharpFluid_withWebp_tracedSVG
               }
             }
