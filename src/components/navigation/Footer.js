@@ -1,4 +1,5 @@
 import React from "react";
+
 import SocialLinks from "../../constants/socialLinks";
 import { Link } from "gatsby";
 import classes from "../../styles/layout/footer.module.scss";

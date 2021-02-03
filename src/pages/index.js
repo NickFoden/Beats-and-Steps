@@ -1,4 +1,5 @@
 import React from "react";
+
 import Layout from "../components/navigation/Layout";
 import Hero from "../components/homePage/Hero";
 import Welcome from "../components/homePage/Welcome";

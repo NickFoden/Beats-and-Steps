@@ -1,4 +1,5 @@
 import React from "react";
+
 import { viewportContext } from "../hoc/ViewportProvider";
 
 const useViewport = () => {

@@ -22,7 +22,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `assets`,
-        path: `${__dirname}/src/assets`,
+        path: `${__dirname}/src/assets/images/`,
       },
     },
     {
@@ -49,7 +49,7 @@ module.exports = {
         background_color: `#e8f1f5`,
         theme_color: `#fafafa`,
         display: `minimal-ui`,
-        icon: `src/assets/logo/dummy-logo-only.png`, // This path is relative to the root of the site.
+        icon: `src/assets/images/Logos/dummy-logo-only.png`, // This path is relative to the root of the site.
       },
     },
     {

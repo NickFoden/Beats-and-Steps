@@ -5,6 +5,7 @@ import {
   FaYoutube,
   FaEnvelope,
 } from "react-icons/fa";
+
 import classes from "../styles/components/socialLinks.module.scss";
 
 const data = [

@@ -1,11 +1,41 @@
 import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
+import Img from "gatsby-image";
+
 import Layout from "../components/navigation/Layout";
-import Image from "../components/Image";
 import NavLink from "../components/navigation/NavLink";
 import SEO from "../components/SEO/SEO";
 import classes from "../styles/pages/dance.module.scss";
 
+export const getImages = graphql`
+  {
+    swans: file(relativePath: { eq: "Dance Page/swans.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+      }
+    }
+    jazz: file(relativePath: { eq: "Dance Page/jazz.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+      }
+    }
+    hiphop: file(relativePath: { eq: "Dance Page/hiphop.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+      }
+    }
+  }
+`;
+
 const Dance = () => {
+  const data = useStaticQuery(getImages);
+
   return (
     <Layout>
       <SEO
@@ -14,10 +44,12 @@ const Dance = () => {
       />
       <section className={classes.danceContainer}>
         <div className={[classes.block, classes.reverseBlock].join(" ")}>
-          <article className={["sectionContainer", classes.block__text].join(" ")}>
+          <article
+            className={["sectionContainer", classes.block__text].join(" ")}
+          >
             <h2>The Ballet Program</h2>
             <p>
-              B&amp;S Arts Academy, in partnership with CMM aims to present
+              Beats &amp; Steps Arts Academy, in partnership with CMM aims to present
               excellence in dance training by teaching a sound classical
               foundation in an atmosphere that is both fun and challenging.
             </p>
@@ -34,19 +66,21 @@ const Dance = () => {
             </p>
             <NavLink link="/contact">Enroll</NavLink>
           </article>
-          <Image
+          <Img
             className={[classes.image, classes.imageRight].join(" ")}
-            filename="swans.jpg"
+            fluid={data.swans.childImageSharp.fluid}
             alt="Beats &amp; Steps Ballet students in swan lake costumes"
           />
         </div>
         <div className={[classes.block, classes.middleBlock].join(" ")}>
-          <Image
+          <Img
             className={[classes.image, classes.imageLeft].join(" ")}
-            filename="jazz.jpg"
+            fluid={data.jazz.childImageSharp.fluid}
             alt="Beats &amp; Steps Jazz Students"
           />
-          <article className={["sectionContainer", classes.block__text].join(" ")}>
+          <article
+            className={["sectionContainer", classes.block__text].join(" ")}
+          >
             <h2>The Jazz Program</h2>
             <p>
               Our Jazz Program focuses on vocabulary of dance steps, technique
@@ -80,7 +114,9 @@ const Dance = () => {
           </article>
         </div>
         <div className={[classes.block, classes.reverseBlock].join(" ")}>
-          <article className={["sectionContainer", classes.block__text].join(" ")}>
+          <article
+            className={["sectionContainer", classes.block__text].join(" ")}
+          >
             <h2>The Hiphop Program</h2>
             <p>
               Hiphop is an energizing form of dance that focuses on
@@ -100,9 +136,9 @@ const Dance = () => {
             </p>
             <NavLink link="/contact">Enroll</NavLink>
           </article>
-          <Image
+          <Img
             className={[classes.image, classes.imageRight].join(" ")}
-            filename="hiphop.jpg"
+            fluid={data.hiphop.childImageSharp.fluid}
             alt="Beats &amp; Steps Hiphop Students posing"
           />
         </div>

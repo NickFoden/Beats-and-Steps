@@ -1,4 +1,5 @@
 import React from "react";
+
 import NavLink from "../navigation/NavLink";
 import classes from "../../styles/pages/homePage/welcome.module.scss";
 

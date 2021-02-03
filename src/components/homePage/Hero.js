@@ -1,4 +1,5 @@
 import React from "react";
+
 import Video from "./Video";
 import classes from "../../styles/pages/homePage/hero.module.scss";
 

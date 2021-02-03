@@ -1,4 +1,5 @@
 import React from "react";
+
 import classes from "../../styles/layout/hamburger/hamburger.module.scss";
 
 const Hamburger = ({ toggleSidebar, isOpen }) => {

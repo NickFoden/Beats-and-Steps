@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
+
 import classes from "../styles/layout/navbar.module.scss";
 import styles from "../styles/layout/sidebar.module.scss";
 

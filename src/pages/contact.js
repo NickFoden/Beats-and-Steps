@@ -1,10 +1,26 @@
 import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
+import Img from "gatsby-image";
+
 import Layout from "../components/navigation/Layout";
-import Image from "../components/Image";
 import SEO from "../components/SEO/SEO";
 import classes from "../styles/pages/contact.module.scss";
 
+const getImages = graphql`
+  {
+    contact: file(relativePath: { eq: "Contact Page/dancers.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+      }
+    }
+  }
+`;
+
 const Contact = () => {
+  const data = useStaticQuery(getImages);
+
   return (
     <Layout>
       <SEO
@@ -12,16 +28,16 @@ const Contact = () => {
         description="Contact page for Beats &amp; Steps Arts Academy"
       />
       <section className={classes.contactContainer}>
-        <Image
+        <Img
           className={classes.image}
-          filename="dancers.jpg"
+          fluid={data.contact.childImageSharp.fluid}
           alt="Beats and Steps students dancing"
         />
         <div className="sectionContainer">
           <h1>Open Enrollment</h1>
           <div className={classes.text}>
             <p>
-              We are now registering for the next school year! For inquiries,
+              Enrollment is all year round! For inquiries,
               please call:
             </p>
             <a className={classes.contactLink} href="tel:0917-5747131">

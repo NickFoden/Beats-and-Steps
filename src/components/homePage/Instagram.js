@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import Image from "gatsby-image";
+
 import classes from "../../styles/pages/homePage/instagram.module.scss";
 
 const getImages = graphql`
@@ -12,7 +13,7 @@ const getImages = graphql`
           caption
           localFile {
             childImageSharp {
-              fluid(maxWidth: 300, maxHeight: 300, quality: 90, webpQuality: 90) {
+              fluid(maxWidth: 300, maxHeight: 300) {
                 ...GatsbyImageSharpFluid_withWebp_tracedSVG
               }
             }
