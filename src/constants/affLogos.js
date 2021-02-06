@@ -27,13 +27,6 @@ export const getImages = graphql`
         }
       }
     }
-    pbt: file(relativePath: { eq: "Logos/PBT.png" }) {
-      childImageSharp {
-        fixed(width: 70, height: 70) {
-          ...GatsbyImageSharpFixed_withWebp_tracedSVG
-        }
-      }
-    }
   }
 `;
 
@@ -86,19 +79,6 @@ const About = () => {
             href="http://www.acbaustralia.com.au/"
           >
             Australian Conservatoire of Ballet
-          </a>
-        </li>
-        <li className={classes.affLinks__listItem}>
-          <a href="https://www.pbt.ph/">
-            <Img
-              fixed={data.pbt.childImageSharp.fixed}
-              alt="logo of the Philippine Ballet Theatre"
-              className={classes.affLinks__logo}
-              style={{ background: "white" }}
-            />
-          </a>
-          <a className={classes.affLinks__textLink} href="https://www.pbt.ph/">
-            Philippine Ballet Theatre
           </a>
         </li>
       </ul>

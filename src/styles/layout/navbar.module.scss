@@ -10,12 +10,13 @@
   border-bottom: 1px solid $grey;
   background: $primaryColor;
   height: 5rem;
-  z-index: 90;
+  z-index: 2;
   align-items: center;
 }
 
 .logoContainer {
-  height: 100%;
+  height: 6rem;
+  width: 10.68rem;
   position: absolute;
   top: 0;
   right: 0;
@@ -83,6 +84,11 @@
 }
 
 @media screen and (min-width: $bigDesktop) {
+  .logoContainer {
+    height: 7.5rem;
+    width: 13.375rem;
+  }
+
   .navbar {
     .navLinksContainer {
       .navLinks {

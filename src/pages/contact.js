@@ -8,9 +8,11 @@ import classes from "../styles/pages/contact.module.scss";
 
 const getImages = graphql`
   {
-    contact: file(relativePath: { eq: "Contact Page/dancers.jpg" }) {
+    contact: file(
+      relativePath: { eq: "Contact Page/dancers.jpg" }
+    ) {
       childImageSharp {
-        fluid(maxWidth: 1000) {
+        fluid(maxWidth: 1000, quality: 85, webpQuality: 85) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
@@ -36,10 +38,7 @@ const Contact = () => {
         <div className="sectionContainer">
           <h1>Open Enrollment</h1>
           <div className={classes.text}>
-            <p>
-              Enrollment is all year round! For inquiries,
-              please call:
-            </p>
+            <p>Enrollment is all year round! For inquiries, please call:</p>
             <a className={classes.contactLink} href="tel:0917-5747131">
               0917-574-7131
             </a>

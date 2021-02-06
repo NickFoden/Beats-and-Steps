@@ -76,7 +76,7 @@ const About = () => {
             fluid={data.teachingDance.childImageSharp.fluid}
           />
         </div>
-        <div className={classes.block}>
+        <div className={[classes.block, classes.middleBlock].join(" ")}>
           <Img
             className={[classes.image, classes.image2].join(" ")}
             alt="Beats &amp; Steps teacher and student playing piano"

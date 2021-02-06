@@ -23,7 +23,11 @@
   }
 }
 
-@media screen and (min-width: 93.75rem) {
+@media screen and (min-width: 65rem) {
+  .lastP {
+    margin-bottom: 3.5rem;
+  }
+
   .block {
     flex-direction: row;
     align-items: center;
@@ -32,18 +36,32 @@
   .image {
     height: fit-content;
     box-shadow: $darkShadow;
-    width: 40.625rem;
+    margin-bottom: 2rem;
+    max-height: 686px;
+    max-width: 888px
   }
 
   .imageRight {
-    margin-right: 13rem;
+    margin-top: 2rem;
+    margin-right: 2rem;
+    width: 100%;
   }
 
   .imageLeft {
-    margin-left: 13rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    width: 100%;
   }
 
   .block__text {
-    width: 40vw;
+    width: 100vw;
+  }
+}
+
+@media screen and (min-width: 93.75rem) {
+  .danceContainer {
+    article {
+      padding: 2rem 5rem;
+    }
   }
 }

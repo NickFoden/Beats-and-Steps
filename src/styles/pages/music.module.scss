@@ -1,7 +1,7 @@
 @use '../base/variables' as *;
 
 .musicContainer {
-  background-color: $section2BackgroundColor;
+  background-color: $backgroundColor;
 }
 
 .block {
@@ -23,7 +23,11 @@
   }
 }
 
-@media screen and (min-width: 93.75rem) {
+@media screen and (min-width: 65rem) {
+  .lastP {
+    margin-bottom: 3.5rem;
+  }
+
   .block {
     flex-direction: row;
     align-items: center;
@@ -32,20 +36,32 @@
   .image {
     height: fit-content;
     box-shadow: $darkShadow;
+    margin-bottom: 2rem;
+    max-height: 686px;
+    max-width: 888px
   }
 
   .imageRight {
     margin-top: 2rem;
-    margin-right: 13rem;
-    width: 40rem;
+    margin-right: 2rem;
+    width: 100%;
   }
 
   .imageLeft {
-    margin: 2rem 0 2rem 13rem;
-    width: 35rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    width: 75%;
   }
 
   .block__text {
-    width: 40vw;
+    width: 100vw;
+  }
+}
+
+@media screen and (min-width: 93.75rem) {
+  .musicContainer {
+    article {
+      padding: 0rem 5rem;
+    }
   }
 }

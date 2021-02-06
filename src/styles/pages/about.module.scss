@@ -1,7 +1,7 @@
 @use '../base/variables' as *;
 
 .aboutContainer {
-  background-color: $section2BackgroundColor;
+  background-color: $backgroundColor;
 }
 
 .block {
@@ -13,13 +13,17 @@
   flex-direction: column-reverse;
 }
 
+.middleBlock {
+  background-color: $section2BackgroundColor;
+}
+
 @media screen and (min-width: $ipad) {
   .section {
     max-width: 45rem;
   }
 }
 
-@media screen and (min-width: 93.75rem) {
+@media screen and (min-width: 65rem) {
   .block {
     flex-direction: row;
     align-items: center;
@@ -28,19 +32,32 @@
   .image {
     height: fit-content;
     box-shadow: $darkShadow;
+    margin-bottom: 2rem;
+    max-height: 686px;
+    max-width: 888px
   }
 
   .image1 {
-    margin-right: 13rem;
-    width: 37.5rem;
+    margin-top: 2rem;
+    margin-right: 2rem;
+    width: 100%;
   }
 
   .image2 {
-    width: 43.75rem;
-    margin-left: 12rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    width: 100%;
   }
 
   .block__text {
-    width: 40vw;
+    width: 100vw;
+  }
+}
+
+@media screen and (min-width: 93.75rem) {
+  .aboutContainer {
+    article {
+      padding: 2rem 5rem;
+    }
   }
 }

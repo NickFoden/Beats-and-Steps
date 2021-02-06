@@ -1,12 +1,17 @@
 @use '../base/variables' as *;
 
 .affLinks {
-  margin: 2rem 0;
+  margin-bottom: 2rem;
 }
 
 .affLinks__list {
   display: grid;
   grid-template-columns: 1fr 1fr;
+
+  :first-child {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
 }
 
 .affLinks__logo {
@@ -50,23 +55,14 @@
   }
 }
 
-@media screen and (min-width: $ipad) {
-  .affLinks__listItem {
-    a {
-      width: 15rem;
-    }
-  }
-
-  .affLinks__textLink {
-    font-size: 0.825rem;
+@media screen and (min-width: $smallTablet) {
+  .affLinks__list {
+    display: flex;
+    justify-content: center;
   }
 }
 
 @media screen and (min-width: $ipadPro) {
-  .affLinks__list {
-    display: flex;
-  }
-
   .affLinks__listItem {
     width: 25%;
     padding: 0 2rem;

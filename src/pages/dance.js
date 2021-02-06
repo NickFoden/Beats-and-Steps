@@ -49,8 +49,8 @@ const Dance = () => {
           >
             <h2>The Ballet Program</h2>
             <p>
-              Beats &amp; Steps Arts Academy, in partnership with CMM aims to present
-              excellence in dance training by teaching a sound classical
+              Beats &amp; Steps Arts Academy, in partnership with CMM aims to
+              present excellence in dance training by teaching a sound classical
               foundation in an atmosphere that is both fun and challenging.
             </p>
             <p>
@@ -59,12 +59,12 @@ const Dance = () => {
               placement, dynamics and performing quality which are all qualities
               inherent in Russia’s Vaganova method of teaching ballet.
             </p>
-            <p>
+            <p className={classes.lastP}>
               The program aims to develop in the student a professional attitude
               which will assist them in the pursuit of a career, either as a
               professional dancer or dance teacher.
             </p>
-            <NavLink link="/contact">Enroll</NavLink>
+            <NavLink link="/contact/">Enroll</NavLink>
           </article>
           <Img
             className={[classes.image, classes.imageRight].join(" ")}
@@ -104,13 +104,13 @@ const Dance = () => {
               seen in choreography used in today’s popular music videos and
               commercials.
             </p>
-            <p>
+            <p className={classes.lastP}>
               The Luigi jazz method, which is the foundation of much of Broadway
               dancing, is also part of our jazz curriculum, along with the
               structured curriculum of Dance Arts International, which has been
               used for teaching jazz in the United States since the 1930s.
             </p>
-            <NavLink link="/contact">Enroll</NavLink>
+            <NavLink link="/contact/">Enroll</NavLink>
           </article>
         </div>
         <div className={[classes.block, classes.reverseBlock].join(" ")}>
@@ -129,12 +129,12 @@ const Dance = () => {
               moves and lay proper dance foundation. For teens the fundamentals
               of hiphop: breaking, locking and popping are learned.
             </p>
-            <p>
+            <p className={classes.lastP}>
               Basic b-boying, often called “breakdancing”, is a popular style of
               hiphop also included in the program. The dance consists of four
               primary elements: toprock, downrock, power moves and freezes.
             </p>
-            <NavLink link="/contact">Enroll</NavLink>
+            <NavLink link="/contact/">Enroll</NavLink>
           </article>
           <Img
             className={[classes.image, classes.imageRight].join(" ")}

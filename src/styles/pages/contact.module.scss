@@ -44,14 +44,21 @@
 @media screen and (min-width: $bigDesktop) {
   .contactContainer {
     flex-direction: row;
+    align-items: center;
   }
 
   .image {
-    width: 50vw;
-    max-height: inherit;
+    height: fit-content;
+    box-shadow: $darkShadow;
+    margin-bottom: 2rem;
+    max-height: 42.875rem;
+    max-width: 55.5rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    width: 100%;
   }
 
   .text {
-    width: 50vw;
+    width: 45vw;
   }
 }

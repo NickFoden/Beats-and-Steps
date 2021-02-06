@@ -50,11 +50,11 @@ const Music = () => {
               All ages are admitted, subject to course specific entry-level
               requirements.
             </p>
-            <p>
+            <p className={classes.lastP}>
               We give special emphasis to detailed technique, ear training,
               sight-reading, and repertoire-building.
             </p>
-            <NavLink link="/contact">Enroll</NavLink>
+            <NavLink link="/contact/">Enroll</NavLink>
           </article>
           <Img
             className={[classes.image, classes.imageRight].join(" ")}
@@ -64,6 +64,7 @@ const Music = () => {
         </div>
         <div className={[classes.block, classes.middleBlock].join(" ")}>
           <Img
+            imgStyle={{ objectPosition: "top" }}
             className={[classes.image, classes.imageLeft].join(" ")}
             fluid={data.guitar.childImageSharp.fluid}
             alt="Beats &amp; Steps Guitar Student"
@@ -82,12 +83,12 @@ const Music = () => {
               of musical achievement, under the auspices of CMM.
             </p>
             <p>We are a designated ABRSM exam center in the country.</p>
-            <p>
+            <p className={classes.lastP}>
               We provide performance opportunities through regular
               lesson-workshops in music performance and annual recitals/public
               performances.
             </p>
-            <NavLink link="/contact">Enroll</NavLink>
+            <NavLink link="/contact/">Enroll</NavLink>
           </article>
         </div>
       </section>

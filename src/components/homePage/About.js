@@ -10,7 +10,7 @@ const getImages = graphql`
   {
     about: file(relativePath: { eq: "Index Page/about.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1000) {
+        fluid(maxWidth: 1000, quality: 85, webpQuality: 85) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
@@ -24,20 +24,25 @@ const About = () => {
   return (
     <section className={classes.about}>
       <Img
+        imgStyle={{ objectFit: "fill" }}
         className={classes.image}
         alt="Beats and Steps Satellite Blossoming Ballet students posing as fairies"
         fluid={data.about.childImageSharp.fluid}
       />
       <div className={`sectionContainer ${classes.aboutTextContainer}`}>
         <p>
-          <strong>Beats &amp; Steps </strong> is a Quezon City based
-          performing arts center working in consonance with CMM’s instructional
-          goals, honing its students to the highest standards of quality
-          training CMM is known for.
+          <strong>Beats &amp; Steps </strong> is a Quezon City based performing
+          arts center working in consonance with CMM’s instructional goals,
+          honing its students to the highest standards of quality training CMM
+          is known for.
         </p>
-        <h2 className={classes.affTitle}>Beats &amp; Steps is a proud affiliate of:</h2>
+        <h2 className={classes.affTitle}>
+          Beats &amp; Steps is a proud affiliate of:
+        </h2>
         <AffLogos />
-        <NavLink link="/about">Find out more</NavLink>
+        <NavLink link="/about/">
+          Find out more
+        </NavLink>
       </div>
     </section>
   );

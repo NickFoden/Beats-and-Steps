@@ -5,12 +5,18 @@
     margin-top: 1rem;
     text-align: center;
   }
+  
+  .image {
+    margin-bottom: 2rem;
+  }
 }
+
 
 @media screen and (min-width: $bigDesktop) {
   .image {
     width: 60%;
     height: auto;
     margin: auto;
+    box-shadow: $darkShadow;
   }
 }

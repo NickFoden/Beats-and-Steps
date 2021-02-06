@@ -1,15 +1,32 @@
 import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
+import Img from "gatsby-image";
 
-import logo from "../../assets/images/Logos/dummy-logo-white.png";
 import classes from "../../styles/components/logo.module.scss";
 
-const Logo = props => (
-  <div
-    className={classes.logo}
-    style={{ height: props.height, marginBottom: props.marginBottom }}
-  >
-    <img src={logo} alt="Beats and Steps Arts Academy Logo" />
-  </div>
-);
+const getImages = graphql`
+  {
+    logo: file(relativePath: { eq: "Logos/dummy-logo-white.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 100, quality: 85, webpQuality: 85) {
+          ...GatsbyImageSharpFluid_noBase64
+        }
+      }
+    }
+  }
+`;
+
+const Logo = () => {
+  const data = useStaticQuery(getImages);
+
+  return (
+    <div className={classes.logo}>
+      <Img
+        fluid={data.logo.childImageSharp.fluid}
+        alt="Beats and Steps Arts Academy Logo"
+      />
+    </div>
+  );
+};
 
 export default Logo;
