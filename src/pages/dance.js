@@ -49,13 +49,13 @@ const Dance = () => {
           >
             <h2>The Ballet Program</h2>
             <p>
-              Beats &amp; Steps Arts Academy, in partnership with CMM aims to
-              present excellence in dance training by teaching a sound classical
+              Beats &amp; Steps, in partnership with CMM aims to present
+              excellence in dance training by teaching a sound classical
               foundation in an atmosphere that is both fun and challenging.
             </p>
             <p>
-              Our core ballet program is based on the Australian Ballet
-              Conservatoire (BC) Syllabus. The BC program emphasizes correct
+              Our core ballet program is the Australian-based Ballet
+              Conservatoire Syllabus. The BC program emphasizes correct
               placement, dynamics and performing quality which are all qualities
               inherent in Russia’s Vaganova method of teaching ballet.
             </p>

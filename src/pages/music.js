@@ -42,7 +42,7 @@ const Music = () => {
           >
             <h2>The Music Program</h2>
             <p>
-              Beats &amp; Steps Arts Academy, offers individual instruction in
+              Beats &amp; Steps offers individual instruction in
               voice, piano, guitar, violin, and music theory following four
               cycles: first semester, second semester, summer, and midyear.
             </p>

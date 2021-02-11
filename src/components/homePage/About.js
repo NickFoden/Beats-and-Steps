@@ -31,18 +31,14 @@ const About = () => {
       />
       <div className={`sectionContainer ${classes.aboutTextContainer}`}>
         <p>
-          <strong>Beats &amp; Steps </strong> is a Quezon City based performing
-          arts center working in consonance with CMM’s instructional goals,
-          honing its students to the highest standards of quality training CMM
-          is known for.
+          <strong>Beats &amp; Steps </strong> is a CMM affiliate center that
+          envisions developing children’s full potential in the arts.
         </p>
         <h2 className={classes.affTitle}>
           Beats &amp; Steps is a proud affiliate of:
         </h2>
         <AffLogos />
-        <NavLink link="/about/">
-          Find out more
-        </NavLink>
+        <NavLink link="/about/">Find out more</NavLink>
       </div>
     </section>
   );

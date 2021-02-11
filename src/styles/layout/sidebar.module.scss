@@ -1,7 +1,7 @@
 @use '../base/variables' as *;
 
 .sidebar {
-  background: $secondaryColor;
+  background: $sidebarColor;
   position: fixed;
   top: 5rem;
   left: 0;
@@ -30,7 +30,7 @@
   .sidebarActive {
     border-top: 2px solid $accent;
     border-bottom: 2px solid $accent;
-    color: $active;
+    color: $accent;
   }
 
   a {
@@ -49,7 +49,7 @@
     &:hover {
       border-top: 2px solid $accent;
       border-bottom: 2px solid $accent;
-      color: $active;
+      color: $accent;
       background-color: $backgroundHover;
     }
 

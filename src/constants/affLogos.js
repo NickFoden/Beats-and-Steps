@@ -70,7 +70,7 @@ const About = () => {
           <a href="http://www.acbaustralia.com.au/">
             <Img
               fixed={data.acb.childImageSharp.fixed}
-              alt="logo of The Australian Conservatoire of Ballet"
+              alt="logo of Australian based Ballet Conservatoire"
               className={classes.affLinks__logo}
             />
           </a>
@@ -78,7 +78,7 @@ const About = () => {
             className={classes.affLinks__textLink}
             href="http://www.acbaustralia.com.au/"
           >
-            Australian Conservatoire of Ballet
+            Australian-based Ballet Conservatoire
           </a>
         </li>
       </ul>
