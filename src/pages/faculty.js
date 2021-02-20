@@ -25,7 +25,7 @@ const Faculty = () => {
           </ul>
           <h2>Meet our Music Instructors</h2>
           <ul
-            className={classes.listContainer}
+            className={[classes.listContainer, classes.musicContainer].join(" ")}
             aria-label="Meet our Music Instructors"
           >
             <MusicTeachers />
