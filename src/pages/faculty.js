@@ -1,26 +1,12 @@
 import React from "react";
-import { graphql, useStaticQuery } from "gatsby";
-import Img from "gatsby-image";
 
+import DanceTeachers from "../components/facultyPage/danceTeachers";
+import MusicTeachers from "../components/facultyPage/musicTeachers";
 import Layout from "../components/navigation/Layout";
 import SEO from "../components/SEO/SEO";
 import classes from "../styles/pages/faculty.module.scss";
 
-const getImages = graphql`
-  {
-    faculty: file(relativePath: { eq: "Faculty Page/staff.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
-        }
-      }
-    }
-  }
-`;
-
 const Faculty = () => {
-  const data = useStaticQuery(getImages);
-
   return (
     <Layout>
       <SEO
@@ -28,12 +14,23 @@ const Faculty = () => {
         description="Faculty page for Beats &amp; Steps Arts Academy"
       />
       <section className={classes.facultyContainer}>
-        <h1>Coming Soon!</h1>
-        <Img
-          className={classes.image}
-          fluid={data.faculty.childImageSharp.fluid}
-          alt="Beats &amp; Steps Staff"
-        />
+        <h1>The Artistic Team</h1>
+        <div className={classes.danceFaculty}>
+          <h2>Meet our Dance Instructors</h2>
+          <ul
+            className={classes.listContainer}
+            aria-label="Meet our Dance Instructors"
+          >
+            <DanceTeachers />
+          </ul>
+          <h2>Meet our Music Instructors</h2>
+          <ul
+            className={classes.listContainer}
+            aria-label="Meet our Music Instructors"
+          >
+            <MusicTeachers />
+          </ul>
+        </div>
       </section>
     </Layout>
   );

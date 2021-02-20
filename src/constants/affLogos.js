@@ -7,23 +7,23 @@ import classes from "../styles/components/affLogos.module.scss";
 export const getImages = graphql`
   {
     cmm: file(relativePath: { eq: "Logos/CMM.jpg" }) {
-      childImageSharp {
-        fixed(width: 70, height: 70) {
-          ...GatsbyImageSharpFixed_withWebp_tracedSVG
+      childCloudinaryAsset {
+        fixed(transformations: ["f_auto", "q_auto"], width: 70, height: 70) {
+          ...CloudinaryAssetFixed
         }
       }
     }
     abrsm: file(relativePath: { eq: "Logos/ABRSM.jpg" }) {
-      childImageSharp {
-        fixed(width: 70, height: 70) {
-          ...GatsbyImageSharpFixed_withWebp_tracedSVG
+      childCloudinaryAsset {
+        fixed(transformations: ["f_auto", "q_auto"], width: 70, height: 70) {
+          ...CloudinaryAssetFixed
         }
       }
     }
     acb: file(relativePath: { eq: "Logos/ACB.jpg" }) {
-      childImageSharp {
-        fixed(width: 70, height: 70) {
-          ...GatsbyImageSharpFixed_withWebp_tracedSVG
+      childCloudinaryAsset {
+        fixed(transformations: ["f_auto", "q_auto"], width: 70, height: 70) {
+          ...CloudinaryAssetFixed
         }
       }
     }
@@ -39,7 +39,7 @@ const About = () => {
         <li className={classes.affLinks__listItem}>
           <a href="https://www.facebook.com/cmm.1998ph/">
             <Img
-              fixed={data.cmm.childImageSharp.fixed}
+              fixed={data.cmm.childCloudinaryAsset.fixed}
               alt="logo of The Center of Movement and Music"
               className={classes.affLinks__logo}
             />
@@ -54,7 +54,7 @@ const About = () => {
         <li className={classes.affLinks__listItem}>
           <a href="https://www.abrsm.org/">
             <Img
-              fixed={data.abrsm.childImageSharp.fixed}
+              fixed={data.abrsm.childCloudinaryAsset.fixed}
               alt="logo of The Associated Board of the Royal Schools of Music"
               className={classes.affLinks__logo}
             />
@@ -69,7 +69,7 @@ const About = () => {
         <li className={classes.affLinks__listItem}>
           <a href="http://www.acbaustralia.com.au/">
             <Img
-              fixed={data.acb.childImageSharp.fixed}
+              fixed={data.acb.childCloudinaryAsset.fixed}
               alt="logo of Australian based Ballet Conservatoire"
               className={classes.affLinks__logo}
             />

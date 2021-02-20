@@ -9,16 +9,16 @@ import classes from "../styles/pages/about.module.scss";
 export const getImages = graphql`
   {
     teachingDance: file(relativePath: { eq: "About Page/teaching-dance.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+      childCloudinaryAsset {
+        fluid(transformations: ["f_auto", "q_auto"], maxWidth: 1000) {
+          ...CloudinaryAssetFluid
         }
       }
     }
     teachingMusic: file(relativePath: { eq: "About Page/teaching-music.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+      childCloudinaryAsset {
+        fluid(transformations: ["f_auto", "q_auto"], maxWidth: 1000) {
+          ...CloudinaryAssetFluid
         }
       }
     }
@@ -41,22 +41,22 @@ const About = () => {
           >
             <h2>Nurturing Together</h2>
             <p>
-              The Beats and Steps Arts Academy, formerly known as CMM
-              White Plains, started operations in 2013 as an Affiliate of the
-              Center for Movement and Music (CMM).
+              The Beats and Steps Arts Academy, formerly known as CMM White
+              Plains, started operations in 2013 as an Affiliate of the Center
+              for Movement and Music (CMM).
             </p>
             <p>
               Working towards CMM’s vision of developing children’s full
-              potential in the arts, Beats &amp; Steps operates this performing arts
-              center in consonance with CMM’s instructional goals, honing its
-              students to the highest standards of quality training CMM is known
-              for.
+              potential in the arts, Beats &amp; Steps operates this performing
+              arts center in consonance with CMM’s instructional goals, honing
+              its students to the highest standards of quality training CMM is
+              known for.
             </p>
             <p>
-              Beats &amp; Steps follows CMM's progressive course offerings in voice,
-              piano, guitar, violin, music theory, classical and modern ballet,
-              jazz, hiphop, as well as short-term special courses in art, yoga,
-              b-boying, Zumba and Taekwondo.
+              Beats &amp; Steps follows CMM's progressive course offerings in
+              voice, piano, guitar, violin, music theory, classical and modern
+              ballet, jazz, hiphop, as well as short-term special courses in
+              art, yoga, b-boying, Zumba and Taekwondo.
             </p>
             <p>
               Our Music Department is an affiliate of the London-based Royal
@@ -73,22 +73,22 @@ const About = () => {
           <Img
             className={[classes.image, classes.image1].join(" ")}
             alt="Beats &amp; Steps teacher and student dancing"
-            fluid={data.teachingDance.childImageSharp.fluid}
+            fluid={data.teachingDance.childCloudinaryAsset.fluid}
           />
         </div>
         <div className={[classes.block, classes.middleBlock].join(" ")}>
           <Img
             className={[classes.image, classes.image2].join(" ")}
             alt="Beats &amp; Steps teacher and student playing piano"
-            fluid={data.teachingMusic.childImageSharp.fluid}
+            fluid={data.teachingMusic.childCloudinaryAsset.fluid}
           />
           <article
             className={["sectionContainer", classes.block__text].join(" ")}
           >
             <p>
-              Beats &amp; Steps abides by CMM’s balanced and progressive program of study
-              where the level of technical expertise is within the grasp of
-              students of all ages.
+              Beats &amp; Steps abides by CMM’s balanced and progressive program
+              of study where the level of technical expertise is within the
+              grasp of students of all ages.
             </p>
             <p>
               Through a comprehensive curriculum of classical studies, the
@@ -107,9 +107,9 @@ const About = () => {
               audiences.
             </p>
             <p>
-              Together, CMM and Beats &amp; Steps are committed to providing a nurturing
-              environment where students of all ages and levels may achieve
-              their artistic best.
+              Together, CMM and Beats &amp; Steps are committed to providing a
+              nurturing environment where students of all ages and levels may
+              achieve their artistic best.
             </p>
           </article>
         </div>

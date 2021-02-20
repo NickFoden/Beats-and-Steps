@@ -13,7 +13,12 @@ const getImages = graphql`
           caption
           localFile {
             childImageSharp {
-              fluid(maxWidth: 300, maxHeight: 300, quality: 85, webpQuality: 85) {
+              fluid(
+                maxWidth: 300
+                maxHeight: 300
+                quality: 85
+                webpQuality: 85
+              ) {
                 ...GatsbyImageSharpFluid_withWebp_tracedSVG
               }
             }
@@ -68,3 +73,34 @@ const Instagram = () => {
 };
 
 export default Instagram;
+
+// {
+//   allFile(filter: {relativeDirectory: {regex: "/gatsby-source-instagram/"}}) {
+//     nodes {
+//       id
+//       childrenCloudinaryAsset {
+//         fluid(transformations: ["f_auto", "q_auto"], maxWidth: 300, maxHeight: 300) {
+//           ...CloudinaryAssetFluid
+//         }
+//       }
+//     }
+//   }
+// }
+// {
+//   allFile(
+//     filter: { relativeDirectory: { regex: "/gatsby-source-instagram/" } }
+//   ) {
+//     nodes {
+//       childrenCloudinaryAsset {
+//         fluid(
+//           transformations: ["f_auto", "q_auto"]
+//           maxWidth: 300
+//           maxHeight: 300
+//         ) {
+//           ...CloudinaryAssetFluid
+//         }
+//       }
+//       id
+//     }
+//   }
+// }

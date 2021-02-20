@@ -10,7 +10,7 @@ const Footer = () => {
       <div className={classes.container}>
         <address>
           <div className={classes.contactDetailsContainer}>
-            <h4>contact beats &amp; steps arts academy</h4>
+            <h3>contact beats &amp; steps arts academy</h3>
             <hr />
             <ul className={classes.contactDetailsInfo}>
               <li>
@@ -41,7 +41,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className={classes.socialMedia}>
-            <h4>Follow us</h4>
+            <h3>Follow us</h3>
             <hr />
             <SocialLinks styleClass={classes.footerLinks} />
           </div>

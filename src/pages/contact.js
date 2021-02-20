@@ -8,12 +8,10 @@ import classes from "../styles/pages/contact.module.scss";
 
 const getImages = graphql`
   {
-    contact: file(
-      relativePath: { eq: "Contact Page/dancers.jpg" }
-    ) {
-      childImageSharp {
-        fluid(maxWidth: 1000, quality: 85, webpQuality: 85) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+    contact: file(relativePath: { eq: "Contact Page/contact.jpg" }) {
+      childCloudinaryAsset {
+        fluid(transformations: ["f_auto", "q_auto"], maxWidth: 1000) {
+          ...CloudinaryAssetFluid
         }
       }
     }
@@ -32,7 +30,7 @@ const Contact = () => {
       <section className={classes.contactContainer}>
         <Img
           className={classes.image}
-          fluid={data.contact.childImageSharp.fluid}
+          fluid={data.contact.childCloudinaryAsset.fluid}
           alt="Beats and Steps students dancing"
         />
         <div className="sectionContainer">

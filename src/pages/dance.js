@@ -9,24 +9,24 @@ import classes from "../styles/pages/dance.module.scss";
 
 export const getImages = graphql`
   {
-    swans: file(relativePath: { eq: "Dance Page/swans.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+    ballet: file(relativePath: { eq: "Dance Page/ballet.jpg" }) {
+      childCloudinaryAsset {
+        fluid(transformations: ["f_auto", "q_auto"], maxWidth: 1000) {
+          ...CloudinaryAssetFluid
         }
       }
     }
     jazz: file(relativePath: { eq: "Dance Page/jazz.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+      childCloudinaryAsset {
+        fluid(transformations: ["f_auto", "q_auto"], maxWidth: 1000) {
+          ...CloudinaryAssetFluid
         }
       }
     }
     hiphop: file(relativePath: { eq: "Dance Page/hiphop.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+      childCloudinaryAsset {
+        fluid(transformations: ["f_auto", "q_auto"], maxWidth: 1000) {
+          ...CloudinaryAssetFluid
         }
       }
     }
@@ -68,14 +68,14 @@ const Dance = () => {
           </article>
           <Img
             className={[classes.image, classes.imageRight].join(" ")}
-            fluid={data.swans.childImageSharp.fluid}
+            fluid={data.ballet.childCloudinaryAsset.fluid}
             alt="Beats &amp; Steps Ballet students in swan lake costumes"
           />
         </div>
         <div className={[classes.block, classes.middleBlock].join(" ")}>
           <Img
             className={[classes.image, classes.imageLeft].join(" ")}
-            fluid={data.jazz.childImageSharp.fluid}
+            fluid={data.jazz.childCloudinaryAsset.fluid}
             alt="Beats &amp; Steps Jazz Students"
           />
           <article
@@ -138,7 +138,7 @@ const Dance = () => {
           </article>
           <Img
             className={[classes.image, classes.imageRight].join(" ")}
-            fluid={data.hiphop.childImageSharp.fluid}
+            fluid={data.hiphop.childCloudinaryAsset.fluid}
             alt="Beats &amp; Steps Hiphop Students posing"
           />
         </div>

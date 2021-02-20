@@ -9,6 +9,21 @@
 .affTitle {
   text-transform: none;
   margin: 2rem 0 1.5rem;
+  font-size: 1rem;
+  font-weight: $semiBoldFont;
+}
+
+@media screen and (min-width: $ipadPro) {
+  .aboutTextContainer {
+    p {
+      max-width: 50rem;
+      margin: auto;
+    }
+  }
+
+  .affTitle {
+    font-size: 1.25rem;
+  }
 }
 
 @media screen and (min-width: 90rem) {

@@ -1,7 +1,14 @@
 @use '../base/variables' as *;
 
 .logo {
-  height: 100%;
-  width: 100%;
-  border: 1px solid $grey;
+  height: 5rem;
+  width: 15rem;
+  // background-color: #fafafa;
+  // border: 1px solid $grey;
+}
+
+@media screen and (min-width: 90rem) {
+  .logo {
+    width: 20rem;
+  }
 }

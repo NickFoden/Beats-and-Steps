@@ -5,7 +5,7 @@ import classes from "../../styles/layout/hamburger/hamburger.module.scss";
 const Hamburger = ({ toggleSidebar, isOpen }) => {
   return (
     <button
-      aria-label="Hamburger"
+      aria-label="Toggle Side Menu"
       className={`${classes.hamburger} ${classes.hamburgerSqueeze} ${
         isOpen ? classes.isActive : ""
       }`}

@@ -1,9 +1,13 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     title: `Beats and Steps Arts Academy, CMM Affiliate Center`,
     description: `The Beats and Steps Arts Academy is a CMM affiliate center that envisions developing children's full potential in the arts.`,
     author: `Alex Friedman`,
-    image: `/dummy-logo-white.png`,
+    image: `/logo.svg`,
     // siteUrl: // *siteURL goes here but remove the trailing forward slash*,
   },
   plugins: [
@@ -18,6 +22,29 @@ module.exports = {
     //     policy: [{ userAgent: `*`, allow: `/` }],
     //   },
     // },
+    {
+      resolve: "gatsby-transformer-cloudinary",
+      options: {
+        cloudName: process.env.CLOUDINARY_CLOUD_NAME,
+        apiKey: process.env.CLOUDINARY_API_KEY,
+        apiSecret: process.env.CLOUDINARY_API_SECRET,
+        uploadFolder: "gatsby-cloudinary",
+      },
+    },
+    {
+      resolve: `gatsby-source-cloudinary`,
+      options: {
+        cloudName: process.env.CLOUDINARY_CLOUD_NAME,
+        apiKey: process.env.CLOUDINARY_API_KEY,
+        apiSecret: process.env.CLOUDINARY_API_SECRET,
+        resourceType: `image`,
+        prefix: `gatsby-cloudinary/Faculty Page`,
+        context: true,
+        maxResults: 20,
+        alwaysUseDefaultBase64: true,
+        enableDefaultTranformations: true,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -49,7 +76,7 @@ module.exports = {
         background_color: `#e8f1f5`,
         theme_color: `#fafafa`,
         display: `minimal-ui`,
-        icon: `src/assets/images/Logos/dummy-logo-only.png`, // This path is relative to the root of the site.
+        icon: `src/assets/images/Logos/smallLogo.svg`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

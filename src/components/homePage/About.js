@@ -9,9 +9,9 @@ import classes from "../../styles/pages/homePage/about.module.scss";
 const getImages = graphql`
   {
     about: file(relativePath: { eq: "Index Page/about.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1000, quality: 85, webpQuality: 85) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+      childCloudinaryAsset {
+        fluid(transformations: ["f_auto", "q_auto"], maxWidth: 1000) {
+          ...CloudinaryAssetFluid
         }
       }
     }
@@ -27,7 +27,7 @@ const About = () => {
         imgStyle={{ objectFit: "fill" }}
         className={classes.image}
         alt="Beats and Steps Satellite Blossoming Ballet students posing as fairies"
-        fluid={data.about.childImageSharp.fluid}
+        fluid={data.about.childCloudinaryAsset.fluid}
       />
       <div className={`sectionContainer ${classes.aboutTextContainer}`}>
         <p>

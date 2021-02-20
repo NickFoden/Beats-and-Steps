@@ -10,16 +10,16 @@ import classes from "../styles/pages/music.module.scss";
 export const getImages = graphql`
   {
     voice: file(relativePath: { eq: "Music Page/voice.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+      childCloudinaryAsset {
+        fluid(transformations: ["f_auto", "q_auto"], maxWidth: 1000) {
+          ...CloudinaryAssetFluid
         }
       }
     }
     guitar: file(relativePath: { eq: "Music Page/guitar.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+      childCloudinaryAsset {
+        fluid(transformations: ["f_auto", "q_auto"], maxWidth: 1000) {
+          ...CloudinaryAssetFluid
         }
       }
     }
@@ -42,9 +42,9 @@ const Music = () => {
           >
             <h2>The Music Program</h2>
             <p>
-              Beats &amp; Steps offers individual instruction in
-              voice, piano, guitar, violin, and music theory following four
-              cycles: first semester, second semester, summer, and midyear.
+              Beats &amp; Steps offers individual instruction in voice, piano,
+              guitar, violin, and music theory following four cycles: first
+              semester, second semester, summer, and midyear.
             </p>
             <p>
               All ages are admitted, subject to course specific entry-level
@@ -58,7 +58,7 @@ const Music = () => {
           </article>
           <Img
             className={[classes.image, classes.imageRight].join(" ")}
-            fluid={data.voice.childImageSharp.fluid}
+            fluid={data.voice.childCloudinaryAsset.fluid}
             alt="Beats &amp; Steps voice students and teacher"
           />
         </div>
@@ -66,7 +66,7 @@ const Music = () => {
           <Img
             imgStyle={{ objectPosition: "top" }}
             className={[classes.image, classes.imageLeft].join(" ")}
-            fluid={data.guitar.childImageSharp.fluid}
+            fluid={data.guitar.childCloudinaryAsset.fluid}
             alt="Beats &amp; Steps Guitar Student"
           />
           <article

@@ -9,7 +9,7 @@ import classes from "../../styles/layout/navbar.module.scss";
 
 const Navbar = ({ toggleSidebar, isOpen }) => {
   const { width } = useViewport();
-  const breakpoint = 1024;
+  const breakpoint = 1440;
 
   return (
     <nav className={classes.navbar}>
