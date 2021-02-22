@@ -7,7 +7,7 @@ module.exports = {
     title: `Beats and Steps Arts Academy, CMM Affiliate Center`,
     description: `The Beats and Steps Arts Academy is a CMM affiliate center that envisions developing children's full potential in the arts.`,
     author: `Alex Friedman`,
-    image: `/logo.svg`,
+    // image: `/logo.png`,
     // siteUrl: // *siteURL goes here but remove the trailing forward slash*,
   },
   plugins: [
@@ -29,6 +29,8 @@ module.exports = {
         apiKey: process.env.CLOUDINARY_API_KEY,
         apiSecret: process.env.CLOUDINARY_API_SECRET,
         uploadFolder: "gatsby-cloudinary",
+        alwaysUseDefaultBase64: true,
+        enableDefaultTranformations: true
       },
     },
     {
@@ -41,8 +43,6 @@ module.exports = {
         prefix: `gatsby-cloudinary/Faculty Page`,
         context: true,
         maxResults: 20,
-        alwaysUseDefaultBase64: true,
-        enableDefaultTranformations: true,
       },
     },
     {

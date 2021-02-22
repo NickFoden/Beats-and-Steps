@@ -1,79 +1,121 @@
 @use '../base/variables' as *;
 
-.facultyContainer {
+h1 {
+  margin: 2rem 0;
   text-align: center;
+}
 
-  h1 {
-    margin-top: 2.5rem;
+.headerImgContainer {
+  box-shadow: $darkShadow;
+}
+
+h2 {
+  font-weight: $semiBoldFont;
+  margin-bottom: 2rem;
+}
+
+.artistImage {
+  box-shadow: $darkShadow;
+  width: 21.56rem;
+}
+
+.listContainer {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.artistInfo {
+  max-width: 21.56rem;
+}
+
+.artistListItem {
+  text-align: left;
+  margin-bottom: 2.5rem;
+  max-width: 21.56rem;
+
+  h2 {
+    font-weight: $boldFont;
+    margin-bottom: 0;
+  }
+
+  h3 {
+    font-weight: $normalFont;
+  }
+
+  .artistHistory {
+    font-weight: $lightFont;
   }
 
   h2 {
-    font-weight: $semiBoldFont;
-    margin-bottom: 2.5rem;
+    font-size: 1rem;
   }
 
-  .artistImage {
-    box-shadow: $darkShadow;
-    width: 21.56rem;
+  h3,
+  .artistHistory {
+    font-size: 0.825rem;
   }
+}
 
-  .listContainer {
-    justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-  }
+.artistName {
+  margin-top: 1rem;
+}
 
-  .artistInfo {
-    max-width: 21.56rem;
+@media screen and (max-width: $defaultSmallPhone) {
+  h1 {
+    font-size: 1.2rem;
   }
 
   .artistListItem {
-    text-align: left;
-    margin-bottom: 2.5rem;
-    max-width: 21.56rem;
-
     h2 {
-      font-weight: $boldFont;
-      margin-bottom: 1rem;
+      font-size: 0.875rem;
     }
 
-    h3 {
-      font-weight: $normalFont;
+    .artistImage {
+      width: 16rem;
     }
 
-    .artistHistory {
-      font-weight: $lightFont;
+    .artistInfo {
+      width: 16rem;
+      margin: auto;
     }
-
-    h2 {
-      font-size: 1rem;
-    }
-
-    h3,
-    .artistHistory {
-      font-size: 0.825rem;
-    }
-  }
-
-  .artistName {
-    margin-top: 1rem;
   }
 }
 
 @media screen and (min-width: $smallTablet) {
   .artistListItem {
-    margin-right: 2.5%;
+    margin: 0 1% 1rem;
+  }
+}
+
+@media screen and (min-width: $ipad) {
+  .artistListItem {
+    width: 16rem;
+  }
+
+  .artistImage {
+    width: 16rem;
   }
 }
 
 @media screen and (min-width: $ipadPro) {
+  .headerImgContainer {
+    width: 80vw;
+    margin: auto;
+  }
+
   .listContainer {
     margin: auto;
   }
 
+  .artistImage {
+    width: 21.56rem
+  }
+
   .artistListItem {
     margin-right: 3.75%;
+    width: 21.56rem;
 
     h2 {
       font-size: 1.25rem;
@@ -86,67 +128,60 @@
   }
 }
 
-@media screen and (min-width: $bigDesktop) {
-  .facultyContainer {
-    h1 {
-      margin-top: 2rem;
-    }
-  }
-
-  .artistListItem {
-    flex-basis: 30.5%;
-    margin-right: 4.25%;
-    margin-bottom: 3.75rem;
-    max-width: 25.5rem;
-  }
-}
-
 @media screen and (min-width: 90rem) {
-  .facultyContainer {
-    .artistListItem {
-      margin-right: 0;
+  .artistListItem {
+    margin-right: 0;
+  }
+
+  .listContainer {
+    display: grid;
+    grid-template-columns: 21.56rem 21.56rem 21.56rem;
+    column-gap: 2rem;
+
+    :first-child {
+      grid-row: 1;
+      grid-column-start: 1;
+      grid-column-end: 3;
+      justify-self: center;
     }
 
-    .listContainer {
-      display: grid;
-      grid-template-columns: 21.56rem 21.56rem 21.56rem;
-      column-gap: 2rem;
+    :nth-child(2) {
+      grid-row: 1;
+      grid-column-start: 2;
+      grid-column-end: 4;
+      justify-self: center;
+    }
+  }
 
-      :first-child {
-        grid-column-start: 1;
-      }
-
-      :nth-child(2) {
-        grid-column-start: 3;
-      }
+  .musicContainer {
+    :first-child {
+      grid-column-start: 2;
     }
 
-    .musicContainer {
-      :first-child {
-        grid-column-start: 2;
-        grid-column-end: 3;
-      }
+    :nth-child(2) {
+      grid-row: 2;
+      grid-column-start: 1;
+      grid-column-end: 3;
+      justify-self: center;
+    }
 
-      :nth-child(2) {
-        grid-row-start: 2;
-      }
+    :nth-child(3) {
+      grid-row: 2;
+      grid-column-start: 2;
+      grid-column-end: 4;
+      justify-self: center;
+    }
 
-      :nth-child(3) {
-        grid-row-start: 2;
-      }
+    :nth-child(4) {
+      grid-row: 3;
+    }
 
-      :nth-child(4) {
-        grid-row-start: 2;
-      }
+    :nth-child(5) {
+      grid-row: 3;
+    }
 
-      :nth-child(5) {
-        grid-row-start: 3;
-      }
-
-      :nth-child(6) {
-        grid-row-start: 3;
-        grid-column-start: 3;
-      }
+    :nth-child(6) {
+      grid-row: 3;
     }
   }
 }

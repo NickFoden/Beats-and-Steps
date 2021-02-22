@@ -1,4 +1,6 @@
+import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
+import Image from "gatsby-image";
 
 import DanceTeachers from "../components/facultyPage/danceTeachers";
 import MusicTeachers from "../components/facultyPage/musicTeachers";
@@ -6,16 +8,37 @@ import Layout from "../components/navigation/Layout";
 import SEO from "../components/SEO/SEO";
 import classes from "../styles/pages/faculty.module.scss";
 
+const getImage = graphql`
+  {
+    header: file(relativePath: { eq: "Faculty Page/staff.jpg" }) {
+      childCloudinaryAsset {
+        fluid {
+          ...CloudinaryAssetFluid
+        }
+      }
+    }
+  }
+`;
+
 const Faculty = () => {
+  const data = useStaticQuery(getImage);
+
   return (
     <Layout>
       <SEO
         title="Faculty"
         description="Faculty page for Beats &amp; Steps Arts Academy"
       />
-      <section className={classes.facultyContainer}>
+      <section>
         <h1>The Artistic Team</h1>
-        <div className={classes.danceFaculty}>
+        <div className={classes.headerImgContainer}>
+          <Image
+            className={classes.headerImg}
+            fluid={data.header.childCloudinaryAsset.fluid}
+            alt="Group photo of Beats &amp; Steps staff"
+          />
+        </div>
+        <div className="sectionContainer">
           <h2>Meet our Dance Instructors</h2>
           <ul
             className={classes.listContainer}
@@ -25,7 +48,9 @@ const Faculty = () => {
           </ul>
           <h2>Meet our Music Instructors</h2>
           <ul
-            className={[classes.listContainer, classes.musicContainer].join(" ")}
+            className={[classes.listContainer, classes.musicContainer].join(
+              " "
+            )}
             aria-label="Meet our Music Instructors"
           >
             <MusicTeachers />
