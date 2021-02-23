@@ -6,7 +6,7 @@ import classes from "../../styles/pages/homePage/welcome.module.scss";
 const Welcome = () => {
   return (
     <section className="sectionContainer">
-      <h1>Beats &amp; Steps Arts Academy</h1>
+      <h1 className={classes.title}>Beats &amp; Steps Arts Academy</h1>
       <p>
         An affiliate of the <strong>Center for Movement and Music (CMM)</strong>{" "}
         offering courses in:

@@ -30,7 +30,7 @@ const Faculty = () => {
         description="Faculty page for Beats &amp; Steps Arts Academy"
       />
       <section>
-        <h1>The Artistic Team</h1>
+        <h1 className={classes.title}>The Artistic Team</h1>
         <div className={classes.headerImgContainer}>
           <Image
             className={classes.headerImg}
@@ -41,7 +41,9 @@ const Faculty = () => {
         <div className="sectionContainer">
           <h2>Meet our Dance Instructors</h2>
           <ul
-            className={classes.listContainer}
+            className={[classes.listContainer, classes.danceContainer].join(
+              " "
+            )}
             aria-label="Meet our Dance Instructors"
           >
             <DanceTeachers />
