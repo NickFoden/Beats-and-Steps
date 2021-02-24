@@ -10,7 +10,7 @@ import classes from "../styles/pages/faculty.module.scss";
 
 const getImage = graphql`
   {
-    header: file(relativePath: { eq: "Faculty Page/staff.jpg" }) {
+    header: file(relativePath: { eq: "faculty/staff.jpg" }) {
       childCloudinaryAsset {
         fluid {
           ...CloudinaryAssetFluid

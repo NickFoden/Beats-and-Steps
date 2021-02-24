@@ -40,7 +40,7 @@ module.exports = {
         apiKey: process.env.CLOUDINARY_API_KEY,
         apiSecret: process.env.CLOUDINARY_API_SECRET,
         resourceType: `image`,
-        prefix: `gatsby-cloudinary/Faculty Page`,
+        prefix: `gatsby-cloudinary/faculty`,
         context: true,
         maxResults: 20,
       },

@@ -8,14 +8,14 @@ import classes from "../styles/pages/about.module.scss";
 
 export const getImages = graphql`
   {
-    teachingDance: file(relativePath: { eq: "About Page/teaching-dance.JPG" }) {
+    teachingDance: file(relativePath: { eq: "about/teaching-dance.JPG" }) {
       childCloudinaryAsset {
         fluid(transformations: ["f_auto", "q_auto"], maxWidth: 1000) {
           ...CloudinaryAssetFluid
         }
       }
     }
-    teachingMusic: file(relativePath: { eq: "About Page/teaching-music.JPG" }) {
+    teachingMusic: file(relativePath: { eq: "about/teaching-music.JPG" }) {
       childCloudinaryAsset {
         fluid(transformations: ["f_auto", "q_auto"], maxWidth: 1000) {
           ...CloudinaryAssetFluid

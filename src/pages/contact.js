@@ -8,7 +8,7 @@ import classes from "../styles/pages/contact.module.scss";
 
 const getImages = graphql`
   {
-    contact: file(relativePath: { eq: "Contact Page/contact.jpg" }) {
+    contact: file(relativePath: { eq: "contact/contact.jpg" }) {
       childCloudinaryAsset {
         fluid(transformations: ["f_auto", "q_auto"], maxWidth: 1000) {
           ...CloudinaryAssetFluid

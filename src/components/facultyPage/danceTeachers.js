@@ -7,7 +7,7 @@ import classes from "../../styles/pages/faculty.module.scss";
 const getImages = graphql`
   {
     image: allFile(
-      filter: { relativeDirectory: { eq: "Faculty Page/Dance" } }
+      filter: { relativeDirectory: { eq: "faculty/dance" } }
       sort: { fields: name }
     ) {
       nodes {
@@ -21,7 +21,7 @@ const getImages = graphql`
       }
     }
     info: allCloudinaryMedia(
-      filter: { public_id: { regex: "/gatsby-cloudinary/Faculty Page/Dance/" } }
+      filter: { public_id: { regex: "/gatsby-cloudinary/faculty/dance/" } }
     ) {
       nodes {
         url

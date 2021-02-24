@@ -9,21 +9,21 @@ import classes from "../styles/pages/dance.module.scss";
 
 export const getImages = graphql`
   {
-    ballet: file(relativePath: { eq: "Dance Page/ballet.jpg" }) {
+    ballet: file(relativePath: { eq: "dance/ballet.jpg" }) {
       childCloudinaryAsset {
         fluid(transformations: ["f_auto", "q_auto"], maxWidth: 1000) {
           ...CloudinaryAssetFluid
         }
       }
     }
-    jazz: file(relativePath: { eq: "Dance Page/jazz.jpg" }) {
+    jazz: file(relativePath: { eq: "dance/jazz.jpg" }) {
       childCloudinaryAsset {
         fluid(transformations: ["f_auto", "q_auto"], maxWidth: 1000) {
           ...CloudinaryAssetFluid
         }
       }
     }
-    hiphop: file(relativePath: { eq: "Dance Page/hiphop.jpg" }) {
+    hiphop: file(relativePath: { eq: "dance/hiphop.jpg" }) {
       childCloudinaryAsset {
         fluid(transformations: ["f_auto", "q_auto"], maxWidth: 1000) {
           ...CloudinaryAssetFluid

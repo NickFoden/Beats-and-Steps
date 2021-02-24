@@ -9,14 +9,14 @@ import classes from "../styles/pages/music.module.scss";
 
 export const getImages = graphql`
   {
-    voice: file(relativePath: { eq: "Music Page/voice.jpg" }) {
+    voice: file(relativePath: { eq: "music/voice.jpg" }) {
       childCloudinaryAsset {
         fluid(transformations: ["f_auto", "q_auto"], maxWidth: 1000) {
           ...CloudinaryAssetFluid
         }
       }
     }
-    guitar: file(relativePath: { eq: "Music Page/guitar.jpg" }) {
+    guitar: file(relativePath: { eq: "music/guitar.jpg" }) {
       childCloudinaryAsset {
         fluid(transformations: ["f_auto", "q_auto"], maxWidth: 1000) {
           ...CloudinaryAssetFluid

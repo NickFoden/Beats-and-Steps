@@ -8,7 +8,7 @@ import classes from "../../styles/pages/homePage/about.module.scss";
 
 const getImages = graphql`
   {
-    about: file(relativePath: { eq: "Index Page/about.jpg" }) {
+    about: file(relativePath: { eq: "index/about.jpg" }) {
       childCloudinaryAsset {
         fluid(transformations: ["f_auto", "q_auto"], maxWidth: 1000) {
           ...CloudinaryAssetFluid
