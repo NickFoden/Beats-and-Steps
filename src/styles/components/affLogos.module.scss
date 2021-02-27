@@ -60,6 +60,12 @@
     display: flex;
     justify-content: center;
   }
+
+  .affLinks__listItem {
+    a {
+      width: 9.5rem;
+    }
+  }
 }
 
 @media screen and (min-width: $ipadPro) {

@@ -19,7 +19,7 @@
 
 @media screen and (min-width: 90rem) {
   .videoContainer {
-    height: 85vh;
+    height: 90vh;
     padding-top: 0;
 
     iframe {
@@ -27,7 +27,7 @@
       top: 50%;
       left: 50%;
       width: 100vw;
-      height: 85vh;
+      height: 90vh;
       transform: translate(-50%, -50%);
     }
   }
@@ -35,10 +35,40 @@
 
 @media screen and (min-width: 95rem) {
   .videoContainer {
-    height: 90vh;
+    height: 85vh;
 
     iframe {
-      height: 90vh;
+      height: 85vh;
+    }
+  }
+}
+
+// @media screen and (min-width: 95rem) {
+//   .videoContainer {
+//     height: 110vh;
+//     iframe {
+//       height: 120vh;
+//     }
+//   }
+// }
+
+@media screen and (min-width: 95rem) {
+  .videoSection {
+    background-color: $section2BackgroundColor;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .videoContainer {
+    width: 70%;
+    margin: auto;
+    height: 46.8rem;
+    box-shadow: $darkShadow;
+    border-radius: 1%;
+
+    iframe {
+      width: 100%;
+      height: -webkit-fill-available;
     }
   }
 }
