@@ -7,7 +7,7 @@ module.exports = {
     title: `Beats and Steps Arts Academy, CMM Affiliate Center`,
     description: `The Beats and Steps Arts Academy is a CMM affiliate center that envisions developing children's full potential in the arts.`,
     author: `Alex Friedman`,
-    // image: `/logo.png`,
+    image: `/logo.png`,
     // siteUrl: // *siteURL goes here but remove the trailing forward slash*,
   },
   plugins: [
@@ -76,7 +76,7 @@ module.exports = {
         background_color: `#e8f1f5`,
         theme_color: `#fafafa`,
         display: `minimal-ui`,
-        icon: `src/assets/images/Logos/smallLogo.svg`, // This path is relative to the root of the site.
+        icon: `src/assets/images/Logos/smallLogo.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
