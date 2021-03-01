@@ -33,21 +33,12 @@
   }
 }
 
-@media screen and (min-width: 95rem) {
-  .videoContainer {
-    height: 85vh;
-
-    iframe {
-      height: 85vh;
-    }
-  }
-}
-
 // @media screen and (min-width: 95rem) {
 //   .videoContainer {
-//     height: 110vh;
+//     height: 85vh;
+
 //     iframe {
-//       height: 120vh;
+//       height: 85vh;
 //     }
 //   }
 // }
@@ -63,6 +54,7 @@
     width: 70%;
     margin: auto;
     height: 46.8rem;
+    // height: 67vh;
     box-shadow: $darkShadow;
     border-radius: 1%;
 
@@ -72,3 +64,12 @@
     }
   }
 }
+
+// *-- TO DO - MAKE WEBSITE FULLY RESPONSIVE ON WIDESCREENS
+// @media screen and (min-width: 150rem) {
+//   .videoContainer {
+//     width: 40%;
+//     height: 71.5rem;
+//     overflow: inherit;
+//   }
+// }
