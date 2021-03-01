@@ -35,7 +35,7 @@ const About = () => {
           envisions developing children’s full potential in the arts.
         </p>
         <h2 className={classes.affTitle}>
-          Beats &amp; Steps is a proud affiliate of:
+          We are a proud affiliate of:
         </h2>
         <AffLogos />
         <NavLink link="/about/">Find out more</NavLink>

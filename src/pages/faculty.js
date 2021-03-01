@@ -29,7 +29,7 @@ const Faculty = () => {
         title="Faculty"
         description="Faculty page for Beats &amp; Steps Arts Academy"
       />
-      <section>
+      <section className={classes.facultyContainer}>
         <h1 className={classes.title}>The Artistic Team</h1>
         <div className={classes.headerImgContainer}>
           <Image

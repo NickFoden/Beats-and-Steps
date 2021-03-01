@@ -27,7 +27,8 @@ const getImages = graphql`
         url
         context {
           custom {
-            alt
+            title1
+            title2
             caption
             hist1
             hist2
@@ -47,27 +48,26 @@ const DanceTeachers = () => {
 
     return (
       <li className={classes.artistListItem} key={artist.id}>
-        <div className={classes.artist}>
-          <figure>
-            <Img
-              className={classes.artistImage}
-              fluid={artist.childCloudinaryAsset.fluid}
-              alt={artistContent.context.custom.caption}
-            />
-            <div className={classes.artistInfo}>
-              <h2 className={classes.artistName}>
-                {artistContent.context.custom.caption}
-              </h2>
-              <h3 className={classes.artistPosition}>
-                {artistContent.context.custom.alt}
-              </h3>
-              <ul className={classes.artistHistory}>
-                <li>{artistContent.context.custom.hist1}</li>
-                <li>{artistContent.context.custom.hist2}</li>
-              </ul>
-            </div>
-          </figure>
-        </div>
+        <figure>
+          <Img
+            className={classes.artistImage}
+            fluid={artist.childCloudinaryAsset.fluid}
+            alt={artistContent.context.custom.caption}
+          />
+          <div className={classes.artistInfo}>
+            <h2 className={classes.artistName}>
+              {artistContent.context.custom.caption}
+            </h2>
+            <ul className={classes.artistPosition}>
+              <li>{artistContent.context.custom.title1}</li>
+              <li>{artistContent.context.custom.title2}</li>
+            </ul>
+            <ul className={classes.artistHistory}>
+              <li>{artistContent.context.custom.hist1}</li>
+              <li>{artistContent.context.custom.hist2}</li>
+            </ul>
+          </div>
+        </figure>
       </li>
     );
   });

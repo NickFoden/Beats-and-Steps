@@ -78,7 +78,7 @@ const About = () => {
             className={classes.affLinks__textLink}
             href="http://www.acbaustralia.com.au/"
           >
-            Australian-based Ballet Conservatoire
+            Ballet Conservatoire
           </a>
         </li>
       </ul>
