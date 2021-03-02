@@ -43,7 +43,6 @@ const Video = () => {
             allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
             frameBorder="0"
             title="Beats and Steps Intro Video"
-            scrolling="no"
           ></iframe>
         </div>
       </header>
