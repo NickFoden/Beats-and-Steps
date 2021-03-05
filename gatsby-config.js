@@ -30,7 +30,7 @@ module.exports = {
         apiSecret: process.env.CLOUDINARY_API_SECRET,
         uploadFolder: "gatsby-cloudinary",
         alwaysUseDefaultBase64: true,
-        enableDefaultTranformations: true
+        enableDefaultTransformations: true,
       },
     },
     {

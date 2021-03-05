@@ -4,62 +4,67 @@
   background-color: $section2BackgroundColor;
   display: flex;
   flex-direction: column;
-}
 
-.image {
-  max-height: 60vh;
-}
-
-.contactLink {
-  color: black;
-  font-weight: $boldFont;
-  transition: $transition;
-
-  &:active,
-  &:hover,
-  &:focus {
-    color: $accent;
-    border-bottom: 2px solid $accent;
-  }
-}
-
-.contactContainer {
-  h2 {
-    margin-top: 2rem;
-  }
-}
-
-.text {
-  p {
-    margin: 2rem 0;
-  }
-}
-
-@media screen and (min-width: $smallTablet) {
   .image {
-    max-height: 70vh;
+    max-width: 1450px;
+  }
+
+  .textContainer {
+    .text {
+      max-width: 800px;
+
+      .contactLink {
+        color: black;
+        font-weight: $boldFont;
+        transition: $transition;
+
+        &:active,
+        &:hover,
+        &:focus {
+          color: $accent;
+          border-bottom: 2px solid $accent;
+        }
+      }
+
+      p {
+        margin: 2rem 0;
+      }
+    }
+
+    h2 {
+      margin-top: 2rem;
+    }
   }
 }
 
-@media screen and (min-width: $bigDesktop) {
+@media screen and (min-width: $ipad) {
+  .contactContainer {
+    .image {
+      margin: 2rem auto 0;
+      width: 80vw;
+      border-radius: 5%;
+      box-shadow: $darkShadow;
+    }
+  }
+}
+
+@media screen and (min-width: $macBookAir) {
   .contactContainer {
     flex-direction: row;
     align-items: center;
-  }
+    justify-content: center;
 
-  .image {
-    height: fit-content;
-    box-shadow: $darkShadow;
-    margin-bottom: 2rem;
-    max-height: 42.875rem;
-    max-width: 55.5rem;
-    margin-top: 2rem;
-    margin-left: 2rem;
-    width: 100%;
-    border-radius: 5%;
-  }
+    .image {
+      margin: 2rem;
+      width: 45vw;
+    }
 
-  .text {
-    width: 45vw;
+    .textContainer {
+      margin: 0;
+
+      .text {
+        width: 45vw;
+      }
+    }
   }
 }

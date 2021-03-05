@@ -1,42 +1,88 @@
 @use '../../base/variables' as *;
 
-.about {
+.indexAboutContainer {
   background-color: $section2BackgroundColor;
   display: flex;
   flex-direction: column;
+
+  .aboutTextContainer {
+    .affTitle {
+      text-transform: none;
+      margin: 1.25rem 0;
+      font-size: 1rem;
+      font-weight: $semiBoldFont;
+    }
+  }
 }
 
-.affTitle {
-  text-transform: none;
-  margin: 2rem 0 1.5rem;
-  font-size: 1rem;
-  font-weight: $semiBoldFont;
+@media screen and (min-width: $smallTablet) {
+  .indexAboutContainer {
+    .aboutTextContainer {
+      p {
+        max-width: 40rem;
+        margin: auto;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $ipad) {
+  .indexAboutContainer {
+    justify-content: center;
+    align-items: center;
+
+    .image {
+      margin: 2rem auto 0;
+      width: 80vw;
+      border-radius: 5%;
+      box-shadow: $darkShadow;
+    }
+  }
 }
 
 @media screen and (min-width: $ipadPro) {
-  .aboutTextContainer {
-    p {
-      max-width: 50rem;
-      margin: auto;
-    }
-  }
+  .indexAboutContainer {
+    .aboutTextContainer {
+      p {
+        max-width: 50rem;
+      }
 
-  .affTitle {
-    font-size: 1.25rem;
+      .affTitle {
+        font-size: 1.25rem;
+      }
+    }
   }
 }
 
-@media screen and (min-width: 90rem) {
-  .about {
+@media screen and (min-width: $macBookAir) {
+  .indexAboutContainer {
     flex-direction: row;
-  }
 
-  .aboutTextContainer {
-    width: 50vw;
-    margin: auto;
-  }
+    .image {
+      width: 50vw;
+      border-radius: 0;
+      box-shadow: unset;
+      margin: 0;
+    }
 
-  .image {
-    width: 50vw;
+    .aboutTextContainer {
+      width: 50vw;
+      margin: auto;
+    }
+  }
+}
+
+@media screen and (min-width: $wideScreen) {
+  .indexAboutContainer {
+    justify-content: center;
+    align-items: unset;
+    .image {
+      width: 42rem;
+    }
+
+    .aboutTextContainer {
+      width: 42rem;
+      margin: 2rem;
+    }
   }
 }

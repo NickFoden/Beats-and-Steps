@@ -10,14 +10,14 @@ export const getImages = graphql`
   {
     teachingDance: file(relativePath: { eq: "about/teaching-dance.JPG" }) {
       childCloudinaryAsset {
-        fluid(transformations: ["f_auto", "q_auto"], maxWidth: 1000) {
+        fluid {
           ...CloudinaryAssetFluid
         }
       }
     }
     teachingMusic: file(relativePath: { eq: "about/teaching-music.JPG" }) {
       childCloudinaryAsset {
-        fluid(transformations: ["f_auto", "q_auto"], maxWidth: 1000) {
+        fluid {
           ...CloudinaryAssetFluid
         }
       }
@@ -35,7 +35,12 @@ const About = () => {
         description="About Page for Beats &amp; Steps Arts Academy"
       />
       <section className={classes.aboutContainer}>
-        <div className={[classes.block, classes.firstBlock].join(" ")}>
+        <div className={classes.block}>
+          <Img
+            className={classes.image}
+            alt="Beats &amp; Steps teacher and student dancing"
+            fluid={data.teachingDance.childCloudinaryAsset.fluid}
+          />
           <article
             className={["sectionContainer", classes.block__text].join(" ")}
           >
@@ -70,15 +75,10 @@ const About = () => {
               Association of Ballet Academies of the Philippines (ABAP).
             </p>
           </article>
-          <Img
-            className={[classes.image, classes.image1].join(" ")}
-            alt="Beats &amp; Steps teacher and student dancing"
-            fluid={data.teachingDance.childCloudinaryAsset.fluid}
-          />
         </div>
-        <div className={[classes.block, classes.middleBlock].join(" ")}>
+        <div className={classes.block}>
           <Img
-            className={[classes.image, classes.image2].join(" ")}
+            className={classes.image}
             alt="Beats &amp; Steps teacher and student playing piano"
             fluid={data.teachingMusic.childCloudinaryAsset.fluid}
           />

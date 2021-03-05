@@ -15,7 +15,6 @@ const Welcome = () => {
       </div>
       <div className={classes.list}>
         <div className={classes.list__department}>
-          {/* <h2>Music</h2> */}
           <NavLink link="/music/">music</NavLink>
           <ul>
             <li>Voice</li>
@@ -26,7 +25,6 @@ const Welcome = () => {
           </ul>
         </div>
         <div className={classes.list__department}>
-          {/* <h2>Dance</h2> */}
           <NavLink link="/dance/">dance</NavLink>
           <ul>
             <li>Classical ballet</li>

@@ -10,7 +10,7 @@ const getImages = graphql`
   {
     about: file(relativePath: { eq: "index/about.jpg" }) {
       childCloudinaryAsset {
-        fluid(transformations: ["f_auto", "q_auto"], maxWidth: 1000) {
+        fluid {
           ...CloudinaryAssetFluid
         }
       }
@@ -22,7 +22,7 @@ const About = () => {
   const data = useStaticQuery(getImages);
 
   return (
-    <section className={classes.about}>
+    <section className={classes.indexAboutContainer}>
       <Img
         imgStyle={{ objectFit: "fill" }}
         className={classes.image}
@@ -34,9 +34,7 @@ const About = () => {
           <strong>Beats &amp; Steps </strong> is a CMM affiliate center that
           envisions developing children’s full potential in the arts.
         </p>
-        <h2 className={classes.affTitle}>
-          We are a proud affiliate of:
-        </h2>
+        <h2 className={classes.affTitle}>We are a proud affiliate of:</h2>
         <AffLogos />
         <NavLink link="/about/">Find out more</NavLink>
       </div>

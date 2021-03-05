@@ -8,21 +8,21 @@ export const getImages = graphql`
   {
     cmm: file(relativePath: { eq: "Logos/CMM.jpg" }) {
       childCloudinaryAsset {
-        fixed(transformations: ["f_auto", "q_auto"], width: 70, height: 70) {
+        fixed(width: 70, height: 70) {
           ...CloudinaryAssetFixed
         }
       }
     }
     abrsm: file(relativePath: { eq: "Logos/ABRSM.jpg" }) {
       childCloudinaryAsset {
-        fixed(transformations: ["f_auto", "q_auto"], width: 70, height: 70) {
+        fixed(width: 70, height: 70) {
           ...CloudinaryAssetFixed
         }
       }
     }
     acb: file(relativePath: { eq: "Logos/ACB.jpg" }) {
       childCloudinaryAsset {
-        fixed(transformations: ["f_auto", "q_auto"], width: 70, height: 70) {
+        fixed(width: 70, height: 70) {
           ...CloudinaryAssetFixed
         }
       }
@@ -34,7 +34,7 @@ const About = () => {
   const data = useStaticQuery(getImages);
 
   return (
-    <div className={classes.affLinks}>
+    <div className={classes.affLinksContainer}>
       <ul className={classes.affLinks__list}>
         <li className={classes.affLinks__listItem}>
           <a href="https://www.facebook.com/cmm.1998ph/">

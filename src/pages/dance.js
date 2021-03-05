@@ -11,21 +11,21 @@ export const getImages = graphql`
   {
     ballet: file(relativePath: { eq: "dance/ballet.jpg" }) {
       childCloudinaryAsset {
-        fluid(transformations: ["f_auto", "q_auto"], maxWidth: 1000) {
+        fluid {
           ...CloudinaryAssetFluid
         }
       }
     }
     jazz: file(relativePath: { eq: "dance/jazz.jpg" }) {
       childCloudinaryAsset {
-        fluid(transformations: ["f_auto", "q_auto"], maxWidth: 1000) {
+        fluid {
           ...CloudinaryAssetFluid
         }
       }
     }
     hiphop: file(relativePath: { eq: "dance/hiphop.jpg" }) {
       childCloudinaryAsset {
-        fluid(transformations: ["f_auto", "q_auto"], maxWidth: 1000) {
+        fluid {
           ...CloudinaryAssetFluid
         }
       }
@@ -43,7 +43,12 @@ const Dance = () => {
         description="Dance Department page for Beats &amp; Steps Arts Academy"
       />
       <section className={classes.danceContainer}>
-        <div className={[classes.block, classes.reverseBlock].join(" ")}>
+        <div className={classes.block}>
+          <Img
+            className={classes.image}
+            fluid={data.ballet.childCloudinaryAsset.fluid}
+            alt="Beats &amp; Steps Ballet students in swan lake costumes"
+          />
           <article
             className={["sectionContainer", classes.block__text].join(" ")}
           >
@@ -59,22 +64,17 @@ const Dance = () => {
               placement, dynamics and performing quality which are all qualities
               inherent in Russia’s Vaganova method of teaching ballet.
             </p>
-            <p className={classes.lastP}>
+            <p>
               The program aims to develop in the student a professional attitude
               which will assist them in the pursuit of a career, either as a
               professional dancer or dance teacher.
             </p>
             <NavLink link="/contact/">Enroll</NavLink>
           </article>
-          <Img
-            className={[classes.image, classes.imageRight].join(" ")}
-            fluid={data.ballet.childCloudinaryAsset.fluid}
-            alt="Beats &amp; Steps Ballet students in swan lake costumes"
-          />
         </div>
-        <div className={[classes.block, classes.middleBlock].join(" ")}>
+        <div className={classes.block}>
           <Img
-            className={[classes.image, classes.imageLeft].join(" ")}
+            className={[classes.image, classes.jazzImg].join(" ")}
             fluid={data.jazz.childCloudinaryAsset.fluid}
             alt="Beats &amp; Steps Jazz Students"
           />
@@ -104,7 +104,7 @@ const Dance = () => {
               seen in choreography used in today’s popular music videos and
               commercials.
             </p>
-            <p className={classes.lastP}>
+            <p>
               The Luigi jazz method, which is the foundation of much of Broadway
               dancing, is also part of our jazz curriculum, along with the
               structured curriculum of Dance Arts International, which has been
@@ -113,7 +113,12 @@ const Dance = () => {
             <NavLink link="/contact/">Enroll</NavLink>
           </article>
         </div>
-        <div className={[classes.block, classes.reverseBlock].join(" ")}>
+        <div className={classes.block}>
+          <Img
+            className={classes.image}
+            fluid={data.hiphop.childCloudinaryAsset.fluid}
+            alt="Beats &amp; Steps Hiphop Students posing"
+          />
           <article
             className={["sectionContainer", classes.block__text].join(" ")}
           >
@@ -129,18 +134,13 @@ const Dance = () => {
               moves and lay proper dance foundation. For teens the fundamentals
               of hiphop: breaking, locking and popping are learned.
             </p>
-            <p className={classes.lastP}>
+            <p>
               Basic b-boying, often called “breakdancing”, is a popular style of
               hiphop also included in the program. The dance consists of four
               primary elements: toprock, downrock, power moves and freezes.
             </p>
             <NavLink link="/contact/">Enroll</NavLink>
           </article>
-          <Img
-            className={[classes.image, classes.imageRight].join(" ")}
-            fluid={data.hiphop.childCloudinaryAsset.fluid}
-            alt="Beats &amp; Steps Hiphop Students posing"
-          />
         </div>
       </section>
     </Layout>

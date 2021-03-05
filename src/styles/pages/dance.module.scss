@@ -2,74 +2,113 @@
 
 .danceContainer {
   background-color: $backgroundColor;
+
+  .block {
+    display: flex;
+    flex-direction: column;
+
+    .image {
+      max-height: 15rem;
+    }
+
+    .jazzImg {
+      height: 15rem;
+    }
+
+    .block__text {
+      max-width: 50rem;
+    }
+  }
+
+  .block:nth-of-type(2) {
+    background-color: $section2BackgroundColor;
+  }
 }
 
-.block {
-  display: flex;
-  flex-direction: column;
-}
-
-.reverseBlock {
-  flex-direction: column-reverse;
-}
-
-.middleBlock {
-  background-color: $section2BackgroundColor;
-}
-
-.image {
-  max-height: 40.5rem;
+@media screen and (min-width: $smallTablet) {
+  .danceContainer {
+    .block {
+      .image {
+        max-height: 22.5rem;
+      }
+      .jazzImg {
+        height: 22.5rem;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: $ipad) {
-  .section {
-    max-width: 45rem;
+  .danceContainer {
+    .block {
+      align-items: center;
+      justify-content: center;
+      .image {
+        margin: 2rem auto 0;
+        width: 80vw;
+        max-height: 25.5rem;
+        border-radius: 5%;
+        box-shadow: $darkShadow;
+      }
+      .jazzImg {
+        height: 25.5rem;
+      }
+    }
   }
 }
 
 @media screen and (min-width: $ipadPro) {
-}
-
-@media screen and (min-width: 65rem) {
-  .lastP {
-    margin-bottom: 3.5rem;
-  }
-
-  .block {
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .image {
-    height: fit-content;
-    box-shadow: $darkShadow;
-    margin-bottom: 2rem;
-    max-height: 600px;
-    max-width: 800px;
-    border-radius: 5%;
-  }
-
-  .imageRight {
-    margin-top: 2rem;
-    margin-right: 2rem;
-    width: 100%;
-  }
-
-  .imageLeft {
-    margin-top: 2rem;
-    margin-left: 2rem;
-    width: 100%;
-  }
-
-  .block__text {
-    width: 100vw;
-  }
-}
-
-@media screen and (min-width: 93.75rem) {
   .danceContainer {
-    article {
-      padding: 2rem 5rem;
+    .block {
+      .image {
+        max-height: 34rem;
+      }
+      .jazzImg {
+        height: 34rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $macBookAir) {
+  .danceContainer {
+    .block {
+      flex-direction: row-reverse;
+
+      .image {
+        margin: 2rem;
+        max-height: 23.3rem;
+        max-width: 50rem;
+      }
+    }
+
+    .block:nth-of-type(2) {
+      flex-direction: row;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .danceContainer {
+    .block {
+      .image {
+        margin: 2rem auto;
+        max-height: 33.3rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $wideScreen) {
+  .danceContainer {
+    .block {
+      .image {
+        margin: 2rem 0;
+      }
+
+      .block__text {
+        margin: 2rem 0;
+      }
     }
   }
 }

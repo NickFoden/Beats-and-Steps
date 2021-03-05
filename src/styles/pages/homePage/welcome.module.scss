@@ -12,7 +12,7 @@
     align-items: center;
 
     a {
-      margin-bottom: 1rem;
+      margin-bottom: 1.25rem;
     }
   }
 }
@@ -27,26 +27,20 @@
   }
 }
 
-@media screen and (max-width: $ipad) {
+@media screen and (min-width: $ipad) {
   .welcomeTitleContainer {
     p {
       margin-bottom: 2rem;
     }
   }
-}
 
-@media screen and (min-width: $ipadPro) {
   .list {
+    justify-content: space-evenly;
+
     .list__department {
       a {
         margin-bottom: 2rem;
       }
     }
-  }
-}
-
-@media screen and (min-width: $bigDesktop) {
-  .list {
-    justify-content: space-evenly;
   }
 }

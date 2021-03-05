@@ -11,14 +11,14 @@ export const getImages = graphql`
   {
     voice: file(relativePath: { eq: "music/voice.jpg" }) {
       childCloudinaryAsset {
-        fluid(transformations: ["f_auto", "q_auto"], maxWidth: 1000) {
+        fluid {
           ...CloudinaryAssetFluid
         }
       }
     }
     guitar: file(relativePath: { eq: "music/guitar.jpg" }) {
       childCloudinaryAsset {
-        fluid(transformations: ["f_auto", "q_auto"], maxWidth: 1000) {
+        fluid {
           ...CloudinaryAssetFluid
         }
       }
@@ -36,7 +36,12 @@ const Music = () => {
         description="Music Department page for Beats &amp; Steps Arts Academy"
       />
       <section className={classes.musicContainer}>
-        <div className={[classes.block, classes.reverseBlock].join(" ")}>
+        <div className={classes.block}>
+          <Img
+            className={classes.image}
+            fluid={data.voice.childCloudinaryAsset.fluid}
+            alt="Beats &amp; Steps voice students and teacher"
+          />
           <article
             className={["sectionContainer", classes.block__text].join(" ")}
           >
@@ -50,22 +55,17 @@ const Music = () => {
               All ages are admitted, subject to course specific entry-level
               requirements.
             </p>
-            <p className={classes.lastP}>
+            <p>
               We give special emphasis to detailed technique, ear training,
               sight-reading, and repertoire-building.
             </p>
             <NavLink link="/contact/">Enroll</NavLink>
           </article>
-          <Img
-            className={[classes.image, classes.imageRight].join(" ")}
-            fluid={data.voice.childCloudinaryAsset.fluid}
-            alt="Beats &amp; Steps voice students and teacher"
-          />
         </div>
-        <div className={[classes.block, classes.middleBlock].join(" ")}>
+        <div className={classes.block}>
           <Img
             imgStyle={{ objectPosition: "top" }}
-            className={[classes.image, classes.imageLeft].join(" ")}
+            className={classes.image}
             fluid={data.guitar.childCloudinaryAsset.fluid}
             alt="Beats &amp; Steps Guitar Student"
           />
@@ -83,7 +83,7 @@ const Music = () => {
               of musical achievement, under the auspices of CMM.
             </p>
             <p>We are a designated ABRSM exam center in the country.</p>
-            <p className={classes.lastP}>
+            <p>
               We provide performance opportunities through regular
               lesson-workshops in music performance and annual recitals/public
               performances.

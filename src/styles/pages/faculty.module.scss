@@ -11,6 +11,7 @@
   .headerImgContainer {
     box-shadow: $darkShadow;
     border-radius: 5%;
+    max-width: 81rem;
   }
 
   h2 {
@@ -84,7 +85,12 @@
 
     .artistInfo {
       .artistName {
-        font-size: 0.875rem;
+        font-size: 0.64rem;
+      }
+
+      .artistPosition,
+      .artistHistory {
+        font-size: 0.64rem;
       }
     }
   }
@@ -94,16 +100,26 @@
   // dance/musicTeachers.js
   .artistListItem {
     margin: 0 1% 1rem;
-
-    .artistInfo {
-      .artistHistory {
-        font-size: 0.8rem;
-      }
-    }
   }
 }
 
 @media screen and (min-width: $ipad) {
+  // faculty.js
+  .facultyContainer {
+    .headerImgContainer {
+      width: 80vw;
+      margin: auto;
+    }
+
+    .headerImg {
+      border-radius: 5%;
+    }
+
+    .listContainer {
+      margin: auto;
+    }
+  }
+
   // dance/musicTeachers.js
   .artistListItem {
     width: 20rem;
@@ -121,22 +137,6 @@
 }
 
 @media screen and (min-width: $ipadPro) {
-  // faculty.js
-  .facultyContainer {
-    .headerImgContainer {
-      width: 80vw;
-      margin: auto;
-    }
-
-    .headerImg {
-      border-radius: 5%;
-    }
-
-    .listContainer {
-      margin: auto;
-    }
-  }
-
   // dance/musicTeachers.js
   .artistListItem {
     width: 21.56rem;
@@ -161,14 +161,8 @@
   }
 }
 
-@media screen and (min-width: 90rem) {
+@media screen and (min-width: $macBookAir) {
   .artistListItem {
     margin: 0 2% 1rem;
-
-    .artistInfo {
-      .artistPosition {
-        font-size: 0.85rem;
-      }
-    }
   }
 }

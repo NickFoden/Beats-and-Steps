@@ -9,7 +9,7 @@ const NotFoundPage = () => (
   <Layout>
     <SEO title="404: Not found" />
     <section className="sectionContainer">
-      <h1 className={classes.errorHeading}>Sorry, this page doesn't exist</h1>
+      <h1 className={classes.errorHeading}>Sorry, this page doesn't exist!</h1>
       <p>Please click below to navigate to the Home page</p>
       <NavLink link="/">Home</NavLink>
     </section>

@@ -8,7 +8,7 @@ const getImages = graphql`
   {
     logo: file(relativePath: { eq: "Logos/logo.png" }) {
       childCloudinaryAsset {
-        fluid(transformations: ["f_auto", "q_auto"], maxWidth: 1000) {
+        fluid {
           ...CloudinaryAssetFluid
         }
       }

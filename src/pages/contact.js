@@ -10,7 +10,7 @@ const getImages = graphql`
   {
     contact: file(relativePath: { eq: "contact/contact.jpg" }) {
       childCloudinaryAsset {
-        fluid(transformations: ["f_auto", "q_auto"], maxWidth: 1000) {
+        fluid {
           ...CloudinaryAssetFluid
         }
       }
@@ -33,7 +33,7 @@ const Contact = () => {
           fluid={data.contact.childCloudinaryAsset.fluid}
           alt="Beats and Steps students dancing"
         />
-        <div className="sectionContainer">
+        <div className={["sectionContainer", classes.textContainer].join(" ")}>
           <h1>Open Enrollment</h1>
           <div className={classes.text}>
             <p>Enrollment is all year round! For inquiries, please call:</p>
