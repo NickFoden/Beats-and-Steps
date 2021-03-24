@@ -17,12 +17,29 @@
   }
 }
 
+.enrollButton {
+  margin-top: 2rem;
+
+  a {
+    display: block;
+    width: 16.5rem;
+    max-width: 20rem;
+    margin: auto;
+  }
+}
+
 @media screen and (max-width: $defaultSmallPhone) {
   .list {
     .list__department {
       a {
         padding: 8px 20px;
       }
+    }
+  }
+
+  .enrollButton {
+    a {
+      width: 14rem;
     }
   }
 }

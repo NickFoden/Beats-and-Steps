@@ -9,7 +9,8 @@ const Welcome = () => {
       <div className={classes.welcomeTitleContainer}>
         <h1 className={classes.title}>Beats &amp; Steps Arts Academy</h1>
         <p>
-          An affiliate of the <strong>Center for Movement and Music (CMM)</strong> offering courses
+          An affiliate of the{" "}
+          <strong>Center for Movement and Music (CMM)</strong> offering courses
           in:
         </p>
       </div>
@@ -33,6 +34,10 @@ const Welcome = () => {
             <li>Hiphop</li>
           </ul>
         </div>
+      </div>
+      <div className={classes.enrollButton}>
+        {/* All enrollment Navlinks should go directly to form e.g. link="/contact/#form" when form embedded */}
+        <NavLink link="/contact/">Enroll Here</NavLink>
       </div>
     </section>
   );
