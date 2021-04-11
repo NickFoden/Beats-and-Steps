@@ -16,7 +16,6 @@ const getImages = graphql`
               fluid(
                 maxWidth: 300
                 maxHeight: 300
-                quality: 85
                 webpQuality: 85
               ) {
                 ...GatsbyImageSharpFluid_withWebp_tracedSVG

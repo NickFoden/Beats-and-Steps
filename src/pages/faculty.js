@@ -35,7 +35,7 @@ const Faculty = () => {
           <Image
             className={classes.headerImg}
             fluid={data.header.childCloudinaryAsset.fluid}
-            alt="Group photo of Beats &amp; Steps staff"
+            alt="Beats &amp; Steps staff"
           />
         </div>
         <div className="sectionContainer">

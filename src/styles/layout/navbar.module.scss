@@ -16,9 +16,6 @@
 
 .logoContainer {
   height: 5rem;
-  // width: 10.68rem;
-  // height: 5rem;
-  // width: 12rem;
   position: absolute;
   top: 0;
   right: 0;
@@ -29,6 +26,7 @@
     height: 6.5rem;
     justify-content: flex-end;
     align-items: flex-start;
+    padding: 0 3rem;
     .navLinksContainer {
       .navLinks {
         .navLink {
@@ -52,9 +50,6 @@
     transition: $transition;
 
     .navLinks {
-      &:last-child {
-        margin-right: 3rem;
-      }
       display: inline-flex;
       align-items: center;
 

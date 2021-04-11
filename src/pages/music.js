@@ -59,7 +59,7 @@ const Music = () => {
               We give special emphasis to detailed technique, ear training,
               sight-reading, and repertoire-building.
             </p>
-            <NavLink link="/contact/">Enroll</NavLink>
+            <NavLink link="/contact">Enroll</NavLink>
           </article>
         </div>
         <div className={classes.block}>
@@ -88,7 +88,7 @@ const Music = () => {
               lesson-workshops in music performance and annual recitals/public
               performances.
             </p>
-            <NavLink link="/contact/">Enroll</NavLink>
+            <NavLink link="/contact">Enroll</NavLink>
           </article>
         </div>
       </section>

@@ -36,8 +36,8 @@ const Welcome = () => {
         </div>
       </div>
       <div className={classes.enrollButton}>
-        {/* All enrollment Navlinks should go directly to form e.g. link="/contact/#form" when form embedded */}
-        <NavLink link="/contact/">Enroll Here</NavLink>
+        {/* SEEMS QUITE COMPLICATED BUT TRY TO FIND A WAY TO LINK DIRECTLY TO THE FORM */}
+        <NavLink link="/contact">Enroll Here</NavLink>
       </div>
     </section>
   );

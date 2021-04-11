@@ -4,6 +4,8 @@ import Img from "gatsby-image";
 
 import Layout from "../components/navigation/Layout";
 import SEO from "../components/SEO/SEO";
+import Form from "../components/my-form/MainForm";
+// import Form from "../components/google-form/form";
 import classes from "../styles/pages/contact.module.scss";
 
 const getImages = graphql`
@@ -36,11 +38,13 @@ const Contact = () => {
         <div className={["sectionContainer", classes.textContainer].join(" ")}>
           <h1>Open Enrollment</h1>
           <div className={classes.text}>
-            <p>Enrollment is all year round! For inquiries, please call:</p>
+            <h2>Enrollment is all year round!</h2>
+            <p>Please complete the enrollment form below.</p>
+            <p>For inquiries, please use the Messenger chat or call:</p>
             <a className={classes.contactLink} href="tel:0917-5747131">
               0917-574-7131
             </a>
-            <p>Or directly message us via:</p>
+            <p>Or you can reach us via:</p>
             <ul>
               <li>
                 <a
@@ -60,7 +64,7 @@ const Contact = () => {
               </li>
             </ul>
           </div>
-          <h2>Our Address:</h2>
+          <h2 className={classes.addressHeader}>Our Address:</h2>
           <div className={classes.text}>
             <ul className={classes.address}>
               <li>Marius Acropoli Building</li>
@@ -71,6 +75,9 @@ const Contact = () => {
           </div>
         </div>
       </section>
+      <div className={classes.formContainer}>
+        <Form />
+      </div>
     </Layout>
   );
 };

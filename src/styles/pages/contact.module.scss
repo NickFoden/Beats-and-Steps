@@ -1,17 +1,17 @@
 @use '../base/variables' as *;
 
 .contactContainer {
-  background-color: $section2BackgroundColor;
+  background-color: $backgroundColor;
   display: flex;
   flex-direction: column;
 
   .image {
-    max-width: 1450px;
+    max-width: 90.625rem;
   }
 
   .textContainer {
     .text {
-      max-width: 800px;
+      max-width: 50rem;
 
       .contactLink {
         color: black;
@@ -25,15 +25,31 @@
           border-bottom: 2px solid $accent;
         }
       }
+      h2 {
+        font-weight: $normalFont;
+      }
 
       p {
-        margin: 2rem 0;
+        margin: 1.2rem 0;
       }
     }
+  }
+}
 
-    h2 {
-      margin-top: 2rem;
-    }
+.addressHeader {
+  margin: 1.2rem 0;
+}
+
+.formContainer {
+  background-color: $section2BackgroundColor;
+  padding: 2rem 0;
+  text-align: center;
+  // height: 1250px;
+}
+
+@media screen and (min-width: $smallTablet) {
+  .formContainer {
+    // height: 1200px;
   }
 }
 
@@ -66,5 +82,9 @@
         width: 45vw;
       }
     }
+  }
+
+  .formContainer {
+    // height: 1150px;
   }
 }
