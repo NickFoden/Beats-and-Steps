@@ -36,7 +36,6 @@ const Welcome = () => {
         </div>
       </div>
       <div className={classes.enrollButton}>
-        {/* SEEMS QUITE COMPLICATED BUT TRY TO FIND A WAY TO LINK DIRECTLY TO THE FORM */}
         <NavLink link="/contact/">Enroll Here</NavLink>
       </div>
     </section>
