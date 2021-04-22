@@ -25,7 +25,7 @@ const Welcome = () => {
         <div className={classes.courseList__container}>
           <NavLink link="/dance/">dance</NavLink>
           <ul className={classes.courseList__danceList}>
-            <div className={classes.courseList__element}>
+            <li className={classes.courseList__element}>
               <div className={classes.courseList__iconContainer}>
                 <img
                   className={classes.courseList__icon}
@@ -33,9 +33,9 @@ const Welcome = () => {
                   alt="ballet logo"
                 />
               </div>
-              <li>Ballet</li>
-            </div>
-            <div className={classes.courseList__element}>
+              <p>Ballet</p>
+            </li>
+            <li className={classes.courseList__element}>
               <div className={classes.courseList__iconContainer}>
                 <img
                   className={classes.courseList__icon}
@@ -43,9 +43,9 @@ const Welcome = () => {
                   alt="jazz logo"
                 />
               </div>
-              <li>Jazz</li>
-            </div>
-            <div className={classes.courseList__element}>
+              <p>Jazz</p>
+            </li>
+            <li className={classes.courseList__element}>
               <div className={classes.courseList__iconContainer}>
                 <img
                   className={classes.courseList__icon}
@@ -53,14 +53,14 @@ const Welcome = () => {
                   alt="hiphop logo"
                 />
               </div>
-              <li>Hiphop</li>
-            </div>
+              <p>Hiphop</p>
+            </li>
           </ul>
         </div>
         <div className={classes.courseList__container}>
           <NavLink link="/music/">music</NavLink>
           <ul className={classes.courseList__musicList}>
-            <div className={classes.courseList__element}>
+            <li className={classes.courseList__element}>
               <div className={classes.courseList__iconContainer}>
                 <img
                   className={classes.courseList__icon}
@@ -68,9 +68,9 @@ const Welcome = () => {
                   alt="voice logo"
                 />
               </div>
-              <li>Voice</li>
-            </div>
-            <div className={classes.courseList__element}>
+              <p>Voice</p>
+            </li>
+            <li className={classes.courseList__element}>
               <div className={classes.courseList__iconContainer}>
                 <img
                   className={classes.courseList__icon}
@@ -78,9 +78,9 @@ const Welcome = () => {
                   alt="piano logo"
                 />
               </div>
-              <li>Piano</li>
-            </div>
-            <div className={classes.courseList__element}>
+              <p>Piano</p>
+            </li>
+            <li className={classes.courseList__element}>
               <div className={classes.courseList__iconContainer}>
                 <img
                   className={classes.courseList__icon}
@@ -88,9 +88,9 @@ const Welcome = () => {
                   alt="guitar logo"
                 />
               </div>
-              <li>Guitar</li>
-            </div>
-            <div className={classes.courseList__element}>
+              <p>Guitar</p>
+            </li>
+            <li className={classes.courseList__element}>
               <div className={classes.courseList__iconContainer}>
                 <img
                   className={classes.courseList__icon}
@@ -98,8 +98,8 @@ const Welcome = () => {
                   alt="violin logo"
                 />
               </div>
-              <li>Violin</li>
-            </div>
+              <p>Violin</p>
+            </li>
           </ul>
         </div>
       </div>
