@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "author": "Alex Friedman <signetcoding@gmail.com>",
   "dependencies": {
-    "@fontsource/montserrat": "^4.2.0",
+    "@fontsource/quicksand": "^4.2.2",
     "@fontsource/sacramento": "^4.2.0",
     "dotenv": "^8.2.0",
     "gatsby": "^2.30.3",

@@ -25,9 +25,6 @@
           border-bottom: 2px solid $accent;
         }
       }
-      h2 {
-        font-weight: $normalFont;
-      }
 
       p {
         margin: 1.2rem 0;
@@ -37,7 +34,8 @@
 }
 
 .addressHeader {
-  margin: 1.2rem 0;
+  // margin: 1.2rem 0;
+  margin-top: 0.5rem;
 }
 
 .formContainer {
@@ -47,9 +45,39 @@
   // height: 1250px;
 }
 
+.socialLinks {
+  display: flex;
+  justify-content: center;
+
+  .socialLink {
+    margin: 0 1rem;
+    font-size: 2rem;
+    transition: $transition;
+
+    &:focus-within {
+      svg {
+        transition: $transition;
+        transform: scale(1.5, 1.5);
+      }
+    }
+
+    svg:hover,
+    svg:active {
+      transition: $transition;
+      transform: scale(1.5, 1.5);
+    }
+  }
+}
+
 @media screen and (min-width: $smallTablet) {
-  .formContainer {
-    // height: 1200px;
+  // .formContainer {
+  //   height: 1200px;
+  // }
+
+  .socialLinks {
+    .socialLink {
+      font-size: 3rem;
+    }
   }
 }
 
@@ -84,7 +112,7 @@
     }
   }
 
-  .formContainer {
+  // .formContainer {
     // height: 1150px;
-  }
+  // }
 }

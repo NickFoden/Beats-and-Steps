@@ -12,13 +12,13 @@ const data = [
   },
   {
     id: 2,
-    text: "music",
-    url: "/music/",
+    text: "dance",
+    url: "/dance/",
   },
   {
     id: 3,
-    text: "dance",
-    url: "/dance/",
+    text: "music",
+    url: "/music/",
   },
   {
     id: 4,

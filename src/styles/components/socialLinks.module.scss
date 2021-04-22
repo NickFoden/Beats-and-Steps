@@ -33,8 +33,6 @@
 
 @media screen and (max-height: 36rem) {
   .socialLinks {
-    display: flex;
-    justify-content: space-between;
     margin-top: 0.5rem;
 
     li:first-of-type a {
@@ -54,13 +52,6 @@
     margin-top: 3rem;
   }
 
-  .socialLink {
-    font-size: 3rem;
-    margin-left: 3rem;
-  }
-}
-
-@media screen and (min-width: $ipad) {
   .socialLink {
     font-size: 3rem;
     margin-left: 3rem;

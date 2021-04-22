@@ -1,63 +1,93 @@
 @use '../../base/variables' as *;
 
-.list {
+.welcomeTitleContainer {
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.courseList__danceList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  :first-child {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
+.courseList__musicList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.courseList__iconContainer {
+  height: 98px;
+  width: 98px;
+  background-color: $navbarColor;
+  border-radius: 50%;
+  border: 2px solid #424242;
+  margin: auto;
   display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  text-align: center;
+  justify-content: center;
+  align-items: center;
+  box-shadow: $lightShadow;
+}
 
-  .list__department {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.courseList__icon {
+  width: 65px;
+  height: 90px;
+  padding: 5px;
+  color: white;
+}
 
-    a {
-      margin-bottom: 1.25rem;
+.courseList__container {
+  .courseList__element {
+    margin-bottom: 1.25rem;
+
+    li {
+      margin-top: 1rem;
+      font-weight: $semiBoldFont;
     }
+  }
+
+  a {
+    margin: 2rem 0;
+  }
+
+  :last-child {
+    margin-bottom: 0;
   }
 }
 
 .enrollButton {
-  margin-top: 2rem;
-
   a {
     display: block;
-    width: 16.5rem;
     max-width: 20rem;
-    margin: auto;
+    margin: 2rem auto 0;
   }
 }
 
-@media screen and (max-width: $defaultSmallPhone) {
-  .list {
-    .list__department {
-      a {
-        padding: 8px 20px;
-      }
+@media screen and (min-width: $ipad) {
+  .courseList__container {
+    ul {
+      display: flex;
+      justify-content: center;
+    }
+
+    .courseList__element {
+      width: 15%;
+      margin-bottom: 0;
+    }
+
+    a {
+      margin: 3rem 0;
     }
   }
 
   .enrollButton {
     a {
-      width: 14rem;
-    }
-  }
-}
-
-@media screen and (min-width: $ipad) {
-  .welcomeTitleContainer {
-    p {
-      margin-bottom: 2rem;
-    }
-  }
-
-  .list {
-    justify-content: space-evenly;
-
-    .list__department {
-      a {
-        margin-bottom: 2rem;
-      }
+      margin: 3rem auto 0;
     }
   }
 }

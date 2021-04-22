@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import Img from "gatsby-image";
+import { FaFacebookSquare, FaInstagram } from "react-icons/fa";
 
 import Layout from "../components/navigation/Layout";
 import SEO from "../components/SEO/SEO";
@@ -36,30 +37,42 @@ const Contact = () => {
           alt="Beats and Steps students dancing"
         />
         <div className={["sectionContainer", classes.textContainer].join(" ")}>
-          <h1>Open Enrollment</h1>
           <div className={classes.text}>
-            <h2>Enrollment is all year round!</h2>
+            <h1>Open Enrollment!</h1>
             <p>Please complete the enrollment form below.</p>
-            <p>For inquiries, please use the Messenger chat or call:</p>
+            <p>For inquiries, use the Messenger chat or call:</p>
             <a className={classes.contactLink} href="tel:0917-5747131">
               0917-574-7131
             </a>
             <p>Or you can reach us via:</p>
-            <ul>
+            <ul className={classes.socialLinks}>
               <li>
                 <a
-                  className={classes.contactLink}
                   href="https://www.facebook.com/beatsandstepsartsacademy/"
+                  className={classes.socialLink}
+                  aria-label="Beats and Steps Facebook"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  Facebook
+                  <FaFacebookSquare style={{ color: "#4267B2" }} />
                 </a>
               </li>
               <li>
                 <a
-                  className={classes.contactLink}
                   href="https://www.instagram.com/beatsandstepsartsacademy/?hl=en"
+                  className={classes.socialLink}
+                  aria-label="Beats and Steps Instagram"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  Instagram
+                  <FaInstagram
+                    style={{
+                      color: "#fff",
+                      background:
+                        "radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%)",
+                      borderRadius: "5px",
+                    }}
+                  />
                 </a>
               </li>
             </ul>

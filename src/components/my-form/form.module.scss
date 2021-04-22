@@ -178,6 +178,14 @@
   }
 }
 
+@media screen and (max-width: $defaultSmallPhone) {
+  .other {
+    input {
+      width: 10rem;
+    }
+  }
+}
+
 @media screen and (min-width: $nexus) {
   .stepContainer {
     .textElement {
