@@ -70,7 +70,7 @@ const Dance = () => {
               which will assist them in the pursuit of a career, either as a
               professional dancer or dance teacher.
             </p>
-            <NavLink link="/contact/">Enroll</NavLink>
+            <NavLink link="/contact/#form">Enroll</NavLink>
           </article>
         </div>
         <div id="jazz" className={classes.anchorPoint} />
@@ -112,7 +112,7 @@ const Dance = () => {
               structured curriculum of Dance Arts International, which has been
               used for teaching jazz in the United States since the 1930s.
             </p>
-            <NavLink link="/contact/">Enroll</NavLink>
+            <NavLink link="/contact/#form">Enroll</NavLink>
           </article>
         </div>
         <div id="hiphop" className={classes.anchorPoint} />
@@ -142,7 +142,7 @@ const Dance = () => {
               hiphop also included in the program. The dance consists of four
               primary elements: toprock, downrock, power moves and freezes.
             </p>
-            <NavLink link="/contact/">Enroll</NavLink>
+            <NavLink link="/contact/#form">Enroll</NavLink>
           </article>
         </div>
       </section>

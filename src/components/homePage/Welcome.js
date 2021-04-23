@@ -119,7 +119,7 @@ const Welcome = () => {
         </div>
       </div>
       <div className={classes.enrollButton}>
-        <NavLink link="/contact/">Enroll Here</NavLink>
+        <NavLink link="/contact/#form">Enroll Here</NavLink>
       </div>
     </section>
   );

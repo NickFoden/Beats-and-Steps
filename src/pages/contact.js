@@ -88,6 +88,7 @@ const Contact = () => {
           </div>
         </div>
       </section>
+      <div id="form" className={classes.anchorPoint} />
       <div className={classes.formContainer}>
         <Form />
       </div>

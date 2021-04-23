@@ -16,7 +16,21 @@ export const getImages = graphql`
         }
       }
     }
+    piano: file(relativePath: { eq: "music/piano.jpg" }) {
+      childCloudinaryAsset {
+        fluid {
+          ...CloudinaryAssetFluid
+        }
+      }
+    }
     guitar: file(relativePath: { eq: "music/guitar.jpg" }) {
+      childCloudinaryAsset {
+        fluid {
+          ...CloudinaryAssetFluid
+        }
+      }
+    }
+    violin: file(relativePath: { eq: "music/violin.jpg" }) {
       childCloudinaryAsset {
         fluid {
           ...CloudinaryAssetFluid
@@ -36,32 +50,55 @@ const Music = () => {
         description="Music Department page for Beats &amp; Steps Arts Academy"
       />
       <section className={classes.musicContainer}>
+        <div id="voice" className={classes.anchorPoint} />
         <div className={classes.block}>
           <Img
+            imgStyle={{ objectPosition: "top" }}
             className={classes.image}
             fluid={data.voice.childCloudinaryAsset.fluid}
-            alt="Beats &amp; Steps voice students and teacher"
+            alt="Beats &amp; Steps Voice student"
           />
           <article
             className={["sectionContainer", classes.block__text].join(" ")}
           >
-            <h2>The Music Program</h2>
+            <h2>The Voice Program</h2>
             <p>
-              Beats &amp; Steps offers individual instruction in voice, piano,
-              guitar, violin, and music theory following four cycles: first
-              semester, second semester, summer, and midyear.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
-            <p>
-              All ages are admitted, subject to course specific entry-level
-              requirements.
-            </p>
-            <p>
-              We give special emphasis to detailed technique, ear training,
-              sight-reading, and repertoire-building.
-            </p>
-            <NavLink link="/contact/">Enroll</NavLink>
+            <NavLink link="/contact/#form">Enroll</NavLink>
           </article>
         </div>
+        <div id="piano" className={classes.anchorPoint} />
+        <div className={classes.block}>
+          <Img
+            imgStyle={{ objectPosition: "top" }}
+            className={classes.image}
+            fluid={data.piano.childCloudinaryAsset.fluid}
+            alt="Beats &amp; Steps Piano Student"
+          />
+          <article
+            className={["sectionContainer", classes.block__text].join(" ")}
+          >
+            <h2>The Piano Program</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <NavLink link="/contact/#form">Enroll</NavLink>
+          </article>
+        </div>
+        <div id="guitar" className={classes.anchorPoint} />
         <div className={classes.block}>
           <Img
             imgStyle={{ objectPosition: "top" }}
@@ -72,23 +109,41 @@ const Music = () => {
           <article
             className={["sectionContainer", classes.block__text].join(" ")}
           >
+            <h2>The Guitar Program</h2>
             <p>
-              Beats &amp; Steps is aligned with the instructional standards of
-              the Center for Movement &amp; Music (CMM), as its Affiliate
-              Centre.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
+            <NavLink link="/contact/#form">Enroll</NavLink>
+          </article>
+        </div>
+        <div id="violin" className={classes.anchorPoint} />
+        <div className={classes.block}>
+          <Img
+            imgStyle={{ objectPosition: "top" }}
+            className={classes.image}
+            fluid={data.violin.childCloudinaryAsset.fluid}
+            alt="Beats &amp; Steps Violin Student"
+          />
+          <article
+            className={["sectionContainer", classes.block__text].join(" ")}
+          >
+            <h2>The Violin Program</h2>
             <p>
-              We participate in the annual Associated Board of the Royal Schools
-              of Music (ABRSM) London music exams for international benchmarking
-              of musical achievement, under the auspices of CMM.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
-            <p>We are a designated ABRSM exam center in the country.</p>
-            <p>
-              We provide performance opportunities through regular
-              lesson-workshops in music performance and annual recitals/public
-              performances.
-            </p>
-            <NavLink link="/contact/">Enroll</NavLink>
+            <NavLink link="/contact/#form">Enroll</NavLink>
           </article>
         </div>
       </section>
@@ -97,3 +152,29 @@ const Music = () => {
 };
 
 export default Music;
+
+/* 
+OG Music Text
+
+  Beats &amp; Steps offers individual instruction in voice, piano,
+  guitar, violin, and music theory following four cycles: first
+  semester, second semester, summer, and midyear.
+
+   All ages are admitted, subject to course specific entry-level
+   requirements.
+
+   We give special emphasis to detailed technique, ear training,
+   sight-reading, and repertoire-building.
+
+   Beats &amp; Steps is aligned with the instructional standards of
+   the Center for Movement &amp; Music (CMM), as its Affiliate
+   Centre.
+
+   We participate in the annual Associated Board of the Royal Schools
+   of Music (ABRSM) London music exams for international benchmarking
+   of musical achievement, under the auspices of CMM.
+
+   We provide performance opportunities through regular
+   lesson-workshops in music performance and annual recitals/public
+   performances.
+*/

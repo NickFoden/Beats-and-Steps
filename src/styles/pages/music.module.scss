@@ -1,5 +1,10 @@
 @use '../base/variables' as *;
 
+.anchorPoint {
+  position: relative;
+  top: -5rem;
+}
+
 .musicContainer {
   background-color: $backgroundColor;
 
@@ -15,7 +20,8 @@
       max-width: 50rem;
     }
   }
-  .block:nth-of-type(2) {
+  .block:nth-of-type(4),
+  .block:nth-of-type(8) {
     background-color: $section2BackgroundColor;
   }
 }
@@ -59,7 +65,8 @@
 @media screen and (min-width: $macBookAir) {
   .musicContainer {
     .block {
-      flex-direction: row;
+      flex-direction: row-reverse;
+
       .image {
         margin: 2rem;
         max-height: 23.3rem;
@@ -67,8 +74,9 @@
       }
     }
 
-    .block:first-of-type {
-      flex-direction: row-reverse;
+    .block:nth-of-type(4),
+    .block:nth-of-type(8) {
+      flex-direction: row;
     }
   }
 }

@@ -1,5 +1,10 @@
 @use '../base/variables' as *;
 
+.anchorPoint {
+  position: relative;
+  top: -5rem;
+}
+
 .contactContainer {
   background-color: $backgroundColor;
   display: flex;
@@ -113,6 +118,6 @@
   }
 
   // .formContainer {
-    // height: 1150px;
+  // height: 1150px;
   // }
 }
