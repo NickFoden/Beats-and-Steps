@@ -25,7 +25,7 @@
       a:focus-within {
         .affLinks__logo {
           box-shadow: $blueShadow;
-          transform: scale(1.01, 1.01);
+          transform: scale(1.1, 1.1);
         }
       }
 
@@ -36,7 +36,7 @@
         &:active,
         &:hover {
           box-shadow: $blueShadow;
-          transform: scale(1.01, 1.01);
+          transform: scale(1.1, 1.1);
         }
       }
 

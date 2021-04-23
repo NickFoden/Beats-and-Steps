@@ -6,6 +6,11 @@
   }
 }
 
+.courses {
+  max-width: 28rem;
+  margin: auto;
+}
+
 .courseList__danceList {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -31,7 +36,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: $lightShadow;
+  box-shadow: $darkShadow;
 }
 
 .courseList__icon {
@@ -55,6 +60,24 @@
     margin: 2rem 0;
   }
 
+  // *************** SET SCROLLING TO ID ************
+  .courseList__anchor {
+    display: inline-block;
+    margin: 0;
+
+    &:hover,
+    &:focus-within {
+      .courseList__iconContainer {
+        box-shadow: $blueShadow;
+        transition: $transition;
+        transform: scale(1.1, 1.1);
+      }
+
+      transition: $transition;
+      color: $accent;
+    }
+  }
+
   :last-child {
     margin-bottom: 0;
   }
@@ -69,6 +92,11 @@
 }
 
 @media screen and (min-width: $ipad) {
+  .courses {
+    max-width: none;
+    margin: 0;
+  }
+
   .courseList__container {
     ul {
       display: flex;

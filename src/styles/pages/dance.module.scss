@@ -1,4 +1,8 @@
 @use '../base/variables' as *;
+.anchorPoint {
+  position: relative;
+  top: -5rem;
+}
 
 .danceContainer {
   background-color: $backgroundColor;

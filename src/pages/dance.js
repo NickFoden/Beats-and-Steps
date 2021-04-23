@@ -43,6 +43,7 @@ const Dance = () => {
         description="Dance Department page for Beats &amp; Steps Arts Academy"
       />
       <section className={classes.danceContainer}>
+        <div id="ballet" className={classes.anchorPoint} />
         <div className={classes.block}>
           <Img
             className={classes.image}
@@ -72,6 +73,7 @@ const Dance = () => {
             <NavLink link="/contact/">Enroll</NavLink>
           </article>
         </div>
+        <div id="jazz" className={classes.anchorPoint} />
         <div className={classes.block}>
           <Img
             className={[classes.image, classes.jazzImg].join(" ")}
@@ -113,6 +115,7 @@ const Dance = () => {
             <NavLink link="/contact/">Enroll</NavLink>
           </article>
         </div>
+        <div id="hiphop" className={classes.anchorPoint} />
         <div className={classes.block}>
           <Img
             className={classes.image}
