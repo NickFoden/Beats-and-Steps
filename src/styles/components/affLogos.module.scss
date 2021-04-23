@@ -2,87 +2,69 @@
 
 .affLinksContainer {
   margin-bottom: 1.25rem;
+}
 
-  .affLinks__list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.affLinks__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
-    :first-child {
-      grid-column-start: 1;
-      grid-column-end: 3;
+  :first-child {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
+.affLinks__listItem {
+  padding: 0.5rem;
+}
+
+.affLinks__anchor {
+  display: block;
+  font-weight: $semiBoldFont;
+  margin: 0 auto;
+  width: fit-content;
+
+  p {
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+  }
+
+  .affLinks__logo {
+    border-radius: 20%;
+    box-shadow: $darkShadow;
+  }
+
+  // Accessibility: focus-within selector lets keyboard users tab through logos
+  &:hover,
+  &:focus-within {
+    .affLinks__logo {
+      box-shadow: $blueShadow;
+      transition: $transition;
+      transform: scale(1.1, 1.1);
     }
-
-    .affLinks__listItem {
-      padding: 0.5rem;
-      a {
-        display: block;
-        font-weight: $semiBoldFont;
-        margin: 0 auto;
-        width: fit-content;
-      }
-
-      // Accessibility: focus-within selector lets keyboard users tab through logos
-      a:focus-within {
-        .affLinks__logo {
-          box-shadow: $blueShadow;
-          transform: scale(1.1, 1.1);
-        }
-      }
-
-      .affLinks__logo {
-        transition: $transition;
-        box-shadow: $darkShadow;
-        border-radius: 20%;
-        &:active,
-        &:hover {
-          box-shadow: $blueShadow;
-          transform: scale(1.1, 1.1);
-        }
-      }
-
-      .affLinks__textLink {
-        color: $black;
-        transition: $transition;
-        font-size: 0.7rem;
-        margin-top: 0.25rem;
-
-        &:active,
-        &:hover,
-        &:focus {
-          color: $accent;
-        }
-      }
-    }
+    transition: $transition;
+    color: $accent;
   }
 }
 
 @media screen and (min-width: $smallTablet) {
-  .affLinksContainer {
-    .affLinks__list {
-      display: flex;
-      justify-content: center;
-
-      .affLinks__listItem {
-        a {
-          width: 9.5rem;
-        }
-      }
-    }
+  .affLinks__list {
+    display: flex;
+    justify-content: center;
+  }
+  .affLinks__anchor {
+    width: 9.5rem;
   }
 }
 
 @media screen and (min-width: $ipadPro) {
-  .affLinksContainer {
-    .affLinks__list {
-      .affLinks__listItem {
-        width: 25%;
-        padding: 0 2rem;
-        a {
-          padding-top: 0.5rem;
-          width: fit-content;
-        }
-      }
-    }
+  .affLinks__listItem {
+    width: 25%;
+    padding: 0 2rem;
+  }
+  .affLinks__anchor {
+    padding-top: 0.5rem;
+    width: fit-content;
   }
 }
 
