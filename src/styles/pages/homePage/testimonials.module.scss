@@ -1,0 +1,23 @@
+@use '../../base/variables' as *;
+
+.title {
+  text-transform: initial;
+  margin-bottom: 2rem;
+}
+
+.testimonialsContainer {
+  margin: 0 auto 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-flow: row;
+  align-items: flex-start;
+  row-gap: 20px;
+  max-width: 75rem;
+}
+
+@media screen and (min-width: $ipad) {
+  .testimonialsContainer {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+  }
+}

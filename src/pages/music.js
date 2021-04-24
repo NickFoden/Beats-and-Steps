@@ -7,6 +7,9 @@ import NavLink from "../components/navigation/NavLink";
 import SEO from "../components/SEO/SEO";
 import classes from "../styles/pages/music.module.scss";
 
+// DELETE AFTER COVID
+import CovidBanner from '../components/covid-banner/covid-banner';
+
 export const getImages = graphql`
   {
     voice: file(relativePath: { eq: "music/voice.jpg" }) {
@@ -49,6 +52,7 @@ const Music = () => {
         title="Music"
         description="Music Department page for Beats &amp; Steps Arts Academy"
       />
+      <CovidBanner />
       <section className={classes.musicContainer}>
         <div id="voice" className={classes.anchorPoint} />
         <div className={classes.block}>

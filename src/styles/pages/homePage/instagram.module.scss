@@ -1,5 +1,9 @@
 @use '../../base/variables' as *;
 
+.instaContainer {
+  background-color: $section2BackgroundColor;
+}
+
 .instaTitle {
   font-size: 2.5rem;
   font-family: $secondaryFont;

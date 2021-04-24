@@ -1,0 +1,64 @@
+@use '../../base/variables' as *;
+
+.testiOuterContainer {
+  max-width: 100%;
+  border-radius: 10px;
+  background-color: white;
+  border: 1px solid #e6e6e6;
+  box-shadow: $darkShadow;
+}
+
+.testiInnerContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  height: 18.75rem;
+  padding: 20px 15px 30px;
+  width: 100%;
+}
+
+.testiImageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0 20px;
+}
+
+.testiTextContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.testiQuote__name {
+  font-style: italic;
+  font-weight: $boldFont;
+  font-size: 1rem;
+}
+
+@media screen and (min-width: $ipadPro) {
+  .testiInnerContainer {
+    grid-template-columns: auto auto;
+    grid-template-rows: 1fr;
+    height: 15rem;
+    padding: 2.5rem;
+  }
+
+  .testiImageContainer {
+    grid-template-columns: auto auto;
+    grid-template-rows: 1fr;
+    height: 100%;
+  }
+
+  .testiTextContainer {
+    padding-left: 20px;
+  }
+}
+
+@media screen and (min-width: $macBookAir) {
+  .testiInnerContainer {
+    height: 11.25rem;
+  }
+}

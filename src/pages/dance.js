@@ -7,6 +7,9 @@ import NavLink from "../components/navigation/NavLink";
 import SEO from "../components/SEO/SEO";
 import classes from "../styles/pages/dance.module.scss";
 
+// DELETE AFTER COVID
+import CovidBanner from '../components/covid-banner/covid-banner';
+
 export const getImages = graphql`
   {
     ballet: file(relativePath: { eq: "dance/ballet.jpg" }) {
@@ -42,6 +45,7 @@ const Dance = () => {
         title="Dance"
         description="Dance Department page for Beats &amp; Steps Arts Academy"
       />
+      <CovidBanner />
       <section className={classes.danceContainer}>
         <div id="ballet" className={classes.anchorPoint} />
         <div className={classes.block}>
