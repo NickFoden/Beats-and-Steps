@@ -46,6 +46,7 @@ const Dance = () => {
         description="Dance Department page for Beats &amp; Steps Arts Academy"
       />
       <CovidBanner />
+      {/* HERE WILL BE THE BANNER SECTION FOR DANCE - MAKE SURE IT HAS AN H1 HEADING */}
       <section className={classes.danceContainer}>
         <div id="ballet" className={classes.anchorPoint} />
         <div className={classes.block}>

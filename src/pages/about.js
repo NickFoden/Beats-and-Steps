@@ -44,7 +44,7 @@ const About = () => {
           <article
             className={["sectionContainer", classes.block__text].join(" ")}
           >
-            <h2>Nurturing Together</h2>
+            <h1>Nurturing Together</h1>
             <p>
               The Beats and Steps Arts Academy, formerly known as CMM White
               Plains, started operations in 2013 as an Affiliate of the Center

@@ -53,6 +53,7 @@ const Music = () => {
         description="Music Department page for Beats &amp; Steps Arts Academy"
       />
       <CovidBanner />
+      {/* HERE WILL BE THE BANNER SECTION FOR MUSIC - MAKE SURE IT HAS AN H1 HEADING */}
       <section className={classes.musicContainer}>
         <div id="voice" className={classes.anchorPoint} />
         <div className={classes.block}>
