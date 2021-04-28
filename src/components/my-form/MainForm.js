@@ -62,7 +62,6 @@ const MainForm = () => {
       alert("Please choose one option or complete Other field");
     } else {
       e.preventDefault();
-      // SHOULD THIS BE PUT INTO TRY / CATCH? RESEARCH
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -72,7 +71,7 @@ const MainForm = () => {
         }),
       })
         .then(res => {
-          if (res.status === 404) {
+          if (!res.ok) {
             setFormStep(4);
           } else {
             setFormStep(3);
