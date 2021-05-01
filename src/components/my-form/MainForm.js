@@ -48,7 +48,7 @@ const MainForm = () => {
     const transformedData = Object.keys(data)
       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
       .join("&");
-      console.log(data)
+    console.log(data);
     return transformedData;
   }
 
@@ -89,7 +89,13 @@ const MainForm = () => {
       onSubmit={handleSubmit(submitHandler)}
       netlify-honeypot="bot-field"
     >
-      <input type="hidden" name="bot-field" />
+      {/* Added this surrounding hidden div - so could wrap the input with a label (seems to be best practice) and hide both. Make sure it still works */}
+      <div hidden>
+        <label htmlFor="bot-field">
+          Don't fill this out:
+          <input type="hidden" name="bot-field" />
+        </label>
+      </div>
       <input type="hidden" name="form-name" value="Contact-form" />
       <input type="hidden" name="name" />
       <input type="hidden" name="email" />
