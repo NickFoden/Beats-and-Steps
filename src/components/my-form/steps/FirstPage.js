@@ -24,7 +24,7 @@ const FirstPage = ({
       getValues("mobileNumber") === ""
     ) {
       console.log(errors);
-      alert("Please complete all required fields")
+      alert("Please complete all required fields");
     } else {
       setFormStep(1);
     }
@@ -173,7 +173,6 @@ const FirstPage = ({
           type="button"
           onClick={clickHandler}
           disabled={!isDirty || !isValid}
-          // disabled={!isDirty}
         >
           Next
         </button>

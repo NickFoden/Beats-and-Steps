@@ -14,7 +14,7 @@ a {
   box-sizing: border-box;
 }
 
-// MUST REDIFINE FOCUS TO SOMETHING FOR ACCESSIBILITY
+// MUST DEFINE FOCUS TO SOMETHING FOR ACCESSIBILITY
 *:focus {
   -webkit-tap-highlight-color: transparent;
   outline: none;
@@ -67,7 +67,6 @@ h5,
 h6 {
   margin: 0;
   font-size: inherit;
-  // font-weight: inherit;
 }
 
 p {

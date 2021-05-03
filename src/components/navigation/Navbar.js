@@ -17,7 +17,7 @@ const Navbar = ({ toggleSidebar, isOpen }) => {
         <Hamburger toggleSidebar={toggleSidebar} isOpen={isOpen} />
       ) : null}
       <div className={classes.logoContainer}>
-        <Link tabIndex="-1" to="/">
+        <Link to="/">
           <Logo />
         </Link>
       </div>

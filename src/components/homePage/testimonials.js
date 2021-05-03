@@ -4,8 +4,6 @@ import { graphql, useStaticQuery } from "gatsby";
 import Testimonial from "../testimonial/testimonial";
 import classes from "../../styles/pages/homePage/testimonials.module.scss";
 
-// https://res.cloudinary.com/demo/image/upload/c_crop,g_face,h_400,w_400/r_max/c_scale,w_200/lady.jpg
-
 const getImages = graphql`
   {
     One: file(name: { eq: "dummy-test" }) {
