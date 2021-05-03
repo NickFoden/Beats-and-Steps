@@ -14,13 +14,6 @@
   align-items: center;
 }
 
-.logoContainer {
-  height: 5rem;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
 @media screen and (min-width: 90rem) {
   .navbar {
     height: 6.5rem;
@@ -34,13 +27,6 @@
         }
       }
     }
-  }
-
-  .logoContainer {
-    height: 6.5rem;
-    width: 20rem;
-    left: 3rem;
-    right: initial;
   }
 
   .navLinksContainer {

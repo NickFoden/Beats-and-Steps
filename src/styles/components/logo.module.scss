@@ -1,12 +1,35 @@
 @use '../base/variables' as *;
 
-.logo {
+.logoContainer {
   height: 5rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  a {
+    &:focus {
+      .logo {
+        background-color: $backgroundFocus;
+      }
+    }
+  }
+}
+
+.logo {
+  height: 100%;
   width: 15rem;
 }
 
 @media screen and (min-width: 90rem) {
+  .logoContainer {
+    height: 6.5rem;
+    width: 20rem;
+    left: 3rem;
+    right: initial;
+  }
+
   .logo {
     width: 20rem;
   }
+
 }

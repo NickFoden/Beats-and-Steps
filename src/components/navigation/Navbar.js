@@ -3,7 +3,6 @@ import React from "react";
 import Logo from "./Logo";
 import PageLinks from "../../constants/pageLinks";
 import Hamburger from "./Hamburger";
-import { Link } from "gatsby";
 import useViewport from "../../hooks/useViewport";
 import classes from "../../styles/layout/navbar.module.scss";
 
@@ -17,9 +16,7 @@ const Navbar = ({ toggleSidebar, isOpen }) => {
         <Hamburger toggleSidebar={toggleSidebar} isOpen={isOpen} />
       ) : null}
       <div className={classes.logoContainer}>
-        <Link to="/">
-          <Logo />
-        </Link>
+        <Logo />
       </div>
       {width >= breakpoint ? (
         <div className={classes.navLinksContainer}>
