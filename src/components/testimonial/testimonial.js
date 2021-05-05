@@ -12,7 +12,7 @@ const Testimonial = ({ quote, name, fixed, alt }) => {
             <Img className={classes.testiImage} fixed={fixed} alt={alt} />
           </div>
           <div className={classes.testiTextContainer}>
-            <q className={classes.testiQuote}>{quote}</q>
+            {quote}
             <p className={classes.testiQuote__name}>{name}</p>
           </div>
         </div>

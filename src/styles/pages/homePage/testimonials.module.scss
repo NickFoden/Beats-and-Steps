@@ -6,16 +6,18 @@
 }
 
 .testimonialsContainer {
-  margin: 0 auto 2rem;
+  // margin: 0 auto 2rem;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
   grid-auto-flow: row;
   align-items: flex-start;
   row-gap: 20px;
-  max-width: 75rem;
+  max-width: 75.5rem;
 }
 
-@media screen and (min-width: $ipad) {
+// @media screen and (min-width: $ipad) {
+@media screen and (min-width: $ipadPro) {
   .testimonialsContainer {
     grid-template-columns: 1fr 1fr;
     column-gap: 20px;
