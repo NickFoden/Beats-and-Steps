@@ -10,6 +10,9 @@ import classes from "../styles/pages/music.module.scss";
 // DELETE AFTER COVID
 import CovidBanner from "../components/covid-banner/covid-banner";
 
+// DELETE AFTER RECITAL VIDEOS UPLOADED
+import RecitalBanner from "../components/recital-banner/recital-banner";
+
 export const getImages = graphql`
   {
     music: file(relativePath: { eq: "music/music.jpg" }) {
@@ -60,6 +63,7 @@ const Music = () => {
         description="Music Department page for Beats &amp; Steps Arts Academy"
       />
       <CovidBanner />
+      <RecitalBanner />
       <section className={classes.musicContainer}>
         <div className={classes.musicBanner}>
           <h1>The Music Program</h1>
