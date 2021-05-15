@@ -10,12 +10,16 @@
   margin: 0 auto;
 }
 
+.testiImage {
+  border-radius: 5%;
+  box-shadow: $darkShadow;
+  width: 90%;
+}
+
 .testiInnerContainer {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto;
-  // height: 18.75rem;
-  // height: 47.13rem;
   height: auto;
   padding: 20px 15px;
   width: 100%;
@@ -50,39 +54,12 @@
 
 @media screen and (min-width: $ipadPro) {
   .testiInnerContainer {
-    height: 46.5rem;
+    height: 56.6rem;
   }
 }
 
 @media screen and (min-width: $macBookAir) {
-  .testiInnerContainer {
-    height: 40.88rem;
+  .testiImage {
+    height: 320px;
   }
 }
-
-// @media screen and (min-width: $ipadPro) {
-  // .testiInnerContainer {
-  //   grid-template-columns: auto auto;
-  //   grid-template-rows: 1fr;
-  //   // height: 15rem;
-  //   height: auto;
-  //   padding: 2.5rem;
-  // }
-
-  // .testiImageContainer {
-  //   grid-template-columns: auto auto;
-  //   grid-template-rows: 1fr;
-  //   height: 100%;
-  // }
-
-  // .testiTextContainer {
-  //   padding-left: 20px;
-  // }
-// }
-
-// @media screen and (min-width: $macBookAir) {
-  // .testiInnerContainer {
-  //   // height: 11.25rem;
-  //   height: 39.63rem;
-  // }
-// }

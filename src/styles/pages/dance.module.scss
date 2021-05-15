@@ -1,4 +1,5 @@
 @use '../base/variables' as *;
+
 .anchorPoint {
   position: relative;
   top: -5rem;
@@ -7,33 +8,58 @@
 .danceContainer {
   background-color: $backgroundColor;
 
+  h1 {
+    text-align: center;
+    margin-bottom: 0;
+    padding: 1rem 0;
+  }
+
   .block {
     display: flex;
     flex-direction: column;
 
     .image {
-      max-height: 15rem;
-    }
-
-    .jazzImg {
-      height: 15rem;
+      max-height: 16rem;
     }
 
     .block__text {
-      max-width: 50rem;
+      max-width: 43.5rem;
     }
   }
 
-  .block:nth-of-type(4) {
+  .block:nth-of-type(3),
+  .block:nth-of-type(7) {
     background-color: $section2BackgroundColor;
   }
 }
 
-@media screen and (min-width: $smallTablet) {
+@media screen and (max-width: $defaultSmallPhone) {
   .danceContainer {
     .block {
       .image {
-        max-height: 22.5rem;
+        max-height: 12.7rem;
+      }
+    }
+  }
+}
+
+// 455px - average phone
+@media screen and (min-width: 28.44rem) {
+  .danceContainer {
+    .block {
+      .image {
+        max-height: 17rem;
+      }
+    }
+  }
+}
+
+// 500px - bigger phone
+@media screen and (min-width: 31.25rem) {
+  .danceContainer {
+    .block {
+      .image {
+        max-height: 23.5rem;
       }
       .jazzImg {
         height: 22.5rem;
@@ -42,8 +68,13 @@
   }
 }
 
-@media screen and (min-width: $ipad) {
+// 700 px - smallish tablet
+@media screen and (min-width: 43.75rem) {
   .danceContainer {
+    h1 {
+      padding: 2rem 0 0 0;
+    }
+
     .block {
       align-items: center;
       justify-content: center;
@@ -61,14 +92,54 @@
   }
 }
 
-@media screen and (min-width: $ipadPro) {
+// 920 px - big tablet
+@media screen and (min-width: 57.5rem) {
   .danceContainer {
+    h1 {
+      padding: 2rem 0 0 0;
+    }
+
+    .block {
+      align-items: center;
+      justify-content: center;
+      .image {
+        margin: 2rem auto 0;
+        width: 80vw;
+        max-height: 25.5rem;
+        border-radius: 5%;
+        box-shadow: $darkShadow;
+      }
+      .jazzImg {
+        height: 25.5rem;
+      }
+    }
+  }
+}
+
+// 1000 px
+@media screen and (min-width: 62.5rem) {
+  .danceContainer {
+    h1 {
+      padding: 1.5rem 0 0 0;
+    }
+
     .block {
       .image {
         max-height: 34rem;
       }
       .jazzImg {
         height: 34rem;
+      }
+    }
+  }
+}
+
+// 1200 px
+@media screen and (min-width: 75rem) {
+  .danceContainer {
+    .block {
+      .image {
+        max-height: 40rem;
       }
     }
   }
@@ -81,12 +152,13 @@
 
       .image {
         margin: 2rem;
-        max-height: 23.3rem;
-        max-width: 50rem;
+        max-height: 25rem;
+        width: 39.4rem;
       }
     }
 
-    .block:nth-of-type(4) {
+    .block:nth-of-type(3),
+    .block:nth-of-type(7) {
       flex-direction: row;
     }
   }
@@ -98,6 +170,7 @@
       .image {
         margin: 2rem auto;
         max-height: 33.3rem;
+        width: 50rem;
       }
     }
   }

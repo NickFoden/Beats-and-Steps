@@ -8,21 +8,59 @@
 .musicContainer {
   background-color: $backgroundColor;
 
+  h1 {
+    text-align: center;
+    margin-bottom: 0;
+    padding: 1rem 0;
+  }
+
   .block {
     display: flex;
     flex-direction: column;
 
     .image {
-      max-height: 15rem;
+      max-height: 19rem;
     }
 
     .block__text {
-      max-width: 50rem;
+      max-width: 43.5rem;
     }
   }
-  .block:nth-of-type(4),
-  .block:nth-of-type(8) {
+  .block:nth-of-type(3),
+  .block:nth-of-type(7) {
     background-color: $section2BackgroundColor;
+  }
+}
+
+@media screen and (max-width: $defaultSmallPhone) {
+  .musicContainer {
+    .block {
+      .image {
+        max-height: 14.3rem;
+      }
+    }
+  }
+}
+
+//455px
+@media screen and (min-width: 28.44rem) {
+  .musicContainer {
+    .block {
+      .image {
+        max-height: 22rem;
+      }
+    }
+  }
+}
+
+//520px
+@media screen and (min-width: 32.5rem) {
+  .musicContainer {
+    .block {
+      .image {
+        max-height: 23rem;
+      }
+    }
   }
 }
 
@@ -30,7 +68,18 @@
   .musicContainer {
     .block {
       .image {
-        max-height: 22.5rem;
+        max-height: 28rem;
+      }
+    }
+  }
+}
+
+// 650 px
+@media screen and (min-width: 40.6rem) {
+  .musicContainer {
+    .block {
+      .image {
+        max-height: 32rem;
       }
     }
   }
@@ -38,13 +87,17 @@
 
 @media screen and (min-width: $ipad) {
   .musicContainer {
+    h1 {
+      padding: 2rem 0 0 0;
+    }
+
     .block {
       align-items: center;
       justify-content: center;
       .image {
         margin: 2rem auto 0;
         width: 80vw;
-        max-height: 25.5rem;
+        max-height: 28.5rem;
         border-radius: 5%;
         box-shadow: $darkShadow;
       }
@@ -52,41 +105,122 @@
   }
 }
 
-@media screen and (min-width: $ipadPro) {
+//835px
+@media screen and (min-width: 52.2rem) {
   .musicContainer {
     .block {
       .image {
-        max-height: 34rem;
+        max-height: 30rem;
       }
     }
   }
 }
 
-@media screen and (min-width: $macBookAir) {
+//900px
+@media screen and (min-width: 56.25rem) {
+  .musicContainer {
+    .block {
+      .image {
+        max-height: 32rem;
+      }
+    }
+  }
+}
+
+//950px
+@media screen and (min-width: 56.25rem) {
+  .musicContainer {
+    .block {
+      .image {
+        max-height: 33rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $ipadPro) {
+  .musicContainer {
+    h1 {
+      padding: 1.5rem 0 0 0;
+    }
+    .block {
+      .image {
+        max-height: 36.7rem;
+      }
+    }
+  }
+}
+
+// 1070px
+@media screen and (min-width: 66.89rem) {
+  .musicContainer {
+    .block {
+      .image {
+        max-height: 39rem;
+      }
+    }
+  }
+}
+
+// 1135px
+@media screen and (min-width: 70.94rem) {
   .musicContainer {
     .block {
       flex-direction: row-reverse;
 
       .image {
         margin: 2rem;
-        max-height: 23.3rem;
-        max-width: 50rem;
+        max-height: 18.5rem;
+        width: 39.4rem;
       }
     }
 
-    .block:nth-of-type(4),
-    .block:nth-of-type(8) {
+    .block:nth-of-type(3),
+    .block:nth-of-type(7) {
       flex-direction: row;
     }
   }
 }
+
+// 1200px
+@media screen and (min-width: 75rem) {
+  .musicContainer {
+    .block {
+      .image {
+        max-height: 25rem;
+      }
+    }
+  }
+}
+
+// 1350px
+@media screen and (min-width: 84.3rem) {
+  .musicContainer {
+    .block {
+      .image {
+        max-height: 27rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $macBookAir) {
+    .musicContainer {
+      .block {
+        .image {
+          max-height: 27.5rem;
+        }
+      }
+    }
+  }
 
 @media screen and (min-width: $desktop) {
   .musicContainer {
     .block {
       .image {
         margin: 2rem auto;
-        max-height: 33.3rem;
+        max-height: 34.5rem;
+        width: 50rem;
       }
     }
   }
@@ -101,6 +235,7 @@
 
       .block__text {
         margin: 2rem 0;
+        max-width: 55rem;
       }
     }
   }

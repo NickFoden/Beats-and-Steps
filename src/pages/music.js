@@ -8,10 +8,17 @@ import SEO from "../components/SEO/SEO";
 import classes from "../styles/pages/music.module.scss";
 
 // DELETE AFTER COVID
-import CovidBanner from '../components/covid-banner/covid-banner';
+import CovidBanner from "../components/covid-banner/covid-banner";
 
 export const getImages = graphql`
   {
+    music: file(relativePath: { eq: "music/music.jpg" }) {
+      childCloudinaryAsset {
+        fluid {
+          ...CloudinaryAssetFluid
+        }
+      }
+    }
     voice: file(relativePath: { eq: "music/voice.jpg" }) {
       childCloudinaryAsset {
         fluid {
@@ -53,8 +60,40 @@ const Music = () => {
         description="Music Department page for Beats &amp; Steps Arts Academy"
       />
       <CovidBanner />
-      {/* HERE WILL BE THE BANNER SECTION FOR MUSIC - MAKE SURE IT HAS AN H1 HEADING */}
       <section className={classes.musicContainer}>
+        <div className={classes.musicBanner}>
+          <h1>The Music Program</h1>
+          <div className={classes.block}>
+            <Img
+              // ADD SYLLABUS LOGOS?
+              className={classes.image}
+              fluid={data.music.childCloudinaryAsset.fluid}
+              alt="Beats &amp; Steps Music students"
+            />
+            <article
+              className={["sectionContainer", classes.block__text].join(" ")}
+            >
+              <p>
+                Beats &amp; Steps offers individual instruction in voice, piano,
+                guitar, violin and music theory. All ages are admitted, subject
+                to course specific entry-level requirements.
+              </p>
+              <p>
+                Our program is aligned with the instructional standards of the
+                Center for Movement &amp; Music (CMM), as its Affiliate Centre.
+                Individual instruction is at the heart of Beats &amp; Steps
+                Music Program and is available to children from beginners to
+                advanced levels.
+              </p>
+              <p>
+                Our professional faculty members are dedicated to making your
+                child’s experience stimulating and fun. Our private lessons
+                ensure that your child receives personalized attention and
+                expert guidance as they develop their musicality.
+              </p>
+            </article>
+          </div>
+        </div>
         <div id="voice" className={classes.anchorPoint} />
         <div className={classes.block}>
           <Img
@@ -67,14 +106,10 @@ const Music = () => {
             className={["sectionContainer", classes.block__text].join(" ")}
           >
             <h2>The Voice Program</h2>
+            <p>Our primary emphasis is on the mastery of singing technique.</p>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+              We follow the bel canto (“beautiful singing”) technique and train
+              our students to become confident and expressive vocal performers.
             </p>
             <NavLink link="/contact/#form">Enroll</NavLink>
           </article>
@@ -92,13 +127,13 @@ const Music = () => {
           >
             <h2>The Piano Program</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Our piano program provides a strong foundation in piano skill and
+              a program for a progressive study in piano.
+            </p>
+            <p>
+              Each session is carefully structured to include technical
+              exercises, theory building, ear-training, and performance
+              practice.
             </p>
             <NavLink link="/contact/#form">Enroll</NavLink>
           </article>
@@ -116,13 +151,9 @@ const Music = () => {
           >
             <h2>The Guitar Program</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Our guitar studies offer the necessary foundation in classical
+              guitar, which allows the developing guitarist to explore varied
+              styles, including that of the electric guitar.
             </p>
             <NavLink link="/contact/#form">Enroll</NavLink>
           </article>
@@ -140,13 +171,9 @@ const Music = () => {
           >
             <h2>The Violin Program</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Technique consistency is emphasized to allow the student to
+              ultimately focus on the style interpretation of the music, and not
+              be hindered by insecure method of playing.
             </p>
             <NavLink link="/contact/#form">Enroll</NavLink>
           </article>

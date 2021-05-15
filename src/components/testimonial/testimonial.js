@@ -3,13 +3,13 @@ import Img from "gatsby-image";
 
 import classes from "../../styles/pages/homePage/testimonial.module.scss";
 
-const Testimonial = ({ quote, name, fixed, alt }) => {
+const Testimonial = ({ quote, name, fluid, alt }) => {
   return (
     <li>
       <div className={classes.testiOuterContainer}>
         <div className={classes.testiInnerContainer}>
           <div className={classes.testiImageContainer}>
-            <Img className={classes.testiImage} fixed={fixed} alt={alt} />
+            <Img className={classes.testiImage} fluid={fluid} alt={alt} />
           </div>
           <div className={classes.testiTextContainer}>
             {quote}

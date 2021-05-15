@@ -6,43 +6,17 @@ import classes from "../../styles/pages/homePage/testimonials.module.scss";
 
 const getImages = graphql`
   {
-    One: file(name: { eq: "dummy-test" }) {
+    One: file(name: { eq: "rhoobee" }) {
       childCloudinaryAsset {
-        fixed(
-          width: 100
-          transformations: ["ar_1:1", "c_thumb", "g_face", "r_max"]
-        ) {
-          ...CloudinaryAssetFixed
+        fluid {
+          ...CloudinaryAssetFluid
         }
       }
     }
-    Two: file(name: { eq: "dummy-test" }) {
+    Two: file(name: { eq: "nhicole" }) {
       childCloudinaryAsset {
-        fixed(
-          width: 100
-          transformations: ["ar_1:1", "c_thumb", "g_face", "r_max"]
-        ) {
-          ...CloudinaryAssetFixed
-        }
-      }
-    }
-    Three: file(name: { eq: "dummy-test" }) {
-      childCloudinaryAsset {
-        fixed(
-          width: 100
-          transformations: ["ar_1:1", "c_thumb", "g_face", "r_max"]
-        ) {
-          ...CloudinaryAssetFixed
-        }
-      }
-    }
-    Four: file(name: { eq: "dummy-test" }) {
-      childCloudinaryAsset {
-        fixed(
-          width: 100
-          transformations: ["ar_1:1", "c_thumb", "g_face", "r_max"]
-        ) {
-          ...CloudinaryAssetFixed
+        fluid {
+          ...CloudinaryAssetFluid
         }
       }
     }
@@ -94,14 +68,14 @@ const Testimonials = () => {
   const parentOne = {
     quote: rhoobeeQuote,
     name: "Mommy Rhoobee - Parent of Areej, Yasmin and Amina",
-    alt: "Jane - Daughter of Mommy Rhoobee and Beats & Steps Student",
-    fixed: data.One.childCloudinaryAsset.fixed,
+    alt: "Daughters of Mommy Rhoobee",
+    fluid: data.One.childCloudinaryAsset.fluid,
   };
   const parentTwo = {
     quote: nhicoleQuote,
     name: "Mommy Nhicole - Parent of Lexie and Sophia",
-    alt: "Lucy - Daughter of Mrs McGonnigal and Beats & Steps Student",
-    fixed: data.Two.childCloudinaryAsset.fixed,
+    alt: "Daughters of Mommy Nhicole",
+    fluid: data.Two.childCloudinaryAsset.fluid,
   };
 
   return (
@@ -112,13 +86,13 @@ const Testimonials = () => {
           quote={parentOne.quote}
           name={parentOne.name}
           alt={parentOne.alt}
-          fixed={parentOne.fixed}
+          fluid={parentOne.fluid}
         />
         <Testimonial
           quote={parentTwo.quote}
           name={parentTwo.name}
           alt={parentTwo.alt}
-          fixed={parentTwo.fixed}
+          fluid={parentTwo.fluid}
         />
       </ul>
     </section>
@@ -126,3 +100,17 @@ const Testimonials = () => {
 };
 
 export default Testimonials;
+
+// Query for face_thumb
+/* 
+    One: file(name: { eq: "rhoobee" }) {
+      childCloudinaryAsset {
+        fixed(
+          width: 100
+          transformations: ["ar_1:1", "c_thumb", "g_face", "r_max"]
+        ) {
+          ...CloudinaryAssetFixed
+        }
+      }
+    }
+*/

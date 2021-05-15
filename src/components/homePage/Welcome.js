@@ -16,11 +16,11 @@ const Welcome = () => {
     <section className="sectionContainer">
       <div className={classes.welcomeTitleContainer}>
         <h1>Beats &amp; Steps Arts Academy</h1>
-        <p>
-          An affiliate of the{" "}
-          <strong>Center for Movement and Music (CMM)</strong> offering courses
-          in:
-        </p>
+        <span>An affiliate of the</span>{" "}
+        <span>
+          <strong>Center for Movement and Music (CMM)</strong>{" "}
+        </span>
+        <span>offering courses in:</span>
       </div>
       <div className={classes.courses}>
         <div className={classes.courseList__container}>
