@@ -15,13 +15,6 @@ import RecitalBanner from "../components/recital-banner/recital-banner";
 
 export const getImages = graphql`
   {
-    music: file(relativePath: { eq: "music/music.jpg" }) {
-      childCloudinaryAsset {
-        fluid {
-          ...CloudinaryAssetFluid
-        }
-      }
-    }
     voice: file(relativePath: { eq: "music/voice.jpg" }) {
       childCloudinaryAsset {
         fluid {
@@ -68,11 +61,11 @@ const Music = () => {
         <div className={classes.musicBanner}>
           <h1>The Music Program</h1>
           <div className={classes.block}>
-            <Img
-              // ADD SYLLABUS LOGOS?
-              className={classes.image}
-              fluid={data.music.childCloudinaryAsset.fluid}
-              alt="Beats &amp; Steps Music students"
+            <video
+              src={`http://res.cloudinary.com/${process.env.GATSBY_CLOUDINARY_CLOUD_NAME}/video/upload/f_auto,q_auto,fl_animated/v1621050825/gatsby-cloudinary/videos/Music-Zoom_pjzmsi.mov`}
+              autoPlay={true}
+              loop={true}
+              muted={true}
             />
             <article
               className={["sectionContainer", classes.block__text].join(" ")}
@@ -188,29 +181,3 @@ const Music = () => {
 };
 
 export default Music;
-
-/* 
-OG Music Text
-
-  Beats &amp; Steps offers individual instruction in voice, piano,
-  guitar, violin, and music theory following four cycles: first
-  semester, second semester, summer, and midyear.
-
-   All ages are admitted, subject to course specific entry-level
-   requirements.
-
-   We give special emphasis to detailed technique, ear training,
-   sight-reading, and repertoire-building.
-
-   Beats &amp; Steps is aligned with the instructional standards of
-   the Center for Movement &amp; Music (CMM), as its Affiliate
-   Centre.
-
-   We participate in the annual Associated Board of the Royal Schools
-   of Music (ABRSM) London music exams for international benchmarking
-   of musical achievement, under the auspices of CMM.
-
-   We provide performance opportunities through regular
-   lesson-workshops in music performance and annual recitals/public
-   performances.
-*/

@@ -6,8 +6,6 @@
 }
 
 .musicContainer {
-  background-color: $backgroundColor;
-
   h1 {
     text-align: center;
     margin-bottom: 0;
@@ -87,6 +85,12 @@
 
 @media screen and (min-width: $ipad) {
   .musicContainer {
+    video {
+      margin-top: 2rem;
+      border-radius: 5%;
+      max-width: 80vw;
+      box-shadow: $darkShadow;
+    }
     h1 {
       padding: 2rem 0 0 0;
     }
@@ -165,13 +169,18 @@
 // 1135px
 @media screen and (min-width: 70.94rem) {
   .musicContainer {
+    video {
+      margin: 2rem;
+      width: 40vw;
+      max-width: 50rem;
+    }
     .block {
       flex-direction: row-reverse;
 
       .image {
         margin: 2rem;
         max-height: 18.5rem;
-        width: 39.4rem;
+        width: 40vw;
       }
     }
 
@@ -205,22 +214,25 @@
 }
 
 @media screen and (min-width: $macBookAir) {
-    .musicContainer {
-      .block {
-        .image {
-          max-height: 27.5rem;
-        }
+  .musicContainer {
+    .block {
+      .image {
+        max-height: 27.5rem;
       }
     }
   }
+}
 
 @media screen and (min-width: $desktop) {
   .musicContainer {
+    video {
+      margin: 2rem auto;
+    }
     .block {
       .image {
         margin: 2rem auto;
         max-height: 34.5rem;
-        width: 50rem;
+        max-width: 50rem;
       }
     }
   }
@@ -228,6 +240,9 @@
 
 @media screen and (min-width: $wideScreen) {
   .musicContainer {
+    video {
+      margin: 2rem 0;
+    }
     .block {
       .image {
         margin: 2rem 0;

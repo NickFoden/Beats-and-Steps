@@ -6,6 +6,9 @@ import Footer from "./Footer";
 import useViewport from "../../hooks/useViewport";
 import classes from "../../styles/layout/layout.module.scss";
 
+/* Background pattern from Toptal Subtle Patterns */
+import bgImage from "../../assets/images/white-waves.png";
+
 const Layout = ({ children }) => {
   const [isOpen, setIsOpen] = React.useState(false);
   const toggleSidebar = () => {
@@ -16,7 +19,7 @@ const Layout = ({ children }) => {
   const breakpoint = 1440;
 
   return (
-    <div className={classes.layoutContainer}>
+    <div className={classes.layoutContainer} style={{ backgroundImage: `url(${bgImage})` }}>
       <Navbar toggleSidebar={toggleSidebar} isOpen={isOpen} />
       {width < breakpoint ? (
         <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />

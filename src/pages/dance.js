@@ -15,13 +15,6 @@ import RecitalBanner from "../components/recital-banner/recital-banner";
 
 export const getImages = graphql`
   {
-    dance: file(relativePath: { eq: "dance/dummy.jpg" }) {
-      childCloudinaryAsset {
-        fluid {
-          ...CloudinaryAssetFluid
-        }
-      }
-    }
     ballet: file(relativePath: { eq: "dance/ballet.jpg" }) {
       childCloudinaryAsset {
         fluid {
@@ -61,12 +54,12 @@ const Dance = () => {
         <div className={classes.danceBanner}>
           <h1>The Dance Program</h1>
           <div className={classes.block}>
-            {/* <Img
-              // PLACEHOLDER IMAGE CURRENTLY HERE. ADD SYLLABUS LOGOS?
-              className={classes.image}
-              fluid={data.dance.childCloudinaryAsset.fluid}
-              alt="Beats &amp; Steps Ballet students rehearsal"
-            /> */}
+            <video
+              src={`http://res.cloudinary.com/${process.env.GATSBY_CLOUDINARY_CLOUD_NAME}/video/upload/f_auto,q_auto,fl_animated/v1621050825/gatsby-cloudinary/videos/Dance-Zoom_zdgcyx.mov`}
+              autoPlay={true}
+              loop={true}
+              muted={true}
+            />
             <article
               className={["sectionContainer", classes.block__text].join(" ")}
             >

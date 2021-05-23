@@ -100,17 +100,3 @@ const Testimonials = () => {
 };
 
 export default Testimonials;
-
-// Query for face_thumb
-/* 
-    One: file(name: { eq: "rhoobee" }) {
-      childCloudinaryAsset {
-        fixed(
-          width: 100
-          transformations: ["ar_1:1", "c_thumb", "g_face", "r_max"]
-        ) {
-          ...CloudinaryAssetFixed
-        }
-      }
-    }
-*/

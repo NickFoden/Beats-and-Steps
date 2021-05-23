@@ -1,8 +1,6 @@
 @use '../base/variables' as *;
 
 .aboutContainer {
-  background-color: $backgroundColor;
-
   .block {
     display: flex;
     flex-direction: column;

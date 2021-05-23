@@ -6,8 +6,6 @@
 }
 
 .danceContainer {
-  background-color: $backgroundColor;
-
   h1 {
     text-align: center;
     margin-bottom: 0;
@@ -71,6 +69,12 @@
 // 700 px - smallish tablet
 @media screen and (min-width: 43.75rem) {
   .danceContainer {
+    video {
+      margin-top: 2rem;
+      border-radius: 5%;
+      max-width: 80vw;
+      box-shadow: $darkShadow;
+    }
     h1 {
       padding: 2rem 0 0 0;
     }
@@ -147,6 +151,12 @@
 
 @media screen and (min-width: $macBookAir) {
   .danceContainer {
+    video {
+      margin: 2rem;
+      width: 40vw;
+      max-width: 50rem;
+    }
+
     .block {
       flex-direction: row-reverse;
 
@@ -166,6 +176,9 @@
 
 @media screen and (min-width: $desktop) {
   .danceContainer {
+    video {
+      margin: 2rem auto;
+    }
     .block {
       .image {
         margin: 2rem auto;
@@ -178,6 +191,9 @@
 
 @media screen and (min-width: $wideScreen) {
   .danceContainer {
+    video {
+      margin: 2rem 0;
+    }
     .block {
       .image {
         margin: 2rem 0;
