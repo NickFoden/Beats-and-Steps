@@ -68,7 +68,7 @@ module.exports = {
         apiKey: process.env.GATSBY_CLOUDINARY_API_KEY,
         apiSecret: process.env.GATSBY_CLOUDINARY_API_SECRET,
         uploadFolder: "gatsby-cloudinary",
-        alwaysUseDefaultBase64: true,
+        // alwaysUseDefaultBase64: true, // Make sure insta photos still load on mobile devices
         enableDefaultTransformations: true,
       },
     },
