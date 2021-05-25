@@ -55,7 +55,7 @@ const Dance = () => {
           <h1>The Dance Program</h1>
           <div className={classes.block}>
             <video
-              src={`http://res.cloudinary.com/${process.env.GATSBY_CLOUDINARY_CLOUD_NAME}/video/upload/f_auto,q_auto,fl_animated/v1621050825/gatsby-cloudinary/videos/Dance-Zoom_zdgcyx.mov`}
+              src={`https://res.cloudinary.com/${process.env.GATSBY_CLOUDINARY_CLOUD_NAME}/video/upload/f_auto,q_auto,fl_animated/v1621050825/gatsby-cloudinary/videos/Dance-Zoom_zdgcyx.mov`}
               autoPlay={true}
               loop={true}
               muted={true}
