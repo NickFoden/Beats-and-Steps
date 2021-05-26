@@ -101,12 +101,18 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     // NEED TO SET UP GRAPH-API OPTION
-    // {
-    //   resolve: `gatsby-source-instagram`,
-    //   options: {
-    //     username: `1503767980`,
-    //   },
-    // },
+    {
+      resolve: `gatsby-source-instagram`,
+      options: {
+        username: `1503767980`,
+        // This new long-lived access token will expire on July 25, 2021:
+        access_token:
+          process.env.GATSBY_INSTAGRAM_TOKEN,
+        instagram_id: process.env.GATSBY_INSTA_BUSINESS_ID,
+        paginate: 6,
+        maxPosts: 6,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
