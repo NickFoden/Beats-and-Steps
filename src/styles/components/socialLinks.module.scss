@@ -58,6 +58,12 @@
   }
 }
 
+@media screen and (min-width: $ipadPro) {
+  .socialLink {
+    font-size: 4rem;
+  }
+}
+
 /*** LANDSCAPE MODE ***/
 
 @media screen and (min-width: 35.5rem) and (min-height: 20rem) and (orientation: landscape) {
@@ -80,5 +86,12 @@
   .socialLink {
     font-size: 2rem;
     margin-left: 3rem;
+  }
+}
+
+// ipad+
+@media screen and (min-width: 61rem) and (min-height: 33.75rem) and (orientation: landscape) {
+  .socialLink {
+    font-size: 3rem;
   }
 }
