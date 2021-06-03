@@ -158,6 +158,15 @@ Sidebar Animation
   }
 }
 
+@media screen and (min-width: $ipadPro) {
+  .sidebarLinks {
+    margin-top: 5rem;
+    a {
+      font-size: 4rem;
+    }
+  }
+}
+
 /*** LANDSCAPE MODE QUERIES ***/
 @media screen and (min-width: 35.5rem) and (min-height: 20rem) and (orientation: landscape) {
   .sidebarLinks {
@@ -174,6 +183,15 @@ Sidebar Animation
   .sidebarLinks {
     a {
       font-size: 1.5rem;
+    }
+  }
+}
+
+// ipad+
+@media screen and (min-width: 61rem) and (min-height: 33.75rem) and (orientation: landscape) {
+  .sidebarLinks {
+    a {
+      font-size: 3rem;
     }
   }
 }
