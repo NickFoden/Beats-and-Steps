@@ -6,6 +6,12 @@
 }
 
 .musicContainer {
+  video {
+    margin: 0;
+    padding: 0;
+    display: block;
+  }
+
   h1 {
     text-align: center;
     margin-bottom: 0;
