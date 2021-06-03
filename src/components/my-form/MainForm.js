@@ -89,7 +89,6 @@ const MainForm = () => {
       onSubmit={handleSubmit(submitHandler)}
       netlify-honeypot="bot-field"
     >
-      {/* Added this surrounding hidden div - so could wrap the input with a label (seems to be best practice) and hide both. Make sure it still works */}
       <div hidden>
         <label htmlFor="bot-field">
           Don't fill this out:
