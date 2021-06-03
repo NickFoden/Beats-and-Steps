@@ -28,7 +28,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <Link to="/">www.beatsandsteps.ph</Link>
+                <Link to="/">www.beatsandsteps.com</Link>
               </li>
               <li className={classes.grey}>
                 <ul className={classes.address}>
