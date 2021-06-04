@@ -2,6 +2,7 @@ import React from "react";
 
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
+// import CustomerChat from "./CustomerChat";
 import Footer from "./Footer";
 import useViewport from "../../hooks/useViewport";
 import classes from "../../styles/layout/layout.module.scss";
@@ -19,12 +20,16 @@ const Layout = ({ children }) => {
   const breakpoint = 1440;
 
   return (
-    <div className={classes.layoutContainer} style={{ backgroundImage: `url(${bgImage})` }}>
+    <div
+      className={classes.layoutContainer}
+      style={{ backgroundImage: `url(${bgImage})` }}
+    >
       <Navbar toggleSidebar={toggleSidebar} isOpen={isOpen} />
       {width < breakpoint ? (
         <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
       ) : null}
       <main>{children}</main>
+      {/* <CustomerChat /> */}
       <Footer />
     </div>
   );

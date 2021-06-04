@@ -6,6 +6,11 @@
 }
 
 .musicContainer {
+  video {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
   h1 {
     text-align: center;
     margin-bottom: 0;
@@ -88,6 +93,7 @@
     video {
       margin-top: 2rem;
       border-radius: 5%;
+      min-width: inherit;
       max-width: 80vw;
       box-shadow: $darkShadow;
     }
