@@ -6,10 +6,11 @@
 }
 
 .musicContainer {
+  // ADDING MARGIN, PADDING = 0 AND DISPLAY TO BLOCK DIDN'T WORK :( MIGHT HAVE SOMETHING TO DO WITH WIDTH
+  // DID ADDING MIN AND MAX-WIDTH 100% HERE AND MIN-WIDTH: INHERIT ON LINE 99 fix?
   video {
-    margin: 0;
-    padding: 0;
-    display: block;
+    min-width: 100%;
+    max-width: 100%;
   }
 
   h1 {
@@ -94,6 +95,7 @@
     video {
       margin-top: 2rem;
       border-radius: 5%;
+      min-width: inherit;
       max-width: 80vw;
       box-shadow: $darkShadow;
     }

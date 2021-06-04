@@ -6,9 +6,10 @@
 }
 
 .danceContainer {
+  // DID ADDING MIN AND MAX-WIDTH 100% HERE AND MIN-WIDTH: INHERIT ON LINE 81 fix?
   video {
-    margin: 0;
-    padding: 0;
+    min-width: 100%;
+    max-width: 100%;
   }
 
   h1 {
@@ -77,6 +78,7 @@
     video {
       margin-top: 2rem;
       border-radius: 5%;
+      min-width: inherit;
       max-width: 80vw;
       box-shadow: $darkShadow;
     }
