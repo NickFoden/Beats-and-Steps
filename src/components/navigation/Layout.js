@@ -2,7 +2,6 @@ import React from "react";
 
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
-// import CustomerChat from "./CustomerChat";
 import Footer from "./Footer";
 import useViewport from "../../hooks/useViewport";
 import classes from "../../styles/layout/layout.module.scss";
@@ -29,7 +28,6 @@ const Layout = ({ children }) => {
         <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
       ) : null}
       <main>{children}</main>
-      {/* <CustomerChat /> */}
       <Footer />
     </div>
   );
