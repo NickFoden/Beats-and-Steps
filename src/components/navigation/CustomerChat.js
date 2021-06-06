@@ -47,7 +47,7 @@
 
 //     <script>
 //       var chatbox = document.getElementById('fb-customer-chat');
-//       chatbox.setAttribute("page_id", "509656605804238");
+//       chatbox.setAttribute("page_id", "XXXXXXXX");
 //       chatbox.setAttribute("attribution", "page_inbox");
 //       window.fbAsyncInit = function() {
 //         FB.init({
