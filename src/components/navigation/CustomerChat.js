@@ -7,7 +7,7 @@ function CustomerChat() {
     window.fbAsyncInit = function () {
       window.FB.init({
         xfbml: true,
-        version: "v10.0",
+        version: "v11.0",
       });
     };
     (function (d, s, id) {
@@ -25,7 +25,7 @@ function CustomerChat() {
       <div className={classes.chat} id="fb-root" />
       <div
         className="fb-customerchat"
-        attribution="page_inbox"
+        attribution="biz_inbox"
         page_id={process.env.GATSBY_FB_APP_ID}
       />
     </>
@@ -35,7 +35,7 @@ function CustomerChat() {
 export default CustomerChat;
 
 // *** Code for Messenger Embed ***
-//
+
 // <!-- Messenger Chat Plugin Code -->
 //     <div id="fb-root"></div>
 
@@ -46,11 +46,11 @@ export default CustomerChat;
 //     <script>
 //       var chatbox = document.getElementById('fb-customer-chat');
 //       chatbox.setAttribute("page_id", "XXXXXXX");
-//       chatbox.setAttribute("attribution", "page_inbox");
+//       chatbox.setAttribute("attribution", "biz_inbox");
 //       window.fbAsyncInit = function() {
 //         FB.init({
 //           xfbml            : true,
-//           version          : 'v10.0'
+//           version          : 'v11.0'
 //         });
 //       };
 
