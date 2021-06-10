@@ -14,7 +14,7 @@ const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
 module.exports = {
   siteMetadata: {
     title: `Beats and Steps Arts Academy, CMM Affiliate Center`,
-    description: `The Beats and Steps Arts Academy is a CMM affiliate center that envisions developing children's full potential in the arts.`,
+    description: `Beats and Steps Arts Academy is a CMM affiliate center that envisions developing children's full potential in the arts.`,
     author: `Alex Friedman`,
     image: `/logo.png`,
     siteUrl,
@@ -51,7 +51,7 @@ module.exports = {
         apiKey: process.env.GATSBY_CLOUDINARY_API_KEY,
         apiSecret: process.env.GATSBY_CLOUDINARY_API_SECRET,
         uploadFolder: "gatsby-cloudinary",
-        alwaysUseDefaultBase64: true, // Delete if going to production!
+        // alwaysUseDefaultBase64: true, // Comment out if going to production!
         enableDefaultTransformations: true,
       },
     },

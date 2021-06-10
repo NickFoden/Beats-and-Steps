@@ -1,6 +1,5 @@
 import React from "react";
 import ViewportProvider from "./src/hoc/ViewportProvider";
-// import CustomerChat from "./src/components/navigation/CustomerChat";
 import CustomLayout from "./wrapPageElement";
 
 import "@fontsource/quicksand";
@@ -14,14 +13,5 @@ import "./src/styles/main.scss";
 export const wrapRootElement = ({ element }) => {
   return <ViewportProvider>{element}</ViewportProvider>;
 };
-
-// export const wrapPageElement = ({ element }) => (
-//   <>
-//     {element}
-//     <CustomerChat />
-//   </>
-// );
-
-
 
 export const wrapPageElement = CustomLayout;

@@ -6,7 +6,6 @@ import { FaFacebookSquare, FaInstagram } from "react-icons/fa";
 import Layout from "../components/navigation/Layout";
 import SEO from "../components/SEO/SEO";
 import Form from "../components/my-form/MainForm";
-// import Form from "../components/google-form/form";
 import classes from "../styles/pages/contact.module.scss";
 
 // DELETE AFTER COVID
