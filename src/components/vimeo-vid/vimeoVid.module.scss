@@ -1,0 +1,33 @@
+.vimeoContainer {
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative;
+  width: 100%;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .vimeoSection {
+    background-color: $section2BackgroundColor;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .vimeoContainer {
+    padding-top: 0;
+    width: 84rem;
+    margin: auto;
+    height: 47.25rem;
+    box-shadow: $darkShadow;
+    border-radius: 1%;
+  }
+}
