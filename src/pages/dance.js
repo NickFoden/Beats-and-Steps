@@ -8,7 +8,7 @@ import SEO from "../components/SEO/SEO";
 import classes from "../styles/pages/dance.module.scss";
 
 // DELETE RECITAL VIDEO AFTER ONE MONTH (IF GIVEN ALL CLEAR)
-import Vimeo from "../components/vimeo-vid/VimeoVid";
+// import Vimeo from "../components/vimeo-vid/VimeoVid";
 
 // DELETE AFTER COVID
 import CovidBanner from "../components/covid-banner/covid-banner";
@@ -56,10 +56,10 @@ const Dance = () => {
       <section className={classes.danceContainer}>
         <div className={classes.danceBanner}>
           <h1>The Dance Program</h1>
-          <div className={classes.block}>
+          {/* <div className={classes.block}>
             <h2>Dance Recital - 2021</h2>
             <Vimeo videoSrcURL="" videoTitle="" />
-          </div>
+          </div> */}
           <div className={classes.block}>
             <video
               src={`https://res.cloudinary.com/${process.env.GATSBY_CLOUDINARY_CLOUD_NAME}/video/upload/f_auto,q_auto,fl_animated/v1621050825/gatsby-cloudinary/videos/Dance-Zoom_zdgcyx.mov`}

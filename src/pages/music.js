@@ -7,6 +7,9 @@ import NavLink from "../components/navigation/NavLink";
 import SEO from "../components/SEO/SEO";
 import classes from "../styles/pages/music.module.scss";
 
+// DELETE RECITAL VIDEO AFTER ONE MONTH (IF GIVEN ALL CLEAR)
+import Vimeo from "../components/vimeo-vid/VimeoVid";
+
 // DELETE AFTER COVID
 import CovidBanner from "../components/covid-banner/covid-banner";
 
@@ -60,6 +63,10 @@ const Music = () => {
       <section className={classes.musicContainer}>
         <div className={classes.musicBanner}>
           <h1>The Music Program</h1>
+          <div className={classes.block}>
+            <h2>Music Recital - 2021</h2>
+            <Vimeo videoSrcURL="" videoTitle="Beats &amp; Steps Music Recital 2021" />
+          </div>
           <div className={classes.block}>
             <video
               src={`https://res.cloudinary.com/${process.env.GATSBY_CLOUDINARY_CLOUD_NAME}/video/upload/f_auto,q_auto,fl_animated/v1621050825/gatsby-cloudinary/videos/Music-Zoom_pjzmsi.mov`}
