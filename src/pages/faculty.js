@@ -48,7 +48,9 @@ const Faculty = () => {
           >
             <DanceTeachers />
           </ul>
-          <h2>Meet our Music Instructors</h2>
+          <h2 className={classes.musicInstructorTitle}>
+            Meet our Music Instructors
+          </h2>
           <ul
             className={[classes.listContainer, classes.musicContainer].join(
               " "

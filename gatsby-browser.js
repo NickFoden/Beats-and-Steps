@@ -1,5 +1,6 @@
 import React from "react";
 import ViewportProvider from "./src/hoc/ViewportProvider";
+import CustomLayout from "./wrapPageElement";
 
 import "@fontsource/quicksand";
 import "@fontsource/quicksand/500.css";
@@ -12,3 +13,5 @@ import "./src/styles/main.scss";
 export const wrapRootElement = ({ element }) => {
   return <ViewportProvider>{element}</ViewportProvider>;
 };
+
+export const wrapPageElement = CustomLayout;

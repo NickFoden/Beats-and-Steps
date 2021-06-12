@@ -45,7 +45,6 @@
   background-color: $section2BackgroundColor;
   padding: 2rem 0;
   text-align: center;
-  // height: 1250px; - FOR GOOGLE FORM
 }
 
 .socialLinks {
@@ -73,10 +72,6 @@
 }
 
 @media screen and (min-width: $smallTablet) {
-  // .formContainer {
-  //   height: 1200px; GOOGLE FORM
-  // }
-
   .socialLinks {
     .socialLink {
       font-size: 3rem;
@@ -114,8 +109,4 @@
       }
     }
   }
-
-  // .formContainer {
-  // height: 1150px; GOOGLE FORM
-  // }
 }
