@@ -1,3 +1,5 @@
+@use '../../styles/base/variables' as *;
+
 .vimeoContainer {
   overflow: hidden;
   padding-top: 56.25%;
@@ -15,9 +17,8 @@
   }
 }
 
-@media screen and (min-width: $desktop) {
+@media screen and (min-width: $macBookAir) {
   .vimeoSection {
-    background-color: $section2BackgroundColor;
     padding-top: 2rem;
     padding-bottom: 2rem;
   }

@@ -1,7 +1,5 @@
 import React, { useEffect } from "react";
 
-import classes from "../../styles/components/CustomerChat.module.scss";
-
 function CustomerChat() {
   useEffect(() => {
     window.fbAsyncInit = function () {
@@ -22,7 +20,7 @@ function CustomerChat() {
   });
   return (
     <>
-      <div className={classes.chat} id="fb-root" />
+      <div id="fb-root" />
       <div
         className="fb-customerchat"
         attribution="biz_inbox"

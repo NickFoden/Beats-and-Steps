@@ -11,10 +11,20 @@
     max-width: 100%;
   }
 
+  .vimeoBlockContainer {
+    background-color: $section2BackgroundColor;
+    padding-bottom: 2rem;
+  }
+
   h1 {
     text-align: center;
     margin-bottom: 0;
     padding: 1rem 0;
+  }
+
+  .recitalTitle {
+    text-align: center;
+    padding-top: 1rem;
   }
 
   .block {
@@ -98,7 +108,7 @@
       box-shadow: $darkShadow;
     }
     h1 {
-      padding: 2rem 0 0 0;
+      padding: 2rem 0;
     }
 
     .block {
@@ -151,7 +161,7 @@
 @media screen and (min-width: $ipadPro) {
   .musicContainer {
     h1 {
-      padding: 1.5rem 0 0 0;
+      padding: 1.5rem 0;
     }
     .block {
       .image {
@@ -221,6 +231,11 @@
 
 @media screen and (min-width: $macBookAir) {
   .musicContainer {
+    .recitalTitle {
+      padding-top: 2rem;
+      margin-bottom: 0;
+    }
+
     .block {
       .image {
         max-height: 27.5rem;

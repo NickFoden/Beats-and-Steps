@@ -16,6 +16,7 @@ const Video = ({ videoSrcURL, videoTitle }) => {
           allowFullScreen
         ></iframe>
       </header>
+      <script src="https://player.vimeo.com/api/player.js"></script>
     </section>
   );
 };

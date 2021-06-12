@@ -13,9 +13,6 @@ import Vimeo from "../components/vimeo-vid/VimeoVid";
 // DELETE AFTER COVID
 import CovidBanner from "../components/covid-banner/covid-banner";
 
-// DELETE AFTER RECITAL VIDEOS UPLOADED
-import RecitalBanner from "../components/recital-banner/recital-banner";
-
 export const getImages = graphql`
   {
     voice: file(relativePath: { eq: "music/voice.jpg" }) {
@@ -59,13 +56,15 @@ const Music = () => {
         description="Music Department page for Beats &amp; Steps Arts Academy"
       />
       <CovidBanner />
-      <RecitalBanner />
       <section className={classes.musicContainer}>
         <div className={classes.musicBanner}>
           <h1>The Music Program</h1>
-          <div className={classes.block}>
-            <h2>Music Recital - 2021</h2>
-            <Vimeo videoSrcURL="" videoTitle="Beats &amp; Steps Music Recital 2021" />
+          <div className={classes.vimeoBlockContainer}>
+            <h2 className={classes.recitalTitle}>Music Recital - 2021</h2>
+            <Vimeo
+              videoSrcURL="https://player.vimeo.com/video/562009677?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+              videoTitle="B&amp;S Music Recital Harmony 2021"
+            />
           </div>
           <div className={classes.block}>
             <video
