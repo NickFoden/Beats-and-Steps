@@ -11,10 +11,20 @@
     max-width: 100%;
   }
 
+  .vimeoBlockContainer {
+    background-color: $section2BackgroundColor;
+    padding-bottom: 2rem;
+  }
+
   h1 {
     text-align: center;
     margin-bottom: 0;
     padding: 1rem 0;
+  }
+
+  .recitalTitle {
+    text-align: center;
+    padding-top: 1rem;
   }
 
   .block {
@@ -81,9 +91,6 @@
       max-width: 80vw;
       box-shadow: $darkShadow;
     }
-    h1 {
-      padding: 2rem 0 0 0;
-    }
 
     .block {
       align-items: center;
@@ -105,10 +112,6 @@
 // 920 px - big tablet
 @media screen and (min-width: 57.5rem) {
   .danceContainer {
-    h1 {
-      padding: 2rem 0 0 0;
-    }
-
     .block {
       align-items: center;
       justify-content: center;
@@ -130,9 +133,8 @@
 @media screen and (min-width: 62.5rem) {
   .danceContainer {
     h1 {
-      padding: 1.5rem 0 0 0;
+      padding: 1.5rem 0;
     }
-
     .block {
       .image {
         max-height: 34rem;
@@ -157,6 +159,11 @@
 
 @media screen and (min-width: $macBookAir) {
   .danceContainer {
+    .recitalTitle {
+      padding-top: 2rem;
+      margin-bottom: 0;
+    }
+
     video {
       margin: 2rem;
       width: 40vw;

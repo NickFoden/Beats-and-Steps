@@ -39,6 +39,7 @@
       max-width: 43.5rem;
     }
   }
+
   .block:nth-of-type(3),
   .block:nth-of-type(7) {
     background-color: $section2BackgroundColor;
@@ -106,9 +107,6 @@
       min-width: inherit;
       max-width: 80vw;
       box-shadow: $darkShadow;
-    }
-    h1 {
-      padding: 2rem 0;
     }
 
     .block {
