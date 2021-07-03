@@ -53,10 +53,10 @@ const Dance = () => {
         <div className={classes.danceBanner}>
           <h1>The Dance Program</h1>
           <div className={classes.vimeoBlockContainer}>
-            <h2 className={classes.recitalTitle}>Dance Recital - 2021</h2>
+            <h2 className={classes.recitalTitle}>Dance Recital Act 1 - 2021</h2>
             <Vimeo
-              videoSrcURL="https://player.vimeo.com/video/562009677?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-              videoTitle="B&amp;S Dance Recital Harmony 2021"
+              videoSrcURL="https://player.vimeo.com/video/570596478?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+              videoTitle="B&amp;S Dance Recital Act 1 2021"
             />
           </div>
           <div className={classes.block}>

@@ -17,7 +17,7 @@ module.exports = {
     description: `Beats and Steps Arts Academy is a CMM affiliate center that envisions developing children's full potential in the arts.`,
     author: `Alex Friedman`,
     image: `/logo.png`,
-    keywords: `ballet, dance, music, manila, hiphop, jazz, violin, piano, voice, performance, quezon city, contemporary`,
+    keywords: `ballet, dance, music, manila, hiphop, jazz, violin, piano, voice, performance, quezon city, contemporary, online classes, online lessons`,
     siteUrl,
   },
   plugins: [
