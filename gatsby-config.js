@@ -52,7 +52,7 @@ module.exports = {
         apiKey: process.env.GATSBY_CLOUDINARY_API_KEY,
         apiSecret: process.env.GATSBY_CLOUDINARY_API_SECRET,
         uploadFolder: "gatsby-cloudinary",
-        alwaysUseDefaultBase64: true, // Comment out if going to production!
+        // alwaysUseDefaultBase64: true, // Comment out if going to production!
         enableDefaultTransformations: true,
       },
     },
