@@ -58,6 +58,13 @@ const Dance = () => {
               videoSrcURL="https://player.vimeo.com/video/570596478?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
               videoTitle="B&amp;S Dance Recital Act 1 2021"
             />
+            <h2 className={classes.recitalTitleAct2}>
+              Dance Recital Act 2 - 2021
+            </h2>
+            <Vimeo
+              videoSrcURL="https://player.vimeo.com/video/570849754?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+              videoTitle="B&amp;S Dance Recital Act 2 2021"
+            />
           </div>
           <div className={classes.block}>
             <video
