@@ -13,6 +13,8 @@ function SEO({ description, lang, meta, title }) {
             description
             author
             keywords
+            image
+            siteUrl
           }
         }
       }
@@ -35,8 +37,16 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
         {
+          name: `image`,
+          content: site.siteMetadata.image,
+        },
+        {
           name: "keywords",
           content: site.siteMetadata.keywords,
+        },
+        {
+          name: "author",
+          content: site.siteMetadata.author,
         },
         {
           property: `og:title`,
@@ -45,6 +55,10 @@ function SEO({ description, lang, meta, title }) {
         {
           property: `og:description`,
           content: metaDescription,
+        },
+        {
+          property: `og:image`,
+          content: site.siteMetadata.image,
         },
         {
           property: `og:type`,
@@ -65,6 +79,10 @@ function SEO({ description, lang, meta, title }) {
         {
           name: `twitter:description`,
           content: metaDescription,
+        },
+        {
+          name: `twitter:image`,
+          content: site.siteMetadata.image,
         },
       ].concat(meta)}
     />
