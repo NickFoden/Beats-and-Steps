@@ -55,7 +55,7 @@ const Dance = () => {
           <div className={classes.vimeoBlockContainer}>
             <h2 className={classes.recitalTitle}>Dance Recital 2021</h2>
             <Vimeo
-              videoSrcURL="https://player.vimeo.com/video/571078945?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+              videoSrcURL="https://player.vimeo.com/video/573292800?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
               videoTitle="B&amp;S Dance Recital Spotlight On Dance - 2021"
             />
           </div>
