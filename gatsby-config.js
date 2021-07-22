@@ -88,7 +88,7 @@ module.exports = {
       resolve: `gatsby-source-instagram`,
       options: {
         username: `1503767980`,
-        // This new long-lived access token will expire on July 25, 2021: AFTER REFRESH DON'T FORGET TO CHANGE NETLIFY ENV VARIABLE
+        // This new long-lived access token will expire on SEPTEMBER 22, 2021: AFTER REFRESH DON'T FORGET TO CHANGE NETLIFY ENV VARIABLE
         access_token: process.env.GATSBY_INSTAGRAM_TOKEN,
         instagram_id: process.env.GATSBY_INSTA_BUSINESS_ID,
         paginate: 6,
