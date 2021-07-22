@@ -54,10 +54,7 @@ const MainForm = () => {
 
   const submitHandler = (data, e) => {
     if (
-      (data.howDidTheyKnow === null ||
-        data.howDidTheyKnow === undefined ||
-        data.howDidTheyKnow === false) &&
-      (data.other === undefined || data.other === null || data.other === "")
+      (!data.howDidTheyKnow && !data.other)
     ) {
       alert("Please choose one option or complete Other field");
     } else {
