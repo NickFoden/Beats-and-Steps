@@ -1,1 +1,1 @@
-Beats and Steps Website
+The Beats and Steps Arts Academy Website
