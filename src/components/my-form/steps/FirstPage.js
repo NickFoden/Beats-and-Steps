@@ -23,7 +23,6 @@ const FirstPage = ({
       getValues("enrolleeAge") === "" ||
       getValues("mobileNumber") === ""
     ) {
-      console.log(errors);
       alert("Please complete all required fields");
     } else {
       setFormStep(1);
