@@ -48,14 +48,11 @@ const MainForm = () => {
     const transformedData = Object.keys(data)
       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
       .join("&");
-    console.log(data);
     return transformedData;
   }
 
   const submitHandler = (data, e) => {
-    if (
-      (!data.howDidTheyKnow && !data.other)
-    ) {
+    if (!data.howDidTheyKnow && !data.other) {
       alert("Please choose one option or complete Other field");
     } else {
       e.preventDefault();
@@ -66,15 +63,13 @@ const MainForm = () => {
           "form-name": "Contact-form",
           ...data,
         }),
-      })
-        .then(res => {
-          if (!res.ok) {
-            setFormStep(4);
-          } else {
-            setFormStep(3);
-          }
-        })
-        .catch(error => console.log(error));
+      }).then(res => {
+        if (!res.ok) {
+          setFormStep(4);
+        } else {
+          setFormStep(3);
+        }
+      });
     }
   };
 

@@ -8,7 +8,6 @@ import SEO from "../components/SEO/SEO";
 import Form from "../components/my-form/MainForm";
 import classes from "../styles/pages/contact.module.scss";
 
-// DELETE AFTER COVID
 import CovidBanner from '../components/covid-banner/covid-banner';
 
 const getImages = graphql`

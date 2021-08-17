@@ -7,10 +7,8 @@ import NavLink from "../components/navigation/NavLink";
 import SEO from "../components/SEO/SEO";
 import classes from "../styles/pages/music.module.scss";
 
-// DELETE RECITAL VIDEO AFTER ONE MONTH (IF GIVEN ALL CLEAR)
 import Vimeo from "../components/vimeo-vid/VimeoVid";
 
-// DELETE AFTER COVID
 import CovidBanner from "../components/covid-banner/covid-banner";
 
 export const getImages = graphql`
