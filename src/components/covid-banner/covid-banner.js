@@ -5,7 +5,7 @@ import classes from "../../styles/components/covid-banner/covid-banner.module.sc
 const CovidBanner = () => {
   return (
     <div className={classes.banner}>
-      <p>Due to Covid - All classes are temporarily online only</p>
+      <p>Due to Covid 34- All classes are temporarily online only</p>
     </div>
   );
 };
